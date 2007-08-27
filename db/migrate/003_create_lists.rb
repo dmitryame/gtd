@@ -3,7 +3,7 @@ class CreateLists < ActiveRecord::Migration
     create_table :lists do |t|
       t.column :name, :string 
     end
-    # create default lists
+    # create default list
     (List.create :name => "in", :id => 1).save!
     (List.create :name => "actionable", :id => 2).save!
     (List.create :name => "maybe", :id => 3).save!
