@@ -1,5 +1,24 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-one:
+in:
   id: 1
-two:
-  id: 2
+  name: In
+
+actionable:
+    id: 2
+    name: actionable
+    
+maybe:
+    id: 3
+    name: maybe
+    
+references:
+    id: 4
+    name: references
+    
+trash:
+    id: 5
+    name: trash
+    
+complete:
+    id: 6
+    name: complete
