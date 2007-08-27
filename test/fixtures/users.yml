@@ -1,5 +1,12 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-one:
+dmitry:
   id: 1
-two:
+  login: dmitry
+  password: dmitry123
+  email: dmitry@custommode.com
+
+nikita:    
   id: 2
+  login: nikita
+  password: nikita123
+  email: nikita@custommode.com

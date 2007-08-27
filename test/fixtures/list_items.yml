@@ -1,5 +1,12 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-one:
+doctors_appointement:
   id: 1
-two:
+  description: make a doctors appointement
+  user_id: 1
+  list_id: 1
+
+changing_the_world:
   id: 2
+  description: change the world
+  user_id: 2
+  list_id: 2

@@ -283,3 +283,207 @@ Migrating to CreateActionItems (4)
   [4;36;1mSQL (0.001086)[0m   [0;1mSHOW KEYS FROM lists[0m
   [4;35;1mSQL (0.001950)[0m   [0mSHOW FIELDS FROM users[0m
   [4;36;1mSQL (0.001359)[0m   [0;1mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000089)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000184)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000492)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002124)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.000319)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.001974)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000361)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001580)[0m   [0;1mSHOW FIELDS FROM lists[0m
+  [4;35;1mSQL (0.000581)[0m   [0mSHOW KEYS FROM lists[0m
+  [4;36;1mSQL (0.001817)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000366)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000090)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000179)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000373)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002994)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.000430)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.001892)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000358)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001523)[0m   [0;1mSHOW FIELDS FROM lists[0m
+  [4;35;1mSQL (0.000532)[0m   [0mSHOW KEYS FROM lists[0m
+  [4;36;1mSQL (0.001723)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000338)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000112)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000182)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000375)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002326)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.000313)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.001779)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000274)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001412)[0m   [0;1mSHOW FIELDS FROM lists[0m
+  [4;35;1mSQL (0.000459)[0m   [0mSHOW KEYS FROM lists[0m
+  [4;36;1mSQL (0.001646)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000311)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000079)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000074)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000661)[0m   [0;1mDROP DATABASE IF EXISTS `gtd_test`[0m
+  [4;35;1mSQL (0.219700)[0m   [0mCREATE DATABASE `gtd_test`[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000131)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'action_items': DROP TABLE action_items[0m
+  [4;35;1mSQL (0.002927)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT '' NOT NULL, `list_item_id` int(11) NOT NULL, `order` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_items': DROP TABLE list_items[0m
+  [4;35;1mSQL (0.013900)[0m   [0mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT '' NOT NULL, `user_id` int(11) NOT NULL, `list_id` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'lists': DROP TABLE lists[0m
+  [4;35;1mSQL (0.002315)[0m   [0mCREATE TABLE lists (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.003093)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) DEFAULT '' NOT NULL, `password` varchar(255) DEFAULT '' NOT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001895)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000546)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001918)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+  [4;35;1mSQL (0.000620)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000090)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000441)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002853)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.000375)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.001922)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000354)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001480)[0m   [0;1mSHOW FIELDS FROM lists[0m
+  [4;35;1mSQL (0.000553)[0m   [0mSHOW KEYS FROM lists[0m
+  [4;36;1mSQL (0.001704)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000345)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000138)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.098052)[0m   [0;1mDROP DATABASE IF EXISTS `gtd_test`[0m
+  [4;35;1mSQL (0.000561)[0m   [0mCREATE DATABASE `gtd_test`[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000135)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'action_items': DROP TABLE action_items[0m
+  [4;35;1mSQL (0.002358)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT '' NOT NULL, `list_item_id` int(11) NOT NULL, `order` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_items': DROP TABLE list_items[0m
+  [4;35;1mSQL (0.002855)[0m   [0mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT '' NOT NULL, `user_id` int(11) NOT NULL, `list_id` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'lists': DROP TABLE lists[0m
+  [4;35;1mSQL (0.002198)[0m   [0mCREATE TABLE lists (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.003045)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) DEFAULT '' NOT NULL, `password` varchar(255) DEFAULT '' NOT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001983)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000579)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001716)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+  [4;35;1mSQL (0.000527)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000150)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000099)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000182)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000367)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002813)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.000377)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.002103)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000389)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001617)[0m   [0;1mSHOW FIELDS FROM lists[0m
+  [4;35;1mSQL (0.000771)[0m   [0mSHOW KEYS FROM lists[0m
+  [4;36;1mSQL (0.001814)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000344)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000131)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000131)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.044897)[0m   [0;1mDROP DATABASE IF EXISTS `gtd_test`[0m
+  [4;35;1mSQL (0.000741)[0m   [0mCREATE DATABASE `gtd_test`[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000130)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'action_items': DROP TABLE action_items[0m
+  [4;35;1mSQL (0.002892)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT '' NOT NULL, `list_item_id` int(11) NOT NULL, `order` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_items': DROP TABLE list_items[0m
+  [4;35;1mSQL (0.002955)[0m   [0mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT '' NOT NULL, `user_id` int(11) NOT NULL, `list_id` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'lists': DROP TABLE lists[0m
+  [4;35;1mSQL (0.002245)[0m   [0mCREATE TABLE lists (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.002945)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) DEFAULT '' NOT NULL, `password` varchar(255) DEFAULT '' NOT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001867)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000730)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001721)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+  [4;35;1mSQL (0.000669)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000105)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000186)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000372)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.003236)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.000377)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.002221)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000373)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001499)[0m   [0;1mSHOW FIELDS FROM lists[0m
+  [4;35;1mSQL (0.000426)[0m   [0mSHOW KEYS FROM lists[0m
+  [4;36;1mSQL (0.001712)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000335)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000141)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.122988)[0m   [0;1mDROP DATABASE IF EXISTS `gtd_test`[0m
+  [4;35;1mSQL (0.000608)[0m   [0mCREATE DATABASE `gtd_test`[0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000133)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'action_items': DROP TABLE action_items[0m
+  [4;35;1mSQL (0.003327)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT '' NOT NULL, `list_item_id` int(11) NOT NULL, `order` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_items': DROP TABLE list_items[0m
+  [4;35;1mSQL (0.002505)[0m   [0mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT '' NOT NULL, `user_id` int(11) NOT NULL, `list_id` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'lists': DROP TABLE lists[0m
+  [4;35;1mSQL (0.002837)[0m   [0mCREATE TABLE lists (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.002546)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) DEFAULT '' NOT NULL, `password` varchar(255) DEFAULT '' NOT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001997)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000592)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001798)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+  [4;35;1mSQL (0.000562)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000089)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000181)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000373)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002820)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.000489)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.002024)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000365)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001596)[0m   [0;1mSHOW FIELDS FROM lists[0m
+  [4;35;1mSQL (0.000703)[0m   [0mSHOW KEYS FROM lists[0m
+  [4;36;1mSQL (0.002010)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000358)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000131)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.008347)[0m   [0;1mDROP DATABASE IF EXISTS `gtd_test`[0m
+  [4;35;1mSQL (0.000530)[0m   [0mCREATE DATABASE `gtd_test`[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000133)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'action_items': DROP TABLE action_items[0m
+  [4;35;1mSQL (0.003419)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT '' NOT NULL, `list_item_id` int(11) NOT NULL, `order` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_items': DROP TABLE list_items[0m
+  [4;35;1mSQL (0.002570)[0m   [0mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT '' NOT NULL, `user_id` int(11) NOT NULL, `list_id` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'lists': DROP TABLE lists[0m
+  [4;35;1mSQL (0.003032)[0m   [0mCREATE TABLE lists (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.002469)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) DEFAULT '' NOT NULL, `password` varchar(255) DEFAULT '' NOT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001901)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000566)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001635)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+  [4;35;1mSQL (0.000604)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000156)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000079)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000181)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000427)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002800)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.000376)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.002047)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000335)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001573)[0m   [0;1mSHOW FIELDS FROM lists[0m
+  [4;35;1mSQL (0.000726)[0m   [0mSHOW KEYS FROM lists[0m
+  [4;36;1mSQL (0.001900)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000384)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000092)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.050827)[0m   [0;1mDROP DATABASE IF EXISTS `gtd_test`[0m
+  [4;35;1mSQL (0.000552)[0m   [0mCREATE DATABASE `gtd_test`[0m
+  [4;36;1mSQL (0.000138)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000131)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'action_items': DROP TABLE action_items[0m
+  [4;35;1mSQL (0.002759)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT '' NOT NULL, `list_item_id` int(11) NOT NULL, `order` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_items': DROP TABLE list_items[0m
+  [4;35;1mSQL (0.002485)[0m   [0mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT '' NOT NULL, `user_id` int(11) NOT NULL, `list_id` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'lists': DROP TABLE lists[0m
+  [4;35;1mSQL (0.002627)[0m   [0mCREATE TABLE lists (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.002398)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) DEFAULT '' NOT NULL, `password` varchar(255) DEFAULT '' NOT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.002127)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000570)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001788)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+  [4;35;1mSQL (0.000520)[0m   [0mUPDATE schema_info SET version = 4[0m
