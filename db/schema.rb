@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 4) do
     t.column "description", :string,   :default => "",    :null => false
     t.column "user_id",     :integer,                     :null => false
     t.column "list_id",     :integer,                     :null => false
+    t.column "order",       :integer,                     :null => false
     t.column "remind_at",   :datetime
     t.column "done",        :boolean,  :default => false, :null => false
     t.column "created_at",  :datetime,                    :null => false
