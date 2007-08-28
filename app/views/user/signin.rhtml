@@ -1,1 +1,26 @@
-sign in 
+<%= start_form_tag :action => "signin"%>
+	<table>
+		<tr>
+			<td>
+				<label for="login">Login:</label>
+			</td>
+			<td>
+				<%= text_field_tag "login"%>
+			</td>
+		</tr>
+		<tr>
+			<td>			
+				<label for="password">Password:</label>
+			</td>
+			<td>
+				<%= password_field_tag "password"%>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<%= submit_tag "Sign in"%>
+			</td>
+			<td></td>
+		</tr>
+	</table>	
+<%= end_form_tag%>	
