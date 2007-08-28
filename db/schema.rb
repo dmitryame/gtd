@@ -30,11 +30,12 @@ ActiveRecord::Schema.define(:version => 4) do
   end
 
   create_table "users", :force => true do |t|
-    t.column "login",      :string,   :default => "", :null => false
-    t.column "password",   :string,   :default => "", :null => false
-    t.column "email",      :string,   :default => "", :null => false
-    t.column "created_at", :datetime,                 :null => false
-    t.column "updated_at", :datetime,                 :null => false
+    t.column "login",         :string,   :default => "", :null => false
+    t.column "password_salt", :string,   :default => "", :null => false
+    t.column "password_hash", :string,   :default => "", :null => false
+    t.column "email",         :string,   :default => "", :null => false
+    t.column "created_at",    :datetime,                 :null => false
+    t.column "updated_at",    :datetime,                 :null => false
   end
 
 end
