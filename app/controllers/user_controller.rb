@@ -1,22 +1,26 @@
 class UserController < ApplicationController
+  
   def signin
     if request.post?
-      user = User.find(:first, :conditions => ['login = ?', params[:login]])
-      if user.blank? ||
-        Digest::SHA256.hexdigest(params[:password] + user.password_salt) != user.password_hash
+      print params[:name]
+      print params[:password] 
+      user = User.authenticate(params[:name], params[:password])
+      if user.blank?
         session[:user] = nil
-        flash[:notice] = "Login or Password invalid";
+        flash[:notice] = "Name or Password invalid";
       else
         session[:user] = user.id
         redirect_to :action => session[:intended_action], :controller => session[:intended_controller]
       end
-      
     end
   end
+  
   def register
-    if request.post?
-      session[:user] = user.id
-      redirect_to :action => session[:intended_action], :controller => session[:intended_controller]
+    @user = User.new(params[:user])
+    if request.post? and @user.save
+      flash.now[:notice] = "User #{@user.name} created"
+      @user = User.new
     end
   end
+ 
 end

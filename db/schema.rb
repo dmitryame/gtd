@@ -11,6 +11,7 @@ ActiveRecord::Schema.define(:version => 4) do
     t.column "level",        :integer,                     :null => false
     t.column "remind_at",    :datetime
     t.column "done",         :boolean,  :default => false, :null => false
+    t.column "resolution",   :string
     t.column "created_at",   :datetime,                    :null => false
     t.column "updated_at",   :datetime,                    :null => false
   end
@@ -22,6 +23,7 @@ ActiveRecord::Schema.define(:version => 4) do
     t.column "order",       :integer,                     :null => false
     t.column "remind_at",   :datetime
     t.column "done",        :boolean,  :default => false, :null => false
+    t.column "resolution",  :string
     t.column "created_at",  :datetime,                    :null => false
     t.column "updated_at",  :datetime,                    :null => false
   end
@@ -31,12 +33,12 @@ ActiveRecord::Schema.define(:version => 4) do
   end
 
   create_table "users", :force => true do |t|
-    t.column "login",         :string,   :default => "", :null => false
-    t.column "password_salt", :string,   :default => "", :null => false
-    t.column "password_hash", :string,   :default => "", :null => false
-    t.column "email",         :string,   :default => "", :null => false
-    t.column "created_at",    :datetime,                 :null => false
-    t.column "updated_at",    :datetime,                 :null => false
+    t.column "name",            :string
+    t.column "hashed_password", :string
+    t.column "salt",            :string
+    t.column "email",           :string,   :default => "", :null => false
+    t.column "created_at",      :datetime,                 :null => false
+    t.column "updated_at",      :datetime,                 :null => false
   end
 
 end
