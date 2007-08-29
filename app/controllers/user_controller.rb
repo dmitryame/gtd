@@ -5,8 +5,16 @@ class UserController < ApplicationController
       if user.blank? ||
         Digest::SHA256.hexdigest(params[:password] + user.password_salt) != user.password_hash
         session[:user] = nil
-        raise "Login or Password invalid"
+        flash[:notice] = "Login or Password invalid";
+      else
+        session[:user] = user.id
+        redirect_to :action => session[:intended_action], :controller => session[:intended_controller]
       end
+      
+    end
+  end
+  def register
+    if request.post?
       session[:user] = user.id
       redirect_to :action => session[:intended_action], :controller => session[:intended_controller]
     end
