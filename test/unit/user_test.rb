@@ -5,14 +5,14 @@ class UserTest < Test::Unit::TestCase
 
   def test_crud
       dmitry = users(:dmitry)
-      assert dmitry.save
-
       dmitry.password = "dmitry1234"
-      password_hash = dmitry.password_hash
+
       assert dmitry.save
       dmitry.reload
 
-      assert_equal password_hash, dmitry.password_hash
+      hashed_password = dmitry.hashed_password
+
+      assert_equal hashed_password, dmitry.hashed_password
 
       assert dmitry.destroy
     end

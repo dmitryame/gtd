@@ -1,10 +1,10 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 dmitry:
   id: 1
-  login: dmitry
+  name: dmitry
   email: dmitry@custommode.com
 
 nikita:    
   id: 2
-  login: nikita
+  name: nikita
   email: nikita@custommode.com
