@@ -3,7 +3,7 @@ class CreateListItems < ActiveRecord::Migration
     create_table :list_items do |t|
       t.column :description, :string,  :null => false
       t.column :user_id,    :integer,  :null => false
-      t.column :list_id,    :integer,  :null => false
+      t.column :list_type_id,    :integer,  :null => false
       t.column :order, :integer, :null => false
       t.column :remind_at,   :datetime
       t.column :done,       :boolean,  :null => false, :default => false

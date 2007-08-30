@@ -17,18 +17,18 @@ ActiveRecord::Schema.define(:version => 4) do
   end
 
   create_table "list_items", :force => true do |t|
-    t.column "description", :string,   :default => "",    :null => false
-    t.column "user_id",     :integer,                     :null => false
-    t.column "list_id",     :integer,                     :null => false
-    t.column "order",       :integer,                     :null => false
-    t.column "remind_at",   :datetime
-    t.column "done",        :boolean,  :default => false, :null => false
-    t.column "resolution",  :string
-    t.column "created_at",  :datetime,                    :null => false
-    t.column "updated_at",  :datetime,                    :null => false
+    t.column "description",  :string,   :default => "",    :null => false
+    t.column "user_id",      :integer,                     :null => false
+    t.column "list_type_id", :integer,                     :null => false
+    t.column "order",        :integer,                     :null => false
+    t.column "remind_at",    :datetime
+    t.column "done",         :boolean,  :default => false, :null => false
+    t.column "resolution",   :string
+    t.column "created_at",   :datetime,                    :null => false
+    t.column "updated_at",   :datetime,                    :null => false
   end
 
-  create_table "lists", :force => true do |t|
+  create_table "list_types", :force => true do |t|
     t.column "name", :string
   end
 

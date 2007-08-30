@@ -16,4 +16,8 @@ class UserTest < Test::Unit::TestCase
 
       assert dmitry.destroy
     end
+    
+    def test_user_lists
+      dmitry = users(:dmitry)
+    end
 end
