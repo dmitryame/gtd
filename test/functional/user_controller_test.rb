@@ -27,5 +27,10 @@ class UserControllerTest < Test::Unit::TestCase
     assert_template "signin"
   end
   
+#  def test_register
+#    post :register, :name => "aaa123", :password => "aaa", :password_confirmation => "aaa", :email => "asd@qwe.com"
+#    assert_not_equal nil, session[:user]
+#  end
+  
 
 end

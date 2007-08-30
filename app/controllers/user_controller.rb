@@ -19,7 +19,9 @@ class UserController < ApplicationController
     @user = User.new(params[:user])
     if request.post? and @user.save
       flash.now[:notice] = "User #{@user.name} created"
-      @user = User.new
+      session[:user] = @user.id
+      print @user.id
+      redirect_to :action => "list", :controller => "list"
     end
   end
  

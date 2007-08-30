@@ -1,33 +1,49 @@
 
-  <%= error_messages_for 'user' %>
+<%= error_messages_for 'user' %>
 
-  <fieldset>
-    <legend>Enter User Details</legend>
+<fieldset>
+	<legend>Enter User Details</legend>
 
-    <% form_for :user do |form| %>
-      <p>
-        <label for="user_name">Name:</label>
-        <%= form.text_field :name, :size => 40 %>
-      </p>
-
-      <p>
-        <label for="user_password">Password:</label>
-        <%= form.password_field :password, :size => 40 %>
-      </p>
-
-      <p>
-        <label for="user_password_confirmation">Confirm:</label>
-        <%= form.password_field :password_confirmation, :size => 40 %>
-      </p>
-
-	  <p>
-        <label for="user_email">Email:</label>
-        <%= form.text_field :email, :size => 40 %>
-      </p>
-
-
-      <%= submit_tag "Add User", :class => "submit" %>
-    
-    <% end %>  
-  </fieldset>
+	<% form_for :user do |form| %>
+	<table>
+		<tr>
+			<td>
+				<label for="user_name">Name:</label>
+			</td>
+			<td>
+				<%= form.text_field :name, :size => 40 %>
+			</td>
+		</tr>
+		<tr>
+			<td>    
+				<label for="user_password">Password:</label>
+			</td>
+			<td>
+				<%= form.password_field :password, :size => 40 %>
+			</td>
+		</tr>
+		<tr>
+			<td>   
+				<label for="user_password_confirmation">Confirm:</label>
+			</td>
+			<td> 
+				<%= form.password_field :password_confirmation, :size => 40 %>
+			</td>
+		</tr>
+		<tr>
+			<td> 
+				<label for="user_email">Email:</label>
+			</td>
+			<td>
+				<%= form.text_field :email, :size => 40 %>
+			</td>
+		</tr>
+		<tr><td></td>
+			<td>    
+				<%= submit_tag "Add User", :class => "submit" %>
+			</td>
+		</tr>
+	</table>
+	<% end %>  
+</fieldset>
 </div>
