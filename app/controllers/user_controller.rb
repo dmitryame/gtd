@@ -10,7 +10,7 @@ class UserController < ApplicationController
         flash[:notice] = "Name or Password invalid";
       else
         session[:user] = user.id
-        redirect_to :action => session[:intended_action], :controller => session[:intended_controller]
+        redirect_to :action => "list", :controller => "list"
       end
     end
   end

@@ -1,4 +1,4 @@
-<%= start_form_tag :action => "signin"%>
+<% form_tag do %>
 <fieldset>
     <legend>Enter Login/Password</legend>
 	<table>
@@ -7,7 +7,7 @@
 				<label for="Name">Name:</label>
 			</td>
 			<td>
-				<%= text_field_tag "name"%>
+				<%= text_field_tag :name, params[:name] %>
 			</td>
 		</tr>
 		<tr>
@@ -15,7 +15,7 @@
 				<label for="password">Password:</label>
 			</td>
 			<td>
-				<%= password_field_tag "password"%>
+				<%= password_field_tag :password %>
 			</td>
 		</tr>
 		<tr>
@@ -26,4 +26,4 @@
 		</tr>
 	</table>	
 </fieldset>
-<%= end_form_tag%>	
+<%end%>	
