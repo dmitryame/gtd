@@ -25,11 +25,11 @@
 	<div id="main">
 		<table>
 			<tr>
-				<% listTypes = List.find(:all) %>
+				<% listTypes = ListType.find(:all) %>
 				<% for listType in listTypes %> 
 					<td>
 						<div class="listTypeItem">
-							(3)
+							(<%=ListItem.find_all_by_user_id_and_list_type_id(session[:user], listType).size%>)
 							<%= listType.name %>
 							&nbsp;&nbsp;&nbsp;
 						</div>

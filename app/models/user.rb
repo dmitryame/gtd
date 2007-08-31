@@ -14,8 +14,7 @@ class User < ActiveRecord::Base
     errors.add_to_base("Missing password") if hashed_password.blank?
   end
 
-  
-  
+
   def self.authenticate(name, password)
     user = self.find_by_name(name)
     if user
@@ -26,7 +25,6 @@ class User < ActiveRecord::Base
     end
     user
   end
-  
   
   # 'password' is a virtual attribute
   
@@ -49,15 +47,11 @@ class User < ActiveRecord::Base
     end
   end     
   
-  
   private
-  
-  
+    
   def create_new_salt
     self.salt = self.object_id.to_s + rand.to_s
   end
-  
-  
   
   def self.encrypted_password(password, salt)
     string_to_hash = password + "wibble" + salt

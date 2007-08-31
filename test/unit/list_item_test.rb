@@ -37,8 +37,11 @@ class ListItemTest < Test::Unit::TestCase
     )
     assert inSecondItem.save
     
-    User.find()
-    
+    countIn    = ListItem.find_all_by_user_id_and_list_type_id(users(:dmitry), list_types(:in)).size
+    countTrash = ListItem.find_all_by_user_id_and_list_type_id(users(:dmitry), list_types(:trash)).size
+
+    assert_equal 3, countIn
+    assert_equal 0, countTrash
   end
   
 end

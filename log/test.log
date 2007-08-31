@@ -2212,3 +2212,304 @@ Processing UserController#signin (for 0.0.0.0 at 2007-08-30 18:13:51) [POST]
 Redirected to http://test.host/list/list
 Completed in 0.00169 (593 reqs/sec) | DB: 0.00098 (57%) | 302 Found [http://test.host/user/signin?password=dmitry1234&name=dmitry]
   [4;36;1mSQL (0.000168)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000169)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000092)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.002296)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.000319)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mListItem Columns (0.002610)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000290)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;35;1mListItem Update (0.000315)[0m   [0mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'make a doctors appointement', `done` = 0, `updated_at` = '2007-08-30 21:14:28' WHERE `id` = 1[0m
+  [4;36;1mListItem Update (0.000281)[0m   [0;1mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'dentist appointement', `done` = 0, `updated_at` = '2007-08-30 21:14:28' WHERE `id` = 1[0m
+  [4;35;1mListItem Load (0.000241)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;36;1mListItem Destroy (0.000201)[0m   [0;1m DELETE FROM list_items
+ WHERE `id` = 1
+[0m
+  [4;35;1mSQL (0.000754)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000296)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mListType Columns (0.001718)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001255)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mSQL (0.000303)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:14:28', 0, NULL, 0, 'new thing to do', 1, 1, '2007-08-30 21:14:28')[0m
+  [4;35;1mSQL (0.000642)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:14:28', 1, NULL, 1, 'one more thing to do', 1, 1, '2007-08-30 21:14:28')[0m
+  [4;36;1mUser Load (0.000386)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mSQL (0.000666)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000218)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000141)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.002267)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.169913)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mListItem Columns (0.002685)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000323)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;35;1mListItem Update (0.000323)[0m   [0mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'make a doctors appointement', `done` = 0, `updated_at` = '2007-08-30 21:36:02' WHERE `id` = 1[0m
+  [4;36;1mListItem Update (0.000304)[0m   [0;1mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'dentist appointement', `done` = 0, `updated_at` = '2007-08-30 21:36:02' WHERE `id` = 1[0m
+  [4;35;1mListItem Load (0.000255)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;36;1mListItem Destroy (0.000180)[0m   [0;1m DELETE FROM list_items
+ WHERE `id` = 1
+[0m
+  [4;35;1mSQL (0.000961)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000512)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000282)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mListType Columns (0.001877)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001440)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mSQL (0.000284)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:36:02', 0, NULL, 0, 'new thing to do', 1, 1, '2007-08-30 21:36:02')[0m
+  [4;35;1mSQL (0.000233)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:36:02', 1, NULL, 1, 'one more thing to do', 1, 1, '2007-08-30 21:36:02')[0m
+  [4;36;1mSQL (0.000747)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000166)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000090)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.002650)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.000326)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mListItem Columns (0.002073)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000310)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;35;1mListItem Update (0.000343)[0m   [0mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'make a doctors appointement', `done` = 0, `updated_at` = '2007-08-30 21:37:09' WHERE `id` = 1[0m
+  [4;36;1mListItem Update (0.000292)[0m   [0;1mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'dentist appointement', `done` = 0, `updated_at` = '2007-08-30 21:37:09' WHERE `id` = 1[0m
+  [4;35;1mListItem Load (0.000252)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;36;1mListItem Destroy (0.000216)[0m   [0;1m DELETE FROM list_items
+ WHERE `id` = 1
+[0m
+  [4;35;1mSQL (0.000815)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000849)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mListType Columns (0.002004)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000479)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mSQL (0.000264)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:37:09', 0, NULL, 0, 'new thing to do', 1, 1, '2007-08-30 21:37:09')[0m
+  [4;35;1mSQL (0.001141)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:37:09', 1, NULL, 1, 'one more thing to do', 1, 1, '2007-08-30 21:37:09')[0m
+  [4;36;1mSQL (0.002967)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000089)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.002579)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.116938)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mListItem Columns (0.002703)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000322)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;35;1mListItem Update (0.000333)[0m   [0mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'make a doctors appointement', `done` = 0, `updated_at` = '2007-08-30 21:37:37' WHERE `id` = 1[0m
+  [4;36;1mListItem Update (0.000322)[0m   [0;1mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'dentist appointement', `done` = 0, `updated_at` = '2007-08-30 21:37:37' WHERE `id` = 1[0m
+  [4;35;1mListItem Load (0.000273)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;36;1mListItem Destroy (0.000188)[0m   [0;1m DELETE FROM list_items
+ WHERE `id` = 1
+[0m
+  [4;35;1mSQL (0.000902)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000380)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000253)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mListType Columns (0.002060)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001089)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mSQL (0.000224)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:37:37', 0, NULL, 0, 'new thing to do', 1, 1, '2007-08-30 21:37:37')[0m
+  [4;35;1mSQL (0.000210)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:37:37', 1, NULL, 1, 'one more thing to do', 1, 1, '2007-08-30 21:37:37')[0m
+  [4;36;1mListItem Load (0.000263)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1) [0m
+  [4;35;1mSQL (0.001034)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000092)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.002583)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.000318)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mListItem Columns (0.002030)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000320)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;35;1mListItem Update (0.000303)[0m   [0mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'make a doctors appointement', `done` = 0, `updated_at` = '2007-08-30 21:37:55' WHERE `id` = 1[0m
+  [4;36;1mListItem Update (0.000272)[0m   [0;1mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'dentist appointement', `done` = 0, `updated_at` = '2007-08-30 21:37:55' WHERE `id` = 1[0m
+  [4;35;1mListItem Load (0.000455)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;36;1mListItem Destroy (0.000230)[0m   [0;1m DELETE FROM list_items
+ WHERE `id` = 1
+[0m
+  [4;35;1mSQL (0.001383)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000186)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000331)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mListType Columns (0.001771)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001081)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mSQL (0.000292)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:37:55', 0, NULL, 0, 'new thing to do', 1, 1, '2007-08-30 21:37:55')[0m
+  [4;35;1mSQL (0.001545)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:37:55', 1, NULL, 1, 'one more thing to do', 1, 1, '2007-08-30 21:37:55')[0m
+  [4;36;1mListItem Load (0.000305)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1) [0m
+  [4;35;1mSQL (0.001307)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000090)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000084)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.002651)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.001170)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mListItem Columns (0.002083)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000276)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;35;1mListItem Update (0.000317)[0m   [0mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'make a doctors appointement', `done` = 0, `updated_at` = '2007-08-30 21:38:11' WHERE `id` = 1[0m
+  [4;36;1mListItem Update (0.000320)[0m   [0;1mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'dentist appointement', `done` = 0, `updated_at` = '2007-08-30 21:38:11' WHERE `id` = 1[0m
+  [4;35;1mListItem Load (0.000251)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;36;1mListItem Destroy (0.000180)[0m   [0;1m DELETE FROM list_items
+ WHERE `id` = 1
+[0m
+  [4;35;1mSQL (0.001298)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000556)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000275)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mListType Columns (0.001824)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001261)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mSQL (0.000556)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:38:11', 0, NULL, 0, 'new thing to do', 1, 1, '2007-08-30 21:38:11')[0m
+  [4;35;1mSQL (0.000232)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:38:11', 1, NULL, 1, 'one more thing to do', 1, 1, '2007-08-30 21:38:11')[0m
+  [4;36;1mListItem Load (0.000278)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1) [0m
+  [4;35;1mSQL (0.000646)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000098)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.002464)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.000601)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mListItem Columns (0.002387)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000319)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;35;1mListItem Update (0.000307)[0m   [0mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'make a doctors appointement', `done` = 0, `updated_at` = '2007-08-30 21:39:18' WHERE `id` = 1[0m
+  [4;36;1mListItem Update (0.000262)[0m   [0;1mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'dentist appointement', `done` = 0, `updated_at` = '2007-08-30 21:39:18' WHERE `id` = 1[0m
+  [4;35;1mListItem Load (0.000268)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;36;1mListItem Destroy (0.000233)[0m   [0;1m DELETE FROM list_items
+ WHERE `id` = 1
+[0m
+  [4;35;1mSQL (0.000737)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000428)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000261)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mListType Columns (0.001662)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001280)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mSQL (0.000415)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:39:19', 0, NULL, 0, 'new thing to do', 1, 1, '2007-08-30 21:39:19')[0m
+  [4;35;1mSQL (0.000245)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:39:19', 1, NULL, 1, 'one more thing to do', 1, 1, '2007-08-30 21:39:19')[0m
+  [4;36;1mListItem Load (0.000285)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mSQL (0.002784)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000086)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000157)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.121815)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.000345)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mListItem Columns (0.002045)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000801)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;35;1mListItem Update (0.000325)[0m   [0mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'make a doctors appointement', `done` = 0, `updated_at` = '2007-08-30 21:41:20' WHERE `id` = 1[0m
+  [4;36;1mListItem Update (0.000342)[0m   [0;1mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'dentist appointement', `done` = 0, `updated_at` = '2007-08-30 21:41:20' WHERE `id` = 1[0m
+  [4;35;1mListItem Load (0.000268)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;36;1mListItem Destroy (0.000183)[0m   [0;1m DELETE FROM list_items
+ WHERE `id` = 1
+[0m
+  [4;35;1mSQL (0.001151)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000357)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mListType Columns (0.001978)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001493)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mSQL (0.000265)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:41:20', 0, NULL, 0, 'new thing to do', 1, 1, '2007-08-30 21:41:20')[0m
+  [4;35;1mSQL (0.000219)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:41:20', 1, NULL, 1, 'one more thing to do', 1, 1, '2007-08-30 21:41:20')[0m
+  [4;36;1mListItem Load (0.000298)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mSQL (0.003461)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000154)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000090)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000127)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.002353)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.113476)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mListItem Columns (0.002326)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000303)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;35;1mListItem Update (0.000298)[0m   [0mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'make a doctors appointement', `done` = 0, `updated_at` = '2007-08-30 21:43:23' WHERE `id` = 1[0m
+  [4;36;1mListItem Update (0.000279)[0m   [0;1mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'dentist appointement', `done` = 0, `updated_at` = '2007-08-30 21:43:23' WHERE `id` = 1[0m
+  [4;35;1mListItem Load (0.000253)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;36;1mListItem Destroy (0.000214)[0m   [0;1m DELETE FROM list_items
+ WHERE `id` = 1
+[0m
+  [4;35;1mSQL (0.000862)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000555)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000253)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mListType Columns (0.002057)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000556)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mSQL (0.000268)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:43:23', 0, NULL, 0, 'new thing to do', 1, 1, '2007-08-30 21:43:23')[0m
+  [4;35;1mSQL (0.000212)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:43:23', 1, NULL, 1, 'one more thing to do', 1, 1, '2007-08-30 21:43:23')[0m
+  [4;36;1mListItem Load (0.000288)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListType Load (0.000168)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 5) [0m
+  [4;36;1mListItem Load (0.000210)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mSQL (0.000620)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000089)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000083)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.002027)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.001562)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mListItem Columns (0.130281)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000349)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;35;1mListItem Update (0.000406)[0m   [0mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'make a doctors appointement', `done` = 0, `updated_at` = '2007-08-30 21:43:52' WHERE `id` = 1[0m
+  [4;36;1mListItem Update (0.000516)[0m   [0;1mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'dentist appointement', `done` = 0, `updated_at` = '2007-08-30 21:43:52' WHERE `id` = 1[0m
+  [4;35;1mListItem Load (0.000367)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;36;1mListItem Destroy (0.000199)[0m   [0;1m DELETE FROM list_items
+ WHERE `id` = 1
+[0m
+  [4;35;1mSQL (0.000882)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000447)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000242)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mListType Columns (0.001606)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001292)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mSQL (0.000279)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:43:52', 0, NULL, 0, 'new thing to do', 1, 1, '2007-08-30 21:43:52')[0m
+  [4;35;1mSQL (0.000248)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:43:52', 1, NULL, 1, 'one more thing to do', 1, 1, '2007-08-30 21:43:52')[0m
+  [4;36;1mListItem Load (0.000337)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListType Load (0.000190)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 5) [0m
+  [4;36;1mListItem Load (0.000221)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mSQL (0.000710)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000090)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Columns (0.002689)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.003250)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;35;1mActionItem Columns (0.002315)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.000332)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 1) [0m
+  [4;35;1mActionItem Update (0.000323)[0m   [0mUPDATE action_items SET `created_at` = NULL, `order` = 1, `remind_at` = '2007-12-12 10:10:10', `resolution` = NULL, `list_item_id` = 1, `level` = 1, `description` = 'pick up the phone', `done` = 0, `updated_at` = '2007-08-30 21:44:01' WHERE `id` = 1[0m
+  [4;36;1mActionItem Update (0.000289)[0m   [0;1mUPDATE action_items SET `created_at` = NULL, `order` = 1, `remind_at` = '2007-12-12 10:10:10', `resolution` = NULL, `list_item_id` = 1, `level` = 1, `description` = 'push the intercom button', `done` = 0, `updated_at` = '2007-08-30 21:44:01' WHERE `id` = 1[0m
+  [4;35;1mActionItem Load (0.000238)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 1) [0m
+  [4;36;1mActionItem Destroy (0.000196)[0m   [0;1m DELETE FROM action_items
+ WHERE `id` = 1
+[0m
+  [4;35;1mSQL (0.000876)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.002148)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.001666)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mListItem Load (0.000233)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;36;1mListItem Update (0.000319)[0m   [0;1mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'make a doctors appointement', `done` = 0, `updated_at` = '2007-08-30 21:44:01' WHERE `id` = 1[0m
+  [4;35;1mListItem Update (0.000271)[0m   [0mUPDATE list_items SET `created_at` = NULL, `order` = 0, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `user_id` = 1, `description` = 'dentist appointement', `done` = 0, `updated_at` = '2007-08-30 21:44:01' WHERE `id` = 1[0m
+  [4;36;1mListItem Load (0.000230)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;35;1mListItem Destroy (0.000311)[0m   [0m DELETE FROM list_items
+ WHERE `id` = 1
+[0m
+  [4;36;1mSQL (0.000754)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000187)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000268)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mListType Columns (0.001731)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000498)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;35;1mSQL (0.000288)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:44:01', 0, NULL, 0, 'new thing to do', 1, 1, '2007-08-30 21:44:01')[0m
+  [4;36;1mSQL (0.000212)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-08-30 21:44:01', 1, NULL, 1, 'one more thing to do', 1, 1, '2007-08-30 21:44:01')[0m
+  [4;35;1mListItem Load (0.000310)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;36;1mListType Load (0.000173)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 5) [0m
+  [4;35;1mListItem Load (0.000239)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;36;1mSQL (0.000821)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000083)[0m   [0mBEGIN[0m
+  [4;36;1mListType Load (0.000244)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mSQL (0.000240)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000148)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000248)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000323)[0m   [0;1mSELECT * FROM users WHERE (users.name = 'dmitry' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.000270)[0m   [0mUPDATE users SET `created_at` = NULL, `hashed_password` = '44a303161892922713452917edc712f28b82a217', `salt` = '262412500.380817069115814', `email` = 'dmitry@custommode.com', `updated_at` = '2007-08-30 21:44:01', `name` = 'dmitry' WHERE `id` = 1[0m
+  [4;36;1mUser Load (0.000200)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mUser Destroy (0.000168)[0m   [0m DELETE FROM users
+ WHERE `id` = 1
+[0m
+  [4;36;1mSQL (0.000154)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+  [4;35;1mSQL (0.000763)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000260)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000086)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000070)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000106)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.002628)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.000360)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#signin (for 0.0.0.0 at 2007-08-30 21:44:03) [POST]
+  Session ID: 
+  Parameters: {"name"=>"dmitry", "action"=>"signin", "controller"=>"user", "password"=>"wrong"}
+  [4;35;1mUser Load (0.000311)[0m   [0mSELECT * FROM users WHERE (users.`name` = 'dmitry') LIMIT 1[0m
+Rendering  within layouts/user
+Rendering user/signin
+Completed in 0.00735 (136 reqs/sec) | Rendering: 0.00532 (72%) | DB: 0.00376 (51%) | 200 OK [http://test.host/user/signin?password=wrong&name=dmitry]
+  [4;36;1mSQL (0.000176)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000365)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#signin (for 0.0.0.0 at 2007-08-30 21:44:03) [POST]
+  Session ID: 
+  Parameters: {"name"=>"dmitry", "action"=>"signin", "controller"=>"user", "password"=>"dmitry1234"}
+  [4;35;1mUser Load (0.000287)[0m   [0mSELECT * FROM users WHERE (users.`name` = 'dmitry') LIMIT 1[0m
+Redirected to http://test.host/list/list
+Completed in 0.00121 (825 reqs/sec) | DB: 0.00092 (75%) | 302 Found [http://test.host/user/signin?password=dmitry1234&name=dmitry]
+  [4;36;1mSQL (0.000144)[0m   [0;1mROLLBACK[0m

@@ -3137,3 +3137,301 @@ Migrating to CreateActionItems (4)
   [4;35;1mSQL (0.000576)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
   [4;36;1mSQL (0.001661)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
   [4;35;1mSQL (0.000858)[0m   [0mUPDATE schema_info SET version = 4[0m
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-08-30 18:22:40) [GET]
+  Session ID: 28d40b8d3ba26b5e26cd9d38c9565abd
+  Parameters: {"action"=>"list", "controller"=>"list"}
+Rendering  within layouts/list
+Rendering list/list
+
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::List) on line #28 of app/views/layouts/list.rhtml:
+25: 	<div id="main">
+26: 		<table>
+27: 			<tr>
+28: 				<% listTypes = List.find(:all) %>
+29: 				<% for listType in listTypes %> 
+30: 					<td>
+31: 						<div class="listTypeItem">
+
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:263:in `load_missing_constant'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:452:in `const_missing'
+    #{RAILS_ROOT}/app/views/layouts/list.rhtml:28:in `_run_rhtml_47app47views47layouts47list46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:254:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1096:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mSQL (0.000161)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000080)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000184)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000409)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002098)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.000336)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.001901)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000254)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001505)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mSQL (0.000674)[0m   [0mSHOW KEYS FROM list_types[0m
+  [4;36;1mSQL (0.001724)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000310)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000099)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.062294)[0m   [0;1mDROP DATABASE IF EXISTS `gtd_test`[0m
+  [4;35;1mSQL (0.000793)[0m   [0mCREATE DATABASE `gtd_test`[0m
+  [4;36;1mSQL (0.000122)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000107)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'action_items': DROP TABLE action_items[0m
+  [4;35;1mSQL (0.003409)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT '' NOT NULL, `list_item_id` int(11) NOT NULL, `order` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_items': DROP TABLE list_items[0m
+  [4;35;1mSQL (0.003132)[0m   [0mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT '' NOT NULL, `user_id` int(11) NOT NULL, `list_type_id` int(11) NOT NULL, `order` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_types': DROP TABLE list_types[0m
+  [4;35;1mSQL (0.002445)[0m   [0mCREATE TABLE list_types (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.003892)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `hashed_password` varchar(255) DEFAULT NULL, `salt` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.002090)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000569)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001683)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+  [4;35;1mSQL (0.000668)[0m   [0mUPDATE schema_info SET version = 4[0m
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-08-30 21:44:34) [GET]
+  Session ID: 28d40b8d3ba26b5e26cd9d38c9565abd
+  Parameters: {"action"=>"list", "controller"=>"list"}
+Rendering  within layouts/list
+Rendering list/list
+
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::List) on line #28 of app/views/layouts/list.rhtml:
+25: 	<div id="main">
+26: 		<table>
+27: 			<tr>
+28: 				<% listTypes = List.find(:all) %>
+29: 				<% for listType in listTypes %> 
+30: 					<td>
+31: 						<div class="listTypeItem">
+
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:263:in `load_missing_constant'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:452:in `const_missing'
+    #{RAILS_ROOT}/app/views/layouts/list.rhtml:28:in `_run_rhtml_47app47views47layouts47list46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:254:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1096:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-08-30 21:45:13) [GET]
+  Session ID: 28d40b8d3ba26b5e26cd9d38c9565abd
+  Parameters: {"action"=>"list", "controller"=>"list"}
+Rendering  within layouts/list
+Rendering list/list
+  [4;36;1mSQL (0.000144)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mListItem Load (0.000232)[0m   [0;1mSELECT * FROM list_items [0m
+Completed in 0.04811 (20 reqs/sec) | Rendering: 0.04676 (97%) | DB: 0.00047 (0%) | 200 OK [http://localhost/]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-08-30 21:45:54) [GET]
+  Session ID: 28d40b8d3ba26b5e26cd9d38c9565abd
+  Parameters: {"action"=>"list", "controller"=>"list"}
+Rendering  within layouts/list
+Rendering list/list
+  [4;35;1mListType Load (0.000353)[0m   [0mSELECT * FROM list_types [0m
+  [4;36;1mListType Columns (0.002185)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+Completed in 0.01301 (76 reqs/sec) | Rendering: 0.00964 (74%) | DB: 0.00254 (19%) | 200 OK [http://localhost/]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-08-30 21:47:53) [GET]
+  Session ID: 28d40b8d3ba26b5e26cd9d38c9565abd
+  Parameters: {"action"=>"list", "controller"=>"list"}
+Rendering  within layouts/list
+Rendering list/list
+  [4;35;1mListType Load (0.000364)[0m   [0mSELECT * FROM list_types [0m
+  [4;36;1mListItem Columns (0.002967)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListType Columns (0.087543)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListItem Load (0.000344)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000281)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000232)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000226)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000235)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000225)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.11515 (8 reqs/sec) | Rendering: 0.02181 (18%) | DB: 0.09242 (80%) | 200 OK [http://localhost/]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-08-30 21:47:56) [GET]
+  Session ID: 28d40b8d3ba26b5e26cd9d38c9565abd
+  Parameters: {"action"=>"list", "controller"=>"list"}
+Rendering  within layouts/list
+Rendering list/list
+  [4;36;1mListType Load (0.000308)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListItem Columns (0.002523)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListType Columns (0.001669)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListItem Load (0.000325)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 1) [0m
+  [4;36;1mListItem Load (0.000229)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 2) [0m
+  [4;35;1mListItem Load (0.000204)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 3) [0m
+  [4;36;1mListItem Load (0.000210)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 4) [0m
+  [4;35;1mListItem Load (0.000190)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 5) [0m
+  [4;36;1mListItem Load (0.000187)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.02628 (38 reqs/sec) | Rendering: 0.01936 (73%) | DB: 0.00585 (22%) | 200 OK [http://localhost/]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-08-30 21:47:57) [GET]
+  Session ID: 28d40b8d3ba26b5e26cd9d38c9565abd
+  Parameters: {"action"=>"list", "controller"=>"list"}
+Rendering  within layouts/list
+Rendering list/list
+  [4;35;1mListType Load (0.000301)[0m   [0mSELECT * FROM list_types [0m
+  [4;36;1mListItem Columns (0.003004)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListType Columns (0.001898)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListItem Load (0.000507)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000229)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000210)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000222)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000210)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000223)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.02715 (36 reqs/sec) | Rendering: 0.01948 (71%) | DB: 0.00680 (25%) | 200 OK [http://localhost/]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-08-30 21:49:09) [GET]
+  Session ID: 28d40b8d3ba26b5e26cd9d38c9565abd
+  Parameters: {"action"=>"list", "controller"=>"list"}
+Rendering  within layouts/list
+Rendering list/list
+  [4;36;1mListType Load (0.000313)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListItem Columns (0.003186)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListType Columns (0.001669)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListItem Load (0.000373)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 1) [0m
+  [4;36;1mListItem Load (0.000219)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 2) [0m
+  [4;35;1mListItem Load (0.000206)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 3) [0m
+  [4;36;1mListItem Load (0.000208)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 4) [0m
+  [4;35;1mListItem Load (0.000197)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 5) [0m
+  [4;36;1mListItem Load (0.000207)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.02768 (36 reqs/sec) | Rendering: 0.02026 (73%) | DB: 0.00658 (23%) | 200 OK [http://localhost/]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-08-30 21:49:10) [GET]
+  Session ID: 28d40b8d3ba26b5e26cd9d38c9565abd
+  Parameters: {"action"=>"list", "controller"=>"list"}
+Rendering  within layouts/list
+Rendering list/list
+  [4;35;1mListType Load (0.000299)[0m   [0mSELECT * FROM list_types [0m
+  [4;36;1mListItem Columns (0.003042)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListType Columns (0.001741)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListItem Load (0.000320)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000238)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000226)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000241)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000311)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000262)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 3 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.02805 (35 reqs/sec) | Rendering: 0.02048 (73%) | DB: 0.00668 (23%) | 200 OK [http://localhost/]
