@@ -28,9 +28,9 @@
 				<% listTypes = ListType.find(:all) %>
 				<% for listType in listTypes %> 
 					<td>
-						<div class="listTypeItem">
-							(<%=ListItem.find_all_by_user_id_and_list_type_id(session[:user], listType).size%>)
-							<%= listType.name %>
+						<div class="listTypeItem" id="listType_<%=listType.id%>">
+							<%listTypeString = "(" + ListItem.find_all_by_user_id_and_list_type_id(session[:user], listType).size.to_s + ")" + listType.name %>
+							<%= link_to_remote listTypeString, :url => {:action => :activate_list, :id => listType } %>
 							&nbsp;&nbsp;&nbsp;
 						</div>
 					</td>	
