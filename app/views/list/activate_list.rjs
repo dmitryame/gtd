@@ -1,10 +1,12 @@
 #highlights active list, dehighlights the other lists
 for listType in ListType.find(:all) 
-    page["listType_#{listType.id}"].visual_effect :highlight, 
-          :startcolor => "#ffffff", :endcolor => "#ffffff",  :restorecolor => true
+  page["listType_#{listType.id}"]['style'].background = '#ffffff'
+#    page["listType_#{listType.id}"].visual_effect :highlight, 
+#          :startcolor => "#ffffff", :endcolor => "#ffffff",  :restorecolor => true
     
 end
-page["listType_#{@listType.id}"].visual_effect :highlight, 
-      :startcolor => "#ffffff", :endcolor => "#00af00",  :restorecolor => true
-      page["listType_#{@listType.id}"].visual_effect :blindDown
+#page["listType_#{@listType.id}"].visual_effect :highlight, 
+#      :startcolor => "#ffffff", :endcolor => "#00af00",  :restorecolor => true
 
+page["listType_#{@listType.id}"]['style'].background = '#00af00'
+page["listType_#{@listType.id}"].visual_effect :blindDown
