@@ -28,11 +28,20 @@
 				<% listTypes = ListType.find(:all) %>
 				<% for listType in listTypes %> 
 					<td>
-						<div class="listTypeItem" id="listType_<%=listType.id%>">
-							<%listTypeString = "(" + ListItem.find_all_by_user_id_and_list_type_id(session[:user], listType).size.to_s + ")" + listType.name %>
-							<%= link_to_remote listTypeString, :url => {:action => :activate_list, :id => listType } %>
-							&nbsp;&nbsp;&nbsp;
+						<table>
+							<tr>
+								<td>
+						<div id="listType_count_<%=listType.id%>">
+							(<%=ListItem.find_all_by_user_id_and_list_type_id(session[:user_id], listType.id).size%>)
 						</div>
+								</td>
+								<td>
+						<div class="listTypeItem" id="listType_<%=listType.id%>" <%= (session[:list_type_id] == listType.id)? 'style="background:LightSeaGreen"':''%>>
+							<%= link_to_remote listType.name, :url => {:action => :activate_list, :id => listType } %>
+						</div>
+								</td>
+							</tr>
+						</table>
 					</td>	
 					
 				<% end %>

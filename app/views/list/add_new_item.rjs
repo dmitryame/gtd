@@ -1,0 +1,5 @@
+listType = ListType.find(session[:list_type_id])
+
+page["listType_count_#{session[:list_type_id]}"].replace_html "(" + ListItem.find_all_by_user_id_and_list_type_id(session[:user_id], listType.id).size.to_s + ")"
+
+page["listType_#{session[:list_type_id]}"]['style'].background = 'Yellow'

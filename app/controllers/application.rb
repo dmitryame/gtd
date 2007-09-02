@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   before_filter :check_authentication, :except => [:signin, :register]
   
   def check_authentication
-    unless session[:user]
+    unless session[:user_id]
       redirect_to :controller => "user", :action => "signin"
     end
   end

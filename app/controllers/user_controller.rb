@@ -6,10 +6,10 @@ class UserController < ApplicationController
       print params[:password] 
       user = User.authenticate(params[:name], params[:password])
       if user.blank?
-        session[:user] = nil
+          session[:user_id] = nil
         flash[:notice] = "Name or Password invalid";
       else
-        session[:user] = user.id
+        session[:user_id] = user.id
         redirect_to :action => "list", :controller => "list"
       end
     end
@@ -19,7 +19,7 @@ class UserController < ApplicationController
     @user = User.new(params[:user])
     if request.post? and @user.save
       flash.now[:notice] = "User #{@user.name} created"
-      session[:user] = @user.id
+      session[:user_id] = @user.id
       redirect_to :action => "list", :controller => "list"
     end
   end

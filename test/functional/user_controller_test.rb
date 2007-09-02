@@ -17,7 +17,7 @@ class UserControllerTest < Test::Unit::TestCase
   def test_signin
     dmitry                        =  users(:dmitry)
     post :signin, :name => dmitry.name, :password => "dmitry1234"
-    assert_equal dmitry.id, session[:user]
+    assert_equal dmitry.id, session[:user_id]
   end
   
   
