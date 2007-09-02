@@ -3,12 +3,12 @@ pick_up_the_phone:
   id: 1
   description: pick up the phone
   list_item_id: 1
-  order: 1
+  sort_order: 1
   level: 1
   remind_at: 20071212101010
 dial_the_phone:
   id: 2
   description: dial the phone
   list_item_id: 1
-  order: 2
+  sort_order: 2
   level: 1
