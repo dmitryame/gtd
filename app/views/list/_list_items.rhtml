@@ -1,0 +1,7 @@
+<ul id='all_list_items'>
+	<%@listItems.each do |item|%>
+		<% domid = "list_item_#{item.id}"%>
+		<li class="list_item" id='<%=domid%>'><%=item.description%></li>
+		<%= draggable_element(domid, :ghosting=>true, :revert=>true)%>
+	<%end%>
+</ul>

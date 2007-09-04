@@ -30287,3 +30287,1592 @@ Rendering list/add_new_item
   [4;36;1mListType Load (0.000914)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 6) [0m
   [4;35;1mListItem Load (0.000430)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
 Completed in 0.03357 (29 reqs/sec) | Rendering: 0.01161 (34%) | DB: 0.00738 (21%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-02 09:55:02) [GET]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003288)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000738)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) ORDER BY sort_order DESC[0m
+Rendering  within layouts/list
+Rendering list/list
+  [4;36;1mListType Load (0.000304)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListType Columns (0.001679)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListItem Load (0.000925)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000935)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000866)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000627)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000512)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000509)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.04030 (24 reqs/sec) | Rendering: 0.02113 (52%) | DB: 0.01038 (25%) | 200 OK [http://localhost/list/list]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-02 09:55:04) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"3", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002194)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000540)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 3) [0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000289)[0m   [0;1mSELECT * FROM list_types [0m
+Completed in 0.01568 (63 reqs/sec) | Rendering: 0.00600 (38%) | DB: 0.00302 (19%) | 200 OK [http://localhost/list/activate_list/3]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-02 09:55:07) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.003048)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.000528)[0m   [0;1mSELECT max(sort_order) AS max_sort_order FROM list_items WHERE (user_id = 1 and list_type_id = 3) [0m
+  [4;35;1mSQL (0.000099)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000310)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `sort_order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-09-02 09:55:07', 0, NULL, 89, NULL, 1, 3, '2007-09-02 09:55:07')[0m
+  [4;35;1mSQL (0.024072)[0m   [0mCOMMIT[0m
+Rendering list/add_new_item
+  [4;36;1mListType Columns (0.001733)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000239)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 3) [0m
+  [4;36;1mListItem Load (0.000664)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+Completed in 0.06230 (16 reqs/sec) | Rendering: 0.01616 (25%) | DB: 0.03069 (49%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-02 09:55:08) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002681)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000394)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000283)[0m   [0mSELECT * FROM list_types [0m
+Completed in 0.01681 (59 reqs/sec) | Rendering: 0.00571 (33%) | DB: 0.00336 (19%) | 200 OK [http://localhost/list/activate_list/2]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-02 09:55:10) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.002974)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000515)[0m   [0mSELECT max(sort_order) AS max_sort_order FROM list_items WHERE (user_id = 1 and list_type_id = 2) [0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000308)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `sort_order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-09-02 09:55:10', 0, NULL, 57, NULL, 1, 2, '2007-09-02 09:55:10')[0m
+  [4;36;1mSQL (0.000725)[0m   [0;1mCOMMIT[0m
+Rendering list/add_new_item
+  [4;35;1mListType Columns (0.001573)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.001139)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;35;1mListItem Load (0.000529)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+Completed in 0.03784 (26 reqs/sec) | Rendering: 0.01420 (37%) | DB: 0.00786 (20%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-02 09:55:12) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002442)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000470)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000289)[0m   [0;1mSELECT * FROM list_types [0m
+Completed in 0.01752 (57 reqs/sec) | Rendering: 0.00603 (34%) | DB: 0.00320 (18%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-02 09:55:13) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.002987)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.001536)[0m   [0;1mSELECT max(sort_order) AS max_sort_order FROM list_items WHERE (user_id = 1 and list_type_id = 1) [0m
+  [4;35;1mSQL (0.000106)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000280)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `sort_order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-09-02 09:55:13', 0, NULL, 18, NULL, 1, 1, '2007-09-02 09:55:13')[0m
+  [4;35;1mSQL (0.000942)[0m   [0mCOMMIT[0m
+Rendering list/add_new_item
+  [4;36;1mListType Columns (0.001820)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000638)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000652)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+Completed in 0.03916 (25 reqs/sec) | Rendering: 0.01541 (39%) | DB: 0.00896 (22%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-02 09:55:14) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.003034)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.000487)[0m   [0;1mSELECT max(sort_order) AS max_sort_order FROM list_items WHERE (user_id = 1 and list_type_id = 1) [0m
+  [4;35;1mSQL (0.000098)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000262)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `sort_order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-09-02 09:55:14', 0, NULL, 19, NULL, 1, 1, '2007-09-02 09:55:14')[0m
+  [4;35;1mSQL (0.000809)[0m   [0mCOMMIT[0m
+Rendering list/add_new_item
+  [4;36;1mListType Columns (0.002016)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000421)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000664)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+Completed in 0.03750 (26 reqs/sec) | Rendering: 0.01568 (41%) | DB: 0.00779 (20%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-02 09:55:16) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"5", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002359)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.001464)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 5) [0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000265)[0m   [0mSELECT * FROM list_types [0m
+Completed in 0.08020 (12 reqs/sec) | Rendering: 0.00549 (6%) | DB: 0.00409 (5%) | 200 OK [http://localhost/list/activate_list/5]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-02 09:55:18) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003013)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.002104)[0m   [0mSELECT max(sort_order) AS max_sort_order FROM list_items WHERE (user_id = 1 and list_type_id = 5) [0m
+  [4;36;1mSQL (0.000236)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000388)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `sort_order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-09-02 09:55:18', 0, NULL, 4, NULL, 1, 5, '2007-09-02 09:55:18')[0m
+  [4;36;1mSQL (0.000755)[0m   [0;1mCOMMIT[0m
+Rendering list/add_new_item
+  [4;35;1mListType Columns (0.001720)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.001251)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 5) [0m
+  [4;35;1mListItem Load (0.000475)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+Completed in 0.04182 (23 reqs/sec) | Rendering: 0.01543 (36%) | DB: 0.00994 (23%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-02 09:55:19) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003087)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000485)[0m   [0mSELECT max(sort_order) AS max_sort_order FROM list_items WHERE (user_id = 1 and list_type_id = 5) [0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000262)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `sort_order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-09-02 09:55:19', 0, NULL, 5, NULL, 1, 5, '2007-09-02 09:55:19')[0m
+  [4;36;1mSQL (0.000893)[0m   [0;1mCOMMIT[0m
+Rendering list/add_new_item
+  [4;35;1mListType Columns (0.002207)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000401)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 5) [0m
+  [4;35;1mListItem Load (0.000602)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+Completed in 0.03895 (25 reqs/sec) | Rendering: 0.01529 (39%) | DB: 0.00803 (20%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-02 09:55:20) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.004326)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.001775)[0m   [0mSELECT max(sort_order) AS max_sort_order FROM list_items WHERE (user_id = 1 and list_type_id = 5) [0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000721)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `sort_order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-09-02 09:55:20', 0, NULL, 6, NULL, 1, 5, '2007-09-02 09:55:20')[0m
+  [4;36;1mSQL (0.000811)[0m   [0;1mCOMMIT[0m
+Rendering list/add_new_item
+  [4;35;1mListType Columns (0.002199)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000550)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 5) [0m
+  [4;35;1mListItem Load (0.000607)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+Completed in 0.03771 (26 reqs/sec) | Rendering: 0.01308 (34%) | DB: 0.01108 (29%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-02 21:05:41) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002420)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001141)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000302)[0m   [0;1mSELECT * FROM list_types [0m
+Completed in 0.01942 (51 reqs/sec) | Rendering: 0.00869 (44%) | DB: 0.00386 (19%) | 200 OK [http://localhost/list/activate_list/2]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-02 21:05:43) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"3", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002524)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000914)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 3) [0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000287)[0m   [0mSELECT * FROM list_types [0m
+Completed in 0.01671 (59 reqs/sec) | Rendering: 0.00596 (35%) | DB: 0.00373 (22%) | 200 OK [http://localhost/list/activate_list/3]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-02 21:05:44) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002282)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000528)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000499)[0m   [0;1mSELECT * FROM list_types [0m
+Completed in 0.01754 (57 reqs/sec) | Rendering: 0.00670 (38%) | DB: 0.00331 (18%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 22:03:38) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mSQL (0.057159)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.019376)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mListType Columns (0.121629)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.016461)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000354)[0m   [0;1mSELECT * FROM list_types [0m
+Completed in 0.62626 (1 reqs/sec) | Rendering: 0.02470 (3%) | DB: 0.21498 (34%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 22:03:39) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002331)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000317)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000285)[0m   [0mSELECT * FROM list_types [0m
+Completed in 0.01521 (65 reqs/sec) | Rendering: 0.00578 (37%) | DB: 0.00293 (19%) | 200 OK [http://localhost/list/activate_list/2]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 22:03:40) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002307)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000635)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000289)[0m   [0;1mSELECT * FROM list_types [0m
+Completed in 0.01513 (66 reqs/sec) | Rendering: 0.00579 (38%) | DB: 0.00323 (21%) | 200 OK [http://localhost/list/activate_list/2]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 22:03:41) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002638)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000337)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000291)[0m   [0mSELECT * FROM list_types [0m
+Completed in 0.07334 (13 reqs/sec) | Rendering: 0.00566 (7%) | DB: 0.00327 (4%) | 200 OK [http://localhost/list/activate_list/1]
+  [4;36;1mSQL (0.000170)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.047480)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000651)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.048568)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.011583)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.027593)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000635)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001516)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mSQL (0.000979)[0m   [0mSHOW KEYS FROM list_types[0m
+  [4;36;1mSQL (0.042883)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000444)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000213)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000159)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.340191)[0m   [0;1mDROP DATABASE IF EXISTS `gtd_test`[0m
+  [4;35;1mSQL (0.025475)[0m   [0mCREATE DATABASE `gtd_test`[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000129)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'action_items': DROP TABLE action_items[0m
+  [4;35;1mSQL (0.044047)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `list_item_id` int(11) NOT NULL, `sort_order` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_items': DROP TABLE list_items[0m
+  [4;35;1mSQL (0.002593)[0m   [0mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `user_id` int(11) NOT NULL, `list_type_id` int(11) NOT NULL, `sort_order` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_types': DROP TABLE list_types[0m
+  [4;35;1mSQL (0.002594)[0m   [0mCREATE TABLE list_types (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.005057)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `hashed_password` varchar(255) DEFAULT NULL, `salt` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001995)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.001859)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001837)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+  [4;35;1mSQL (0.006722)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000090)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000181)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000121)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000359)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateActionItems (4)
+  [4;35;1mSQL (0.002175)[0m   [0mDROP TABLE action_items[0m
+  [4;36;1mSQL (0.000390)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.000203)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateListTypes (3)
+  [4;36;1mSQL (0.001843)[0m   [0;1mDROP TABLE list_types[0m
+  [4;35;1mSQL (0.000300)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000189)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateListItems (2)
+  [4;35;1mSQL (0.001737)[0m   [0mDROP TABLE list_items[0m
+  [4;36;1mSQL (0.000301)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000184)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateUsers (1)
+  [4;36;1mSQL (0.002191)[0m   [0;1mDROP TABLE users[0m
+  [4;35;1mSQL (0.000310)[0m   [0mUPDATE schema_info SET version = 0[0m
+  [4;36;1mSQL (0.000714)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000411)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000235)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateUsers (1)
+  [4;35;1mSQL (0.002867)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `hashed_password` varchar(255) DEFAULT NULL, `salt` varchar(255) DEFAULT NULL, `email` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000335)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000192)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateListItems (2)
+  [4;36;1mSQL (0.090793)[0m   [0;1mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `user_id` int(11) NOT NULL, `list_type_id` int(11) NOT NULL, `sort_order` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000383)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000206)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateListTypes (3)
+  [4;35;1mSQL (0.002445)[0m   [0mCREATE TABLE list_types (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mListType Columns (0.001984)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mSQL (0.000154)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000238)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('in')[0m
+  [4;35;1mSQL (0.000538)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000212)[0m   [0mUPDATE list_types SET `name` = 'in' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000087)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('actionable')[0m
+  [4;35;1mSQL (0.000594)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000070)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000225)[0m   [0mUPDATE list_types SET `name` = 'actionable' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000108)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000198)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('maybe')[0m
+  [4;35;1mSQL (0.000539)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000099)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000210)[0m   [0mUPDATE list_types SET `name` = 'maybe' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.000097)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000084)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000192)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('references')[0m
+  [4;35;1mSQL (0.000699)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000121)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000262)[0m   [0mUPDATE list_types SET `name` = 'references' WHERE `id` = 4[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000088)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000197)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('trash')[0m
+  [4;35;1mSQL (0.000564)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000086)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000219)[0m   [0mUPDATE list_types SET `name` = 'trash' WHERE `id` = 5[0m
+  [4;36;1mSQL (0.000120)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000192)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('complete')[0m
+  [4;35;1mSQL (0.000592)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000106)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000217)[0m   [0mUPDATE list_types SET `name` = 'complete' WHERE `id` = 6[0m
+  [4;36;1mSQL (0.000100)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000265)[0m   [0mUPDATE schema_info SET version = 3[0m
+  [4;36;1mSQL (0.000216)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateActionItems (4)
+  [4;35;1mSQL (0.003148)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `list_item_id` int(11) NOT NULL, `sort_order` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000321)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;35;1mSQL (0.000220)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000459)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002355)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mSQL (0.000578)[0m   [0;1mSHOW KEYS FROM action_items[0m
+  [4;35;1mSQL (0.002392)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.000387)[0m   [0;1mSHOW KEYS FROM list_items[0m
+  [4;35;1mSQL (0.001508)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mSQL (0.000681)[0m   [0;1mSHOW KEYS FROM list_types[0m
+  [4;35;1mSQL (0.002049)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mSQL (0.000365)[0m   [0;1mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000182)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000373)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002899)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.000417)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.002090)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000314)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001455)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mSQL (0.000728)[0m   [0mSHOW KEYS FROM list_types[0m
+  [4;36;1mSQL (0.001736)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000326)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000121)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000133)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.007437)[0m   [0;1mDROP DATABASE IF EXISTS `gtd_test`[0m
+  [4;35;1mSQL (0.000514)[0m   [0mCREATE DATABASE `gtd_test`[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000146)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'action_items': DROP TABLE action_items[0m
+  [4;35;1mSQL (0.002882)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `list_item_id` int(11) NOT NULL, `sort_order` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_items': DROP TABLE list_items[0m
+  [4;35;1mSQL (0.002344)[0m   [0mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `user_id` int(11) NOT NULL, `list_type_id` int(11) NOT NULL, `sort_order` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_types': DROP TABLE list_types[0m
+  [4;35;1mSQL (0.002712)[0m   [0mCREATE TABLE list_types (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.003486)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `hashed_password` varchar(255) DEFAULT NULL, `salt` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001983)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000599)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001833)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+  [4;35;1mSQL (0.001737)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000157)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000181)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000373)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002954)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.000393)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.002109)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000367)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001457)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mSQL (0.000498)[0m   [0mSHOW KEYS FROM list_types[0m
+  [4;36;1mSQL (0.001780)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000346)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000130)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.008245)[0m   [0;1mDROP DATABASE IF EXISTS `gtd_test`[0m
+  [4;35;1mSQL (0.000429)[0m   [0mCREATE DATABASE `gtd_test`[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000130)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'action_items': DROP TABLE action_items[0m
+  [4;35;1mSQL (0.003027)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `list_item_id` int(11) NOT NULL, `sort_order` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_items': DROP TABLE list_items[0m
+  [4;35;1mSQL (0.002895)[0m   [0mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `user_id` int(11) NOT NULL, `list_type_id` int(11) NOT NULL, `sort_order` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_types': DROP TABLE list_types[0m
+  [4;35;1mSQL (0.002051)[0m   [0mCREATE TABLE list_types (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.003211)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `hashed_password` varchar(255) DEFAULT NULL, `salt` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001971)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000603)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001843)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+  [4;35;1mSQL (0.000913)[0m   [0mUPDATE schema_info SET version = 4[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 23:38:21) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002290)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000590)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000323)[0m   [0;1mSELECT * FROM list_types [0m
+Completed in 0.01532 (65 reqs/sec) | Rendering: 0.00567 (36%) | DB: 0.00320 (20%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 23:38:22) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002495)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.001107)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000285)[0m   [0mSELECT * FROM list_types [0m
+Completed in 0.01596 (62 reqs/sec) | Rendering: 0.00567 (35%) | DB: 0.00389 (24%) | 200 OK [http://localhost/list/activate_list/2]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 23:38:24) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"3", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002327)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000516)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 3) [0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000307)[0m   [0;1mSELECT * FROM list_types [0m
+Completed in 0.01590 (62 reqs/sec) | Rendering: 0.00632 (39%) | DB: 0.00315 (19%) | 200 OK [http://localhost/list/activate_list/3]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-03 23:38:25) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.002962)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.000324)[0m   [0;1mSELECT max(sort_order) AS max_sort_order FROM list_items WHERE (user_id = 1 and list_type_id = 3) [0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000276)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `sort_order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-09-03 23:38:25', 0, NULL, 1, NULL, 1, 3, '2007-09-03 23:38:25')[0m
+  [4;35;1mSQL (0.000925)[0m   [0mCOMMIT[0m
+Rendering list/add_new_item
+  [4;36;1mListType Columns (0.001797)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000862)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 3) [0m
+  [4;36;1mListItem Load (0.000306)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+Completed in 0.03614 (27 reqs/sec) | Rendering: 0.01494 (41%) | DB: 0.00755 (20%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 23:38:27) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"3", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002298)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000516)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 3) [0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000303)[0m   [0mSELECT * FROM list_types [0m
+Completed in 0.01667 (60 reqs/sec) | Rendering: 0.00626 (37%) | DB: 0.00312 (18%) | 200 OK [http://localhost/list/activate_list/3]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 23:38:29) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002108)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001597)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000312)[0m   [0;1mSELECT * FROM list_types [0m
+Completed in 0.01945 (51 reqs/sec) | Rendering: 0.00585 (30%) | DB: 0.00402 (20%) | 200 OK [http://localhost/list/activate_list/2]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 23:38:30) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"4", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002297)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.002177)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 4) [0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000293)[0m   [0mSELECT * FROM list_types [0m
+Completed in 0.01668 (59 reqs/sec) | Rendering: 0.00574 (34%) | DB: 0.00477 (28%) | 200 OK [http://localhost/list/activate_list/4]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-03 23:38:31) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.002997)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000348)[0m   [0mSELECT max(sort_order) AS max_sort_order FROM list_items WHERE (user_id = 1 and list_type_id = 4) [0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000293)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `sort_order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-09-03 23:38:31', 0, NULL, 1, NULL, 1, 4, '2007-09-03 23:38:31')[0m
+  [4;36;1mSQL (0.000888)[0m   [0;1mCOMMIT[0m
+Rendering list/add_new_item
+  [4;35;1mListType Columns (0.001737)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000397)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 4) [0m
+  [4;35;1mListItem Load (0.000236)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+Completed in 0.03524 (28 reqs/sec) | Rendering: 0.01442 (40%) | DB: 0.00699 (19%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-03 23:38:34) [GET]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003076)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000454)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) ORDER BY sort_order DESC[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00209)
+  [4;36;1mListType Load (0.000305)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListType Columns (0.001567)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListItem Load (0.000309)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000237)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000246)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000229)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000221)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000217)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.03696 (27 reqs/sec) | Rendering: 0.02167 (58%) | DB: 0.00686 (18%) | 200 OK [http://localhost/list/list]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 23:38:37) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002288)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000451)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000296)[0m   [0;1mSELECT * FROM list_types [0m
+Completed in 0.01576 (63 reqs/sec) | Rendering: 0.00585 (37%) | DB: 0.00304 (19%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-03 23:38:38) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.003033)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.001207)[0m   [0;1mSELECT max(sort_order) AS max_sort_order FROM list_items WHERE (user_id = 1 and list_type_id = 1) [0m
+  [4;35;1mSQL (0.000088)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000256)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `sort_order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-09-03 23:38:38', 0, NULL, 1, NULL, 1, 1, '2007-09-03 23:38:38')[0m
+  [4;35;1mSQL (0.000777)[0m   [0mCOMMIT[0m
+Rendering list/add_new_item
+  [4;36;1mListType Columns (0.002019)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000504)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000336)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+Completed in 0.03690 (27 reqs/sec) | Rendering: 0.01430 (38%) | DB: 0.00822 (22%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-03 23:38:39) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.002974)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.000355)[0m   [0;1mSELECT max(sort_order) AS max_sort_order FROM list_items WHERE (user_id = 1 and list_type_id = 1) [0m
+  [4;35;1mSQL (0.000103)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000279)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `sort_order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-09-03 23:38:39', 0, NULL, 2, NULL, 1, 1, '2007-09-03 23:38:39')[0m
+  [4;35;1mSQL (0.000766)[0m   [0mCOMMIT[0m
+Rendering list/add_new_item
+  [4;36;1mListType Columns (0.001852)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000493)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000291)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+Completed in 0.03524 (28 reqs/sec) | Rendering: 0.01452 (41%) | DB: 0.00711 (20%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 23:38:40) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002357)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000460)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000287)[0m   [0mSELECT * FROM list_types [0m
+Completed in 0.01574 (63 reqs/sec) | Rendering: 0.00623 (39%) | DB: 0.00310 (19%) | 200 OK [http://localhost/list/activate_list/2]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-03 23:38:41) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003149)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000705)[0m   [0mSELECT max(sort_order) AS max_sort_order FROM list_items WHERE (user_id = 1 and list_type_id = 2) [0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000279)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `sort_order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-09-03 23:38:41', 0, NULL, 1, NULL, 1, 2, '2007-09-03 23:38:41')[0m
+  [4;36;1mSQL (0.000967)[0m   [0;1mCOMMIT[0m
+Rendering list/add_new_item
+  [4;35;1mListType Columns (0.001896)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000470)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;35;1mListItem Load (0.000327)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+Completed in 0.03633 (27 reqs/sec) | Rendering: 0.01486 (40%) | DB: 0.00789 (21%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-03 23:38:43) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003062)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000319)[0m   [0mSELECT max(sort_order) AS max_sort_order FROM list_items WHERE (user_id = 1 and list_type_id = 2) [0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000277)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `sort_order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-09-03 23:38:43', 0, NULL, 2, NULL, 1, 2, '2007-09-03 23:38:43')[0m
+  [4;36;1mSQL (0.000785)[0m   [0;1mCOMMIT[0m
+Rendering list/add_new_item
+  [4;35;1mListType Columns (0.001766)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000484)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;35;1mListItem Load (0.000296)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+Completed in 0.03539 (28 reqs/sec) | Rendering: 0.01409 (39%) | DB: 0.00708 (20%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-03 23:38:43) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003020)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000344)[0m   [0mSELECT max(sort_order) AS max_sort_order FROM list_items WHERE (user_id = 1 and list_type_id = 2) [0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000293)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `sort_order`, `description`, `user_id`, `list_type_id`, `created_at`) VALUES(NULL, '2007-09-03 23:38:43', 0, NULL, 3, NULL, 1, 2, '2007-09-03 23:38:43')[0m
+  [4;36;1mSQL (0.000869)[0m   [0;1mCOMMIT[0m
+Rendering list/add_new_item
+  [4;35;1mListType Columns (0.001755)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000633)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;35;1mListItem Load (0.000270)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+Completed in 0.03530 (28 reqs/sec) | Rendering: 0.01420 (40%) | DB: 0.00730 (20%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 23:38:45) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002344)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000545)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000290)[0m   [0;1mSELECT * FROM list_types [0m
+Completed in 0.01517 (65 reqs/sec) | Rendering: 0.00584 (38%) | DB: 0.00318 (20%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 23:38:46) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002331)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.001412)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000318)[0m   [0mSELECT * FROM list_types [0m
+Completed in 0.01699 (58 reqs/sec) | Rendering: 0.00627 (36%) | DB: 0.00406 (23%) | 200 OK [http://localhost/list/activate_list/2]
+  [4;36;1mSQL (0.000145)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000182)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000370)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002410)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.099429)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.002741)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000416)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001528)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mSQL (0.000682)[0m   [0mSHOW KEYS FROM list_types[0m
+  [4;36;1mSQL (0.001831)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000353)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000095)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.028715)[0m   [0;1mDROP DATABASE IF EXISTS `gtd_test`[0m
+  [4;35;1mSQL (0.000547)[0m   [0mCREATE DATABASE `gtd_test`[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000130)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'action_items': DROP TABLE action_items[0m
+  [4;35;1mSQL (0.002383)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `list_item_id` int(11) NOT NULL, `sort_order` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_items': DROP TABLE list_items[0m
+  [4;35;1mSQL (0.002955)[0m   [0mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `user_id` int(11) NOT NULL, `list_type_id` int(11) NOT NULL, `sort_order` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_types': DROP TABLE list_types[0m
+  [4;35;1mSQL (0.002541)[0m   [0mCREATE TABLE list_types (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.003492)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `hashed_password` varchar(255) DEFAULT NULL, `salt` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001848)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000574)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001766)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+  [4;35;1mSQL (0.000536)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000148)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000093)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000196)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000126)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000188)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateActionItems (4)
+  [4;35;1mSQL (0.002281)[0m   [0mDROP TABLE action_items[0m
+  [4;36;1mSQL (0.000309)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.000188)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateListTypes (3)
+  [4;36;1mSQL (0.001877)[0m   [0;1mDROP TABLE list_types[0m
+  [4;35;1mSQL (0.000326)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000192)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateListItems (2)
+  [4;35;1mSQL (0.001613)[0m   [0mDROP TABLE list_items[0m
+  [4;36;1mSQL (0.000344)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000195)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateUsers (1)
+  [4;36;1mSQL (0.033107)[0m   [0;1mDROP TABLE users[0m
+  [4;35;1mSQL (0.000357)[0m   [0mUPDATE schema_info SET version = 0[0m
+  [4;36;1mSQL (0.000233)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000409)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000090)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000221)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateUsers (1)
+  [4;35;1mSQL (0.002974)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `hashed_password` varchar(255) DEFAULT NULL, `salt` varchar(255) DEFAULT NULL, `email` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000409)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000209)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateListItems (2)
+  [4;36;1mSQL (0.002735)[0m   [0;1mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `user_id` int(11) NOT NULL, `list_type_id` int(11) NOT NULL, `sort_order` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000503)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000184)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateListTypes (3)
+  [4;35;1mSQL (0.001968)[0m   [0mCREATE TABLE list_types (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mListType Columns (0.001897)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mSQL (0.001248)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000264)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('in')[0m
+  [4;35;1mSQL (0.000671)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000075)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000210)[0m   [0mUPDATE list_types SET `name` = 'in' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.000085)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000068)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000156)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('actionable')[0m
+  [4;35;1mSQL (0.000527)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000191)[0m   [0mUPDATE list_types SET `name` = 'actionable' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000088)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000173)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('maybe')[0m
+  [4;35;1mSQL (0.000645)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000215)[0m   [0mUPDATE list_types SET `name` = 'maybe' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000096)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000176)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('references')[0m
+  [4;35;1mSQL (0.000566)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000084)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000232)[0m   [0mUPDATE list_types SET `name` = 'references' WHERE `id` = 4[0m
+  [4;36;1mSQL (0.000099)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000097)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('trash')[0m
+  [4;35;1mSQL (0.000642)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000215)[0m   [0mUPDATE list_types SET `name` = 'trash' WHERE `id` = 5[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000087)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000171)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('complete')[0m
+  [4;35;1mSQL (0.000655)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000097)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000195)[0m   [0mUPDATE list_types SET `name` = 'complete' WHERE `id` = 6[0m
+  [4;36;1mSQL (0.000102)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000268)[0m   [0mUPDATE schema_info SET version = 3[0m
+  [4;36;1mSQL (0.000193)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateActionItems (4)
+  [4;35;1mSQL (0.003526)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `list_item_id` int(11) NOT NULL, `sort_order` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000338)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;35;1mSQL (0.000257)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000474)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002531)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mSQL (0.000448)[0m   [0;1mSHOW KEYS FROM action_items[0m
+  [4;35;1mSQL (0.002473)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.001471)[0m   [0;1mSHOW KEYS FROM list_items[0m
+  [4;35;1mSQL (0.001485)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mSQL (0.001376)[0m   [0;1mSHOW KEYS FROM list_types[0m
+  [4;35;1mSQL (0.002070)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mSQL (0.000359)[0m   [0;1mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000090)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000184)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000121)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateActionItems (4)
+  [4;35;1mSQL (0.002992)[0m   [0mDROP TABLE action_items[0m
+  [4;36;1mSQL (0.000302)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.000169)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateListTypes (3)
+  [4;36;1mSQL (0.001935)[0m   [0;1mDROP TABLE list_types[0m
+  [4;35;1mSQL (0.000451)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000294)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateListItems (2)
+  [4;35;1mSQL (0.002504)[0m   [0mDROP TABLE list_items[0m
+  [4;36;1mSQL (0.000315)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000191)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateUsers (1)
+  [4;36;1mSQL (0.001630)[0m   [0;1mDROP TABLE users[0m
+  [4;35;1mSQL (0.000300)[0m   [0mUPDATE schema_info SET version = 0[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000423)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000089)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000239)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateUsers (1)
+  [4;35;1mSQL (0.003632)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `hashed_password` varchar(255) DEFAULT NULL, `salt` varchar(255) DEFAULT NULL, `email` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000341)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000216)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateListItems (2)
+  [4;36;1mSQL (0.002666)[0m   [0;1mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `user_id` int(11) NOT NULL, `list_type_id` int(11) NOT NULL, `sort_order` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000313)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000214)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateListTypes (3)
+  [4;35;1mSQL (0.002874)[0m   [0mCREATE TABLE list_types (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mListType Columns (0.001969)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mSQL (0.000234)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000257)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('in')[0m
+  [4;35;1mSQL (0.000742)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000081)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000218)[0m   [0mUPDATE list_types SET `name` = 'in' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.000360)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000106)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000181)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('actionable')[0m
+  [4;35;1mSQL (0.000660)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000228)[0m   [0mUPDATE list_types SET `name` = 'actionable' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.000121)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000205)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('maybe')[0m
+  [4;35;1mSQL (0.000695)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000220)[0m   [0mUPDATE list_types SET `name` = 'maybe' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000106)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('references')[0m
+  [4;35;1mSQL (0.000580)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000196)[0m   [0mUPDATE list_types SET `name` = 'references' WHERE `id` = 4[0m
+  [4;36;1mSQL (0.000131)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000069)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('trash')[0m
+  [4;35;1mSQL (0.000649)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000235)[0m   [0mUPDATE list_types SET `name` = 'trash' WHERE `id` = 5[0m
+  [4;36;1mSQL (0.000099)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000164)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('complete')[0m
+  [4;35;1mSQL (0.000600)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000084)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000175)[0m   [0mUPDATE list_types SET `name` = 'complete' WHERE `id` = 6[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000258)[0m   [0mUPDATE schema_info SET version = 3[0m
+  [4;36;1mSQL (0.000199)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateActionItems (4)
+  [4;35;1mSQL (0.047214)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `list_item_id` int(11) NOT NULL, `position` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000547)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;35;1mSQL (0.000402)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000481)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002477)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mSQL (0.000376)[0m   [0;1mSHOW KEYS FROM action_items[0m
+  [4;35;1mSQL (0.002305)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.000366)[0m   [0;1mSHOW KEYS FROM list_items[0m
+  [4;35;1mSQL (0.001613)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mSQL (0.000547)[0m   [0;1mSHOW KEYS FROM list_types[0m
+  [4;35;1mSQL (0.001840)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mSQL (0.001480)[0m   [0;1mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000156)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000181)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000373)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002849)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.000404)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.002203)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000358)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001481)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mSQL (0.000507)[0m   [0mSHOW KEYS FROM list_types[0m
+  [4;36;1mSQL (0.001770)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000356)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000139)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.007957)[0m   [0;1mDROP DATABASE IF EXISTS `gtd_test`[0m
+  [4;35;1mSQL (0.000480)[0m   [0mCREATE DATABASE `gtd_test`[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000113)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'action_items': DROP TABLE action_items[0m
+  [4;35;1mSQL (0.002758)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `list_item_id` int(11) NOT NULL, `position` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_items': DROP TABLE list_items[0m
+  [4;35;1mSQL (0.002903)[0m   [0mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `user_id` int(11) NOT NULL, `list_type_id` int(11) NOT NULL, `sort_order` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_types': DROP TABLE list_types[0m
+  [4;35;1mSQL (0.002178)[0m   [0mCREATE TABLE list_types (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.003444)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `hashed_password` varchar(255) DEFAULT NULL, `salt` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.002024)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000599)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001614)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+  [4;35;1mSQL (0.001123)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000179)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000513)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002907)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.000395)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.002001)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000360)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001524)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mSQL (0.000529)[0m   [0mSHOW KEYS FROM list_types[0m
+  [4;36;1mSQL (0.001824)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000335)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000129)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.007804)[0m   [0;1mDROP DATABASE IF EXISTS `gtd_test`[0m
+  [4;35;1mSQL (0.000461)[0m   [0mCREATE DATABASE `gtd_test`[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000130)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'action_items': DROP TABLE action_items[0m
+  [4;35;1mSQL (0.002355)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `list_item_id` int(11) NOT NULL, `position` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_items': DROP TABLE list_items[0m
+  [4;35;1mSQL (0.003026)[0m   [0mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `user_id` int(11) NOT NULL, `list_type_id` int(11) NOT NULL, `sort_order` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_types': DROP TABLE list_types[0m
+  [4;35;1mSQL (0.002206)[0m   [0mCREATE TABLE list_types (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.003024)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `hashed_password` varchar(255) DEFAULT NULL, `salt` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.002008)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000578)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001797)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+  [4;35;1mSQL (0.000642)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000148)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000089)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000171)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000121)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000193)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateActionItems (4)
+  [4;35;1mSQL (0.002757)[0m   [0mDROP TABLE action_items[0m
+  [4;36;1mSQL (0.000317)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.000197)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateListTypes (3)
+  [4;36;1mSQL (0.123269)[0m   [0;1mDROP TABLE list_types[0m
+  [4;35;1mSQL (0.000384)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000206)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateListItems (2)
+  [4;35;1mSQL (0.001862)[0m   [0mDROP TABLE list_items[0m
+  [4;36;1mSQL (0.000278)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000177)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateUsers (1)
+  [4;36;1mSQL (0.001546)[0m   [0;1mDROP TABLE users[0m
+  [4;35;1mSQL (0.000291)[0m   [0mUPDATE schema_info SET version = 0[0m
+  [4;36;1mSQL (0.000205)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000390)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000237)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateUsers (1)
+  [4;35;1mSQL (0.034242)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `hashed_password` varchar(255) DEFAULT NULL, `salt` varchar(255) DEFAULT NULL, `email` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000378)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000181)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateListItems (2)
+  [4;36;1mSQL (0.003020)[0m   [0;1mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `user_id` int(11) NOT NULL, `list_type_id` int(11) NOT NULL, `position` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000323)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000195)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateListTypes (3)
+  [4;35;1mSQL (0.003143)[0m   [0mCREATE TABLE list_types (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mListType Columns (0.002244)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mSQL (0.000323)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000257)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('in')[0m
+  [4;35;1mSQL (0.000582)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000220)[0m   [0mUPDATE list_types SET `name` = 'in' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.000122)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000104)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('actionable')[0m
+  [4;35;1mSQL (0.000598)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000104)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000211)[0m   [0mUPDATE list_types SET `name` = 'actionable' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.000099)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000105)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000169)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('maybe')[0m
+  [4;35;1mSQL (0.000544)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000227)[0m   [0mUPDATE list_types SET `name` = 'maybe' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.000101)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000080)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000169)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('references')[0m
+  [4;35;1mSQL (0.000515)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000235)[0m   [0mUPDATE list_types SET `name` = 'references' WHERE `id` = 4[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000211)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('trash')[0m
+  [4;35;1mSQL (0.000607)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000237)[0m   [0mUPDATE list_types SET `name` = 'trash' WHERE `id` = 5[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000200)[0m   [0;1mINSERT INTO list_types (`name`) VALUES('complete')[0m
+  [4;35;1mSQL (0.000698)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Update (0.000223)[0m   [0mUPDATE list_types SET `name` = 'complete' WHERE `id` = 6[0m
+  [4;36;1mSQL (0.000101)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000266)[0m   [0mUPDATE schema_info SET version = 3[0m
+  [4;36;1mSQL (0.000205)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateActionItems (4)
+  [4;35;1mSQL (0.003881)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `list_item_id` int(11) NOT NULL, `position` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000312)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;35;1mSQL (0.000405)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000491)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002299)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mSQL (0.000368)[0m   [0;1mSHOW KEYS FROM action_items[0m
+  [4;35;1mSQL (0.002314)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.000325)[0m   [0;1mSHOW KEYS FROM list_items[0m
+  [4;35;1mSQL (0.001546)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mSQL (0.000502)[0m   [0;1mSHOW KEYS FROM list_types[0m
+  [4;35;1mSQL (0.001990)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mSQL (0.001497)[0m   [0;1mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000185)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000375)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002950)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.000420)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.002212)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000347)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001485)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mSQL (0.000584)[0m   [0mSHOW KEYS FROM list_types[0m
+  [4;36;1mSQL (0.001777)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000336)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000108)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.008120)[0m   [0;1mDROP DATABASE IF EXISTS `gtd_test`[0m
+  [4;35;1mSQL (0.000519)[0m   [0mCREATE DATABASE `gtd_test`[0m
+  [4;36;1mSQL (0.000121)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000107)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'action_items': DROP TABLE action_items[0m
+  [4;35;1mSQL (0.002400)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `list_item_id` int(11) NOT NULL, `position` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_items': DROP TABLE list_items[0m
+  [4;35;1mSQL (0.003145)[0m   [0mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `user_id` int(11) NOT NULL, `list_type_id` int(11) NOT NULL, `position` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_types': DROP TABLE list_types[0m
+  [4;35;1mSQL (0.002550)[0m   [0mCREATE TABLE list_types (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.002973)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `hashed_password` varchar(255) DEFAULT NULL, `salt` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001945)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000581)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001839)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+  [4;35;1mSQL (0.000714)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000164)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000093)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000391)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002781)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.000383)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.001968)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000335)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001465)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mSQL (0.000481)[0m   [0mSHOW KEYS FROM list_types[0m
+  [4;36;1mSQL (0.001841)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000343)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000090)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.007718)[0m   [0;1mDROP DATABASE IF EXISTS `gtd_test`[0m
+  [4;35;1mSQL (0.000518)[0m   [0mCREATE DATABASE `gtd_test`[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000124)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'action_items': DROP TABLE action_items[0m
+  [4;35;1mSQL (0.002958)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `list_item_id` int(11) NOT NULL, `position` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_items': DROP TABLE list_items[0m
+  [4;35;1mSQL (0.003115)[0m   [0mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `user_id` int(11) NOT NULL, `list_type_id` int(11) NOT NULL, `position` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_types': DROP TABLE list_types[0m
+  [4;35;1mSQL (0.002133)[0m   [0mCREATE TABLE list_types (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.003731)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `hashed_password` varchar(255) DEFAULT NULL, `salt` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.002065)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000580)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001829)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+  [4;35;1mSQL (0.000545)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000100)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000185)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000374)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002832)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.000382)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.001987)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000320)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001537)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mSQL (0.000519)[0m   [0mSHOW KEYS FROM list_types[0m
+  [4;36;1mSQL (0.001847)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000351)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000130)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.008980)[0m   [0;1mDROP DATABASE IF EXISTS `gtd_test`[0m
+  [4;35;1mSQL (0.000524)[0m   [0mCREATE DATABASE `gtd_test`[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000130)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'action_items': DROP TABLE action_items[0m
+  [4;35;1mSQL (0.003014)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `list_item_id` int(11) NOT NULL, `position` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_items': DROP TABLE list_items[0m
+  [4;35;1mSQL (0.002451)[0m   [0mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `user_id` int(11) NOT NULL, `list_type_id` int(11) NOT NULL, `position` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_types': DROP TABLE list_types[0m
+  [4;35;1mSQL (0.002571)[0m   [0mCREATE TABLE list_types (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.003791)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `hashed_password` varchar(255) DEFAULT NULL, `salt` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001996)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000610)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001819)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+  [4;35;1mSQL (0.000751)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000171)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000093)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000182)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000373)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002896)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mSQL (0.095085)[0m   [0mSHOW KEYS FROM action_items[0m
+  [4;36;1mSQL (0.002553)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000389)[0m   [0mSHOW KEYS FROM list_items[0m
+  [4;36;1mSQL (0.001492)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mSQL (0.000548)[0m   [0mSHOW KEYS FROM list_types[0m
+  [4;36;1mSQL (0.001902)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000330)[0m   [0mSHOW KEYS FROM users[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000129)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.027187)[0m   [0;1mDROP DATABASE IF EXISTS `gtd_test`[0m
+  [4;35;1mSQL (0.000429)[0m   [0mCREATE DATABASE `gtd_test`[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000130)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'action_items': DROP TABLE action_items[0m
+  [4;35;1mSQL (0.002952)[0m   [0mCREATE TABLE action_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `list_item_id` int(11) NOT NULL, `position` int(11) NOT NULL, `level` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_items': DROP TABLE list_items[0m
+  [4;35;1mSQL (0.002235)[0m   [0mCREATE TABLE list_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255) DEFAULT NULL, `user_id` int(11) NOT NULL, `list_type_id` int(11) NOT NULL, `position` int(11) NOT NULL, `remind_at` datetime DEFAULT NULL, `done` tinyint(1) DEFAULT 0 NOT NULL, `resolution` varchar(255) DEFAULT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'list_types': DROP TABLE list_types[0m
+  [4;35;1mSQL (0.002542)[0m   [0mCREATE TABLE list_types (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.003723)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `hashed_password` varchar(255) DEFAULT NULL, `salt` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001653)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000508)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001605)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+  [4;35;1mSQL (0.000568)[0m   [0mUPDATE schema_info SET version = 4[0m
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-03 23:49:14) [GET]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003058)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000000)[0m   [0mMysql::Error: Unknown column 'posision' in 'order clause': SELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY posision DESC[0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: Unknown column 'posision' in 'order clause': SELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2)  ORDER BY posision DESC):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract_adapter.rb:128:in `log'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/mysql_adapter.rb:243:in `execute'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/mysql_adapter.rb:399:in `select'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:427:in `find_by_sql'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:997:in `find_every'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:1216:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:1216:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/deprecation.rb:44:in `silence'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:1216:in `method_missing'
+    .//app/controllers/list_controller.rb:4:in `list'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-03 23:49:29) [GET]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;36;1mSQL (0.000157)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000090)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mListItem Columns (0.002927)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000000)[0m   [0mMysql::Error: Unknown column 'posision' in 'order clause': SELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY posision DESC[0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: Unknown column 'posision' in 'order clause': SELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2)  ORDER BY posision DESC):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract_adapter.rb:128:in `log'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/mysql_adapter.rb:243:in `execute'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/mysql_adapter.rb:399:in `select'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:427:in `find_by_sql'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:997:in `find_every'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:1216:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:1216:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/deprecation.rb:44:in `silence'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:1216:in `method_missing'
+    .//app/controllers/list_controller.rb:4:in `list'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing UserController#signin (for 127.0.0.1 at 2007-09-03 23:49:36) [GET]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"signin", "controller"=>"user"}
+Rendering  within layouts/user
+Rendering user/signin
+Completed in 0.00595 (168 reqs/sec) | Rendering: 0.00506 (85%) | DB: 0.00317 (53%) | 200 OK [http://localhost/user/signin]
+
+
+Processing UserController#signin (for 127.0.0.1 at 2007-09-03 23:49:42) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"name"=>"dmitry", "commit"=>"Sign in", "action"=>"signin", "controller"=>"user", "password"=>"dmitry123"}
+  [4;36;1mUser Columns (0.002318)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.000270)[0m   [0mSELECT * FROM users WHERE (users.`name` = 'dmitry') LIMIT 1[0m
+Rendering  within layouts/user
+Rendering user/signin
+Completed in 0.01711 (58 reqs/sec) | Rendering: 0.00287 (16%) | DB: 0.00259 (15%) | 200 OK [http://localhost/user/signin]
+
+
+Processing UserController#register (for 127.0.0.1 at 2007-09-03 23:49:44) [GET]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"register", "controller"=>"user"}
+  [4;36;1mUser Columns (0.002209)[0m   [0;1mSHOW FIELDS FROM users[0m
+Rendering  within layouts/user
+Rendering user/register
+Completed in 0.01838 (54 reqs/sec) | Rendering: 0.00708 (38%) | DB: 0.00221 (12%) | 200 OK [http://localhost/user/register]
+
+
+Processing UserController#register (for 127.0.0.1 at 2007-09-03 23:49:57) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"user"=>{"name"=>"dmitry", "password_confirmation"=>"dmitry123", "password"=>"dmitry123", "email"=>"dmitry@custommode.com"}, "commit"=>"Add User", "action"=>"register", "controller"=>"user"}
+  [4;35;1mUser Columns (0.002735)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mSQL (0.000131)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000296)[0m   [0mSELECT * FROM users WHERE (users.name = 'dmitry') LIMIT 1[0m
+  [4;36;1mSQL (0.000250)[0m   [0;1mINSERT INTO users (`name`, `salt`, `updated_at`, `hashed_password`, `created_at`, `email`) VALUES('dmitry', '272355000.794513773662486', '2007-09-03 23:49:57', 'd6bf82b43f396bd66cc376b5015ddf5513689b99', '2007-09-03 23:49:57', 'dmitry@custommode.com')[0m
+  [4;35;1mSQL (0.000727)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/list/list
+Completed in 0.01830 (54 reqs/sec) | DB: 0.00414 (22%) | 302 Found [http://localhost/user/register]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-03 23:49:58) [GET]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003538)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000000)[0m   [0mMysql::Error: Unknown column 'posision' in 'order clause': SELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY posision DESC[0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: Unknown column 'posision' in 'order clause': SELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2)  ORDER BY posision DESC):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract_adapter.rb:128:in `log'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/mysql_adapter.rb:243:in `execute'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/mysql_adapter.rb:399:in `select'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:427:in `find_by_sql'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:997:in `find_every'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:1216:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:1216:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/deprecation.rb:44:in `silence'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:1216:in `method_missing'
+    .//app/controllers/list_controller.rb:4:in `list'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-03 23:52:09) [GET]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003041)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.085272)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY position DESC[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00089)
+  [4;36;1mListType Load (0.000303)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListType Columns (0.001829)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListItem Load (0.000300)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000224)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000219)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000208)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000208)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000244)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.12074 (8 reqs/sec) | Rendering: 0.02010 (16%) | DB: 0.09539 (78%) | 200 OK [http://localhost/list/list]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 23:52:14) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002384)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001361)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000289)[0m   [0;1mSELECT * FROM list_types [0m
+Completed in 0.01663 (60 reqs/sec) | Rendering: 0.00622 (37%) | DB: 0.00403 (24%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 23:52:16) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002312)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.001581)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000292)[0m   [0mSELECT * FROM list_types [0m
+Completed in 0.01630 (61 reqs/sec) | Rendering: 0.00598 (36%) | DB: 0.00419 (25%) | 200 OK [http://localhost/list/activate_list/2]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-03 23:52:17) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.002995)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000310)[0m   [0mSELECT max(position) AS max_position FROM list_items WHERE (user_id = 1 and list_type_id = 2) [0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Load (0.000351)[0m   [0mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mSQL (0.000270)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-03 23:52:17', 0, NULL, NULL, 1, 2, 1, '2007-09-03 23:52:17')[0m
+  [4;35;1mSQL (0.000814)[0m   [0mCOMMIT[0m
+Rendering list/add_new_item
+  [4;36;1mListType Columns (0.001930)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000592)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;36;1mListItem Load (0.000306)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+Completed in 0.03762 (26 reqs/sec) | Rendering: 0.01510 (40%) | DB: 0.00768 (20%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-03 23:52:18) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.003265)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.000322)[0m   [0;1mSELECT max(position) AS max_position FROM list_items WHERE (user_id = 1 and list_type_id = 2) [0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Load (0.000354)[0m   [0;1mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mSQL (0.000298)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-03 23:52:18', 0, NULL, NULL, 1, 2, 2, '2007-09-03 23:52:18')[0m
+  [4;36;1mSQL (0.000779)[0m   [0;1mCOMMIT[0m
+Rendering list/add_new_item
+  [4;35;1mListType Columns (0.001868)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000460)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;35;1mListItem Load (0.000297)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+Completed in 0.09691 (10 reqs/sec) | Rendering: 0.01410 (14%) | DB: 0.00774 (7%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 23:52:19) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002254)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001804)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.002697)[0m   [0;1mSELECT * FROM list_types [0m
+Completed in 0.02110 (47 reqs/sec) | Rendering: 0.00693 (32%) | DB: 0.00676 (32%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-03 23:52:20) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.002903)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.000312)[0m   [0;1mSELECT max(position) AS max_position FROM list_items WHERE (user_id = 1 and list_type_id = 1) [0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Load (0.000330)[0m   [0;1mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mSQL (0.000253)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-03 23:52:20', 0, NULL, NULL, 1, 1, 3, '2007-09-03 23:52:20')[0m
+  [4;36;1mSQL (0.000780)[0m   [0;1mCOMMIT[0m
+Rendering list/add_new_item
+  [4;35;1mListType Columns (0.001864)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000412)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;35;1mListItem Load (0.000274)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+Completed in 0.03503 (28 reqs/sec) | Rendering: 0.01346 (38%) | DB: 0.00722 (20%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-03 23:52:21) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003107)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000319)[0m   [0mSELECT max(position) AS max_position FROM list_items WHERE (user_id = 1 and list_type_id = 1) [0m
+  [4;36;1mSQL (0.000103)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Load (0.000377)[0m   [0mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mSQL (0.000245)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-03 23:52:21', 0, NULL, NULL, 1, 1, 4, '2007-09-03 23:52:21')[0m
+  [4;35;1mSQL (0.000747)[0m   [0mCOMMIT[0m
+Rendering list/add_new_item
+  [4;36;1mListType Columns (0.001577)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000246)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000236)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+Completed in 0.03528 (28 reqs/sec) | Rendering: 0.01415 (40%) | DB: 0.00696 (19%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-03 23:52:21) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.002921)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.000303)[0m   [0;1mSELECT max(position) AS max_position FROM list_items WHERE (user_id = 1 and list_type_id = 1) [0m
+  [4;35;1mSQL (0.000078)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Load (0.000302)[0m   [0;1mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mSQL (0.000210)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-03 23:52:21', 0, NULL, NULL, 1, 1, 5, '2007-09-03 23:52:21')[0m
+  [4;36;1mSQL (0.000984)[0m   [0;1mCOMMIT[0m
+Rendering list/add_new_item
+  [4;35;1mListType Columns (0.001823)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000975)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;35;1mListItem Load (0.000323)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+Completed in 0.09820 (10 reqs/sec) | Rendering: 0.07789 (79%) | DB: 0.00792 (8%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-03 23:52:22) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"3", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002347)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000433)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 3) [0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000335)[0m   [0;1mSELECT * FROM list_types [0m
+Completed in 0.01921 (52 reqs/sec) | Rendering: 0.00945 (49%) | DB: 0.00311 (16%) | 200 OK [http://localhost/list/activate_list/3]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-03 23:52:24) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.003015)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.000331)[0m   [0;1mSELECT max(position) AS max_position FROM list_items WHERE (user_id = 1 and list_type_id = 3) [0m
+  [4;35;1mSQL (0.000098)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Load (0.000417)[0m   [0;1mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mSQL (0.000264)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-03 23:52:24', 0, NULL, NULL, 1, 3, 6, '2007-09-03 23:52:24')[0m
+  [4;36;1mSQL (0.000804)[0m   [0;1mCOMMIT[0m
+Rendering list/add_new_item
+  [4;35;1mListType Columns (0.001888)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000603)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 3) [0m
+  [4;35;1mListItem Load (0.000285)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+Completed in 0.03642 (27 reqs/sec) | Rendering: 0.01445 (39%) | DB: 0.00771 (21%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-03 23:52:24) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003064)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.002222)[0m   [0mSELECT max(position) AS max_position FROM list_items WHERE (user_id = 1 and list_type_id = 3) [0m
+  [4;36;1mSQL (0.000126)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Load (0.000548)[0m   [0mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mSQL (0.000279)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-03 23:52:24', 0, NULL, NULL, 1, 3, 7, '2007-09-03 23:52:24')[0m
+  [4;35;1mSQL (0.000808)[0m   [0mCOMMIT[0m
+Rendering list/add_new_item
+  [4;36;1mListType Columns (0.001940)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000925)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 3) [0m
+  [4;36;1mListItem Load (0.000243)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+Completed in 0.04051 (24 reqs/sec) | Rendering: 0.01400 (34%) | DB: 0.01016 (25%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-03 23:52:24) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.002806)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.000315)[0m   [0;1mSELECT max(position) AS max_position FROM list_items WHERE (user_id = 1 and list_type_id = 3) [0m
+  [4;35;1mSQL (0.000078)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Load (0.000302)[0m   [0;1mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mSQL (0.000211)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-03 23:52:24', 0, NULL, NULL, 1, 3, 8, '2007-09-03 23:52:24')[0m
+  [4;36;1mSQL (0.000815)[0m   [0;1mCOMMIT[0m
+Rendering list/add_new_item
+  [4;35;1mListType Columns (0.001922)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000479)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 3) [0m
+  [4;35;1mListItem Load (0.000324)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+Completed in 0.03822 (26 reqs/sec) | Rendering: 0.01499 (39%) | DB: 0.00725 (18%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-03 23:52:24) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.002955)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mSQL (0.000333)[0m   [0mSELECT max(position) AS max_position FROM list_items WHERE (user_id = 1 and list_type_id = 3) [0m
+  [4;36;1mSQL (0.000097)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Load (0.000367)[0m   [0mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mSQL (0.000262)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-03 23:52:24', 0, NULL, NULL, 1, 3, 9, '2007-09-03 23:52:24')[0m
+  [4;35;1mSQL (0.000740)[0m   [0mCOMMIT[0m
+Rendering list/add_new_item
+  [4;36;1mListType Columns (0.003295)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001182)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 3) [0m
+  [4;36;1mListItem Load (0.000288)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+Completed in 0.04272 (23 reqs/sec) | Rendering: 0.01604 (37%) | DB: 0.00952 (22%) | 200 OK [http://localhost/list/add_new_item]

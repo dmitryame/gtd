@@ -3,12 +3,12 @@ doctors_appointement:
   id: 1
   description: make a doctors appointement
   user_id: 1
-  sort_order: 1
+  position: 1
   list_type_id: 1
 
 changing_the_world:
   id: 2
   description: change the world
   user_id: 2
-  sort_order: 2
+  position: 2
   list_type_id: 2

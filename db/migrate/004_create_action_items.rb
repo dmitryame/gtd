@@ -3,7 +3,7 @@ class CreateActionItems < ActiveRecord::Migration
     create_table :action_items do |t|
       t.column :description, :string
       t.column :list_item_id,    :integer,  :null => false
-      t.column :sort_order, :integer, :null       => false
+      t.column :position, :integer, :null       => false
       t.column :level, :integer, :null            => false
       t.column :remind_at, :datetime
       t.column :done,       :boolean,  :null => false, :default => false

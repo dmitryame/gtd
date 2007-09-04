@@ -23,7 +23,7 @@ class ListItemTest < Test::Unit::TestCase
         :description => "new thing to do",
         :user        => users(:dmitry),
         :list_type   => list_types(:in),
-        :sort_order       => 0,
+        :position       => 0,
         :done        => false
     )
     assert inItem.save
@@ -32,7 +32,7 @@ class ListItemTest < Test::Unit::TestCase
         :description => "one more thing to do",
         :user        => users(:dmitry),
         :list_type   => list_types(:in),
-        :sort_order       => 1,
+        :position       => 1,
         :done        => true
     )
     assert inSecondItem.save

@@ -7,7 +7,7 @@ ActiveRecord::Schema.define(:version => 4) do
   create_table "action_items", :force => true do |t|
     t.column "description",  :string
     t.column "list_item_id", :integer,                     :null => false
-    t.column "sort_order",   :integer,                     :null => false
+    t.column "position",     :integer,                     :null => false
     t.column "level",        :integer,                     :null => false
     t.column "remind_at",    :datetime
     t.column "done",         :boolean,  :default => false, :null => false
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 4) do
     t.column "description",  :string
     t.column "user_id",      :integer,                     :null => false
     t.column "list_type_id", :integer,                     :null => false
-    t.column "sort_order",   :integer,                     :null => false
+    t.column "position",     :integer,                     :null => false
     t.column "remind_at",    :datetime
     t.column "done",         :boolean,  :default => false, :null => false
     t.column "resolution",   :string

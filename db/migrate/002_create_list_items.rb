@@ -4,7 +4,7 @@ class CreateListItems < ActiveRecord::Migration
       t.column :description, :string
       t.column :user_id,    :integer,  :null      => false
       t.column :list_type_id,    :integer,  :null => false
-      t.column :sort_order, :integer, :null       => false
+      t.column :position, :integer, :null       => false
       t.column :remind_at,   :datetime
       t.column :done,       :boolean,  :null => false, :default => false
       t.column :resolution, :string
