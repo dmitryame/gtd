@@ -38821,3 +38821,1468 @@ Rendering list/activate_list
   [4;36;1mListType Load (0.000333)[0m   [0;1mSELECT * FROM list_types [0m
 Rendered list/_list_items (0.00199)
 Completed in 0.02859 (34 reqs/sec) | Rendering: 0.00721 (25%) | DB: 0.00726 (25%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 22:58:41) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002424)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000491)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;35;1mListItem Columns (0.002293)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000412)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000268)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00246)
+Completed in 0.03079 (32 reqs/sec) | Rendering: 0.00851 (27%) | DB: 0.00589 (19%) | 200 OK [http://localhost/list/activate_list/2]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 22:58:43) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"3", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002386)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000683)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 3) [0m
+  [4;36;1mListItem Columns (0.002133)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000404)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000263)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00149)
+Completed in 0.02857 (34 reqs/sec) | Rendering: 0.00754 (26%) | DB: 0.00587 (20%) | 200 OK [http://localhost/list/activate_list/3]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 22:58:45) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002321)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000615)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;35;1mListItem Columns (0.002402)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000410)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000270)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00244)
+Completed in 0.03021 (33 reqs/sec) | Rendering: 0.00838 (27%) | DB: 0.00602 (19%) | 200 OK [http://localhost/list/activate_list/2]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 22:58:48) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002272)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000496)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Columns (0.002752)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000478)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000263)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00256)
+Completed in 0.03124 (32 reqs/sec) | Rendering: 0.00885 (28%) | DB: 0.00626 (20%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-04 22:58:50) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.003184)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.000321)[0m   [0;1mSELECT max(position) AS max_position FROM list_items WHERE (user_id = 1 and list_type_id = 1) [0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Load (0.000376)[0m   [0;1mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mSQL (0.000254)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-04 22:58:50', 0, NULL, 'Click To Change Description', 1, 1, 9, '2007-09-04 22:58:50')[0m
+  [4;36;1mSQL (0.000821)[0m   [0;1mCOMMIT[0m
+  [4;35;1mListItem Load (0.000497)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/add_new_item
+  [4;36;1mListType Columns (0.001841)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000453)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000295)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+Rendered list/_list_items (0.00159)
+Completed in 0.04019 (24 reqs/sec) | Rendering: 0.01685 (41%) | DB: 0.00814 (20%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-04 22:58:58) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.003097)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.000350)[0m   [0;1mSELECT max(position) AS max_position FROM list_items WHERE (user_id = 1 and list_type_id = 1) [0m
+  [4;35;1mSQL (0.000096)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Load (0.000368)[0m   [0;1mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mSQL (0.000258)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-04 22:58:58', 0, NULL, 'Click To Change Description', 1, 1, 10, '2007-09-04 22:58:58')[0m
+  [4;36;1mSQL (0.000892)[0m   [0;1mCOMMIT[0m
+  [4;35;1mListItem Load (0.000480)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/add_new_item
+  [4;36;1mListType Columns (0.001828)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000628)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000350)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+Rendered list/_list_items (0.00190)
+Completed in 0.04157 (24 reqs/sec) | Rendering: 0.01698 (40%) | DB: 0.00835 (20%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-04 22:58:59) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.003001)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.000335)[0m   [0;1mSELECT max(position) AS max_position FROM list_items WHERE (user_id = 1 and list_type_id = 1) [0m
+  [4;35;1mSQL (0.000104)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Load (0.000404)[0m   [0;1mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mSQL (0.000244)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-04 22:58:59', 0, NULL, 'Click To Change Description', 1, 1, 11, '2007-09-04 22:58:59')[0m
+  [4;36;1mSQL (0.000873)[0m   [0;1mCOMMIT[0m
+  [4;35;1mListItem Load (0.000562)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/add_new_item
+  [4;36;1mListType Columns (0.001824)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001418)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000373)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+Rendered list/_list_items (0.00170)
+Completed in 0.04114 (24 reqs/sec) | Rendering: 0.01712 (41%) | DB: 0.00914 (22%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-04 22:59:00) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.003095)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mSQL (0.000333)[0m   [0;1mSELECT max(position) AS max_position FROM list_items WHERE (user_id = 1 and list_type_id = 1) [0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Load (0.000376)[0m   [0;1mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mSQL (0.000258)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-04 22:59:00', 0, NULL, 'Click To Change Description', 1, 1, 12, '2007-09-04 22:59:00')[0m
+  [4;36;1mSQL (0.000876)[0m   [0;1mCOMMIT[0m
+  [4;35;1mListItem Load (0.000546)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/add_new_item
+  [4;36;1mListType Columns (0.001853)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000452)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000355)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+Rendered list/_list_items (0.00174)
+Completed in 0.04131 (24 reqs/sec) | Rendering: 0.01746 (42%) | DB: 0.00824 (19%) | 200 OK [http://localhost/list/add_new_item]
+
+
+Processing ListController#sort (for 127.0.0.1 at 2007-09-04 22:59:09) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"sort", "controller"=>"list", "all_list_items"=>["23", "13", "14", "15", "16", "17", "21", "18", "19", "22", "24", "25"]}
+Completed in 0.00125 (801 reqs/sec) | Rendering: 0.00006 (4%) | DB: 0.00000 (0%) | 200 OK [http://localhost/list/sort]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 22:59:10) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002331)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000520)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;35;1mListItem Columns (0.002341)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000458)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000270)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00244)
+Completed in 0.03031 (32 reqs/sec) | Rendering: 0.00875 (28%) | DB: 0.00592 (19%) | 200 OK [http://localhost/list/activate_list/2]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 22:59:12) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002390)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.073291)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Columns (0.002482)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000592)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000280)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00257)
+Completed in 0.10452 (9 reqs/sec) | Rendering: 0.00930 (8%) | DB: 0.07903 (75%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#sort (for 127.0.0.1 at 2007-09-04 22:59:17) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"sort", "controller"=>"list", "all_list_items"=>["25", "13", "14", "15", "16", "17", "21", "18", "19", "22", "23", "24"]}
+Completed in 0.00098 (1021 reqs/sec) | Rendering: 0.00005 (4%) | DB: 0.00000 (0%) | 200 OK [http://localhost/list/sort]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 22:59:19) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002314)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000540)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;35;1mListItem Columns (0.002070)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000413)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000268)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00253)
+Completed in 0.02976 (33 reqs/sec) | Rendering: 0.00862 (28%) | DB: 0.00560 (18%) | 200 OK [http://localhost/list/activate_list/2]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 22:59:21) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002293)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000437)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Columns (0.002222)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000489)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000272)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00252)
+Completed in 0.03036 (32 reqs/sec) | Rendering: 0.00890 (29%) | DB: 0.00571 (18%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 22:59:22) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002323)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000526)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;35;1mListItem Columns (0.002036)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000485)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000252)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00259)
+Completed in 0.02991 (33 reqs/sec) | Rendering: 0.00903 (30%) | DB: 0.00562 (18%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 22:59:22) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002277)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000463)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Columns (0.002426)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000497)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000261)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00251)
+Completed in 0.03113 (32 reqs/sec) | Rendering: 0.00915 (29%) | DB: 0.00592 (19%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#sort (for 127.0.0.1 at 2007-09-04 22:59:31) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"sort", "controller"=>"list", "all_list_items"=>["14", "15", "16", "17", "21", "18", "19", "22", "23", "13", "24", "25"]}
+Completed in 0.00091 (1095 reqs/sec) | Rendering: 0.00004 (4%) | DB: 0.00000 (0%) | 200 OK [http://localhost/list/sort]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 22:59:34) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002282)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000773)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;35;1mListItem Columns (0.002407)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000497)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000280)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00268)
+Completed in 0.09288 (10 reqs/sec) | Rendering: 0.00893 (9%) | DB: 0.00624 (6%) | 200 OK [http://localhost/list/activate_list/2]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 22:59:36) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002300)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000546)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Columns (0.002409)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000536)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000283)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00256)
+Completed in 0.03116 (32 reqs/sec) | Rendering: 0.00922 (29%) | DB: 0.00607 (19%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 22:59:38) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002303)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000531)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;35;1mListItem Columns (0.002170)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000482)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000338)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00258)
+Completed in 0.03007 (33 reqs/sec) | Rendering: 0.00898 (29%) | DB: 0.00582 (19%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 22:59:38) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002374)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000416)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Columns (0.002202)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000475)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000263)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00250)
+Completed in 0.03023 (33 reqs/sec) | Rendering: 0.00907 (30%) | DB: 0.00573 (18%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-04 22:59:40) [GET]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.003210)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000502)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00175)
+  [4;35;1mListType Load (0.000317)[0m   [0mSELECT * FROM list_types [0m
+  [4;36;1mListType Columns (0.011956)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListItem Load (0.001077)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;36;1mListItem Load (0.000270)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;35;1mListItem Load (0.000278)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;36;1mListItem Load (0.000405)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;35;1mListItem Load (0.000199)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;36;1mListItem Load (0.000212)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.11032 (9 reqs/sec) | Rendering: 0.08325 (75%) | DB: 0.01843 (16%) | 200 OK [http://localhost/list/list]
+  [4;35;1mListItem Columns (0.002959)[0m   [0mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#sort (for 127.0.0.1 at 2007-09-04 22:59:45) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"sort", "controller"=>"list", "all_list_items"=>["13", "25", "14", "15", "16", "17", "21", "18", "19", "22", "23", "24"]}
+  [4;36;1mSQL (0.000150)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000360)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:33:27', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 1, `user_id` = 1, `description` = '13', `done` = 0, `updated_at` = '2007-09-04 22:59:45' WHERE `id` = 13[0m
+  [4;36;1mSQL (0.000816)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000297)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:34:16', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 3, `user_id` = 1, `description` = '14', `done` = 0, `updated_at` = '2007-09-04 22:59:45' WHERE `id` = 14[0m
+  [4;35;1mSQL (0.000599)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000273)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:34:22', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 4, `user_id` = 1, `description` = '15', `done` = 0, `updated_at` = '2007-09-04 22:59:45' WHERE `id` = 15[0m
+  [4;36;1mSQL (0.000601)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000108)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000246)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:35:47', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 5, `user_id` = 1, `description` = '16', `done` = 0, `updated_at` = '2007-09-04 22:59:45' WHERE `id` = 16[0m
+  [4;35;1mSQL (0.000550)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000291)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:36:04', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 6, `user_id` = 1, `description` = '17', `done` = 0, `updated_at` = '2007-09-04 22:59:45' WHERE `id` = 17[0m
+  [4;36;1mSQL (0.000848)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000100)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000297)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:48:27', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 7, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 22:59:45' WHERE `id` = 21[0m
+  [4;35;1mSQL (0.000521)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000246)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:36:05', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 8, `user_id` = 1, `description` = '18', `done` = 0, `updated_at` = '2007-09-04 22:59:45' WHERE `id` = 18[0m
+  [4;36;1mSQL (0.000628)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000240)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:36:07', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 9, `user_id` = 1, `description` = '19', `done` = 0, `updated_at` = '2007-09-04 22:59:45' WHERE `id` = 19[0m
+  [4;35;1mSQL (0.000678)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000343)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:58:50', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 10, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 22:59:45' WHERE `id` = 22[0m
+  [4;36;1mSQL (0.000575)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000083)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000414)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:58:58', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 11, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 22:59:45' WHERE `id` = 23[0m
+  [4;35;1mSQL (0.000748)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000350)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:58:59', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 12, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 22:59:45' WHERE `id` = 24[0m
+  [4;36;1mSQL (0.000591)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000105)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000232)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:59:00', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 2, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 22:59:45' WHERE `id` = 25[0m
+  [4;35;1mSQL (0.000756)[0m   [0mCOMMIT[0m
+Completed in 0.05246 (19 reqs/sec) | Rendering: 0.00009 (0%) | DB: 0.01572 (29%) | 200 OK [http://localhost/list/sort]
+  [4;36;1mListItem Columns (0.002863)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-04 22:59:48) [GET]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;35;1mListItem Load (0.000546)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00156)
+  [4;36;1mListType Load (0.000269)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListType Columns (0.001697)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListItem Load (0.000482)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000252)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000284)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000239)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000233)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000231)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.02304 (43 reqs/sec) | Rendering: 0.01696 (73%) | DB: 0.00710 (30%) | 200 OK [http://localhost/list/list]
+  [4;36;1mListItem Columns (0.002487)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 22:59:51) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListType Columns (0.001713)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000489)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;35;1mListItem Load (0.000382)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000268)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00244)
+Completed in 0.01940 (51 reqs/sec) | Rendering: 0.00874 (45%) | DB: 0.00534 (27%) | 200 OK [http://localhost/list/activate_list/2]
+  [4;35;1mListItem Columns (0.003480)[0m   [0mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 22:59:53) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.001786)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000720)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000461)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000261)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00261)
+Completed in 0.02086 (47 reqs/sec) | Rendering: 0.00914 (43%) | DB: 0.00671 (32%) | 200 OK [http://localhost/list/activate_list/1]
+  [4;36;1mListItem Columns (0.002934)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#sort (for 127.0.0.1 at 2007-09-04 22:59:57) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"sort", "controller"=>"list", "all_list_items"=>["25", "14", "15", "16", "17", "21", "18", "19", "22", "23", "24", "13"]}
+  [4;35;1mSQL (0.000156)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000367)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:33:27', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 12, `user_id` = 1, `description` = '13', `done` = 0, `updated_at` = '2007-09-04 22:59:57' WHERE `id` = 13[0m
+  [4;35;1mSQL (0.000729)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000280)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:59:00', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 1, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 22:59:57' WHERE `id` = 25[0m
+  [4;36;1mSQL (0.000600)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000323)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:34:16', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 2, `user_id` = 1, `description` = '14', `done` = 0, `updated_at` = '2007-09-04 22:59:57' WHERE `id` = 14[0m
+  [4;35;1mSQL (0.000632)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000265)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:34:22', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 3, `user_id` = 1, `description` = '15', `done` = 0, `updated_at` = '2007-09-04 22:59:57' WHERE `id` = 15[0m
+  [4;36;1mSQL (0.000591)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000088)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000310)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:35:47', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 4, `user_id` = 1, `description` = '16', `done` = 0, `updated_at` = '2007-09-04 22:59:57' WHERE `id` = 16[0m
+  [4;35;1mSQL (0.000640)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000246)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:36:04', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 5, `user_id` = 1, `description` = '17', `done` = 0, `updated_at` = '2007-09-04 22:59:57' WHERE `id` = 17[0m
+  [4;36;1mSQL (0.000614)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000097)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000296)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:48:27', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 6, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 22:59:57' WHERE `id` = 21[0m
+  [4;35;1mSQL (0.000643)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000242)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:36:05', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 7, `user_id` = 1, `description` = '18', `done` = 0, `updated_at` = '2007-09-04 22:59:57' WHERE `id` = 18[0m
+  [4;36;1mSQL (0.000606)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000086)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000236)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:36:07', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 8, `user_id` = 1, `description` = '19', `done` = 0, `updated_at` = '2007-09-04 22:59:57' WHERE `id` = 19[0m
+  [4;35;1mSQL (0.000635)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000264)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:58:50', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 9, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 22:59:57' WHERE `id` = 22[0m
+  [4;36;1mSQL (0.000783)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000109)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000267)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:58:58', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 10, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 22:59:57' WHERE `id` = 23[0m
+  [4;35;1mSQL (0.000623)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000264)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:58:59', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 11, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 22:59:57' WHERE `id` = 24[0m
+  [4;36;1mSQL (0.000545)[0m   [0;1mCOMMIT[0m
+Completed in 0.05229 (19 reqs/sec) | Rendering: 0.00008 (0%) | DB: 0.01520 (29%) | 200 OK [http://localhost/list/sort]
+  [4;35;1mListItem Columns (0.003015)[0m   [0mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:00:00) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;36;1mListType Columns (0.001683)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000528)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;36;1mListItem Load (0.000363)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000244)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00241)
+Completed in 0.01917 (52 reqs/sec) | Rendering: 0.00834 (43%) | DB: 0.00583 (30%) | 200 OK [http://localhost/list/activate_list/2]
+  [4;36;1mListItem Columns (0.003068)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:00:02) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;35;1mListType Columns (0.001685)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000458)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;35;1mListItem Load (0.000412)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000255)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00257)
+Completed in 0.02020 (49 reqs/sec) | Rendering: 0.00907 (44%) | DB: 0.00588 (29%) | 200 OK [http://localhost/list/activate_list/1]
+  [4;35;1mListItem Columns (0.003183)[0m   [0mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#sort (for 127.0.0.1 at 2007-09-04 23:00:05) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"sort", "controller"=>"list", "all_list_items"=>["14", "15", "25", "16", "17", "21", "18", "19", "22", "23", "24", "13"]}
+  [4;36;1mSQL (0.000152)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000353)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:33:27', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 12, `user_id` = 1, `description` = '13', `done` = 0, `updated_at` = '2007-09-04 23:00:05' WHERE `id` = 13[0m
+  [4;36;1mSQL (0.000827)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000124)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000328)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:59:00', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 3, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:00:05' WHERE `id` = 25[0m
+  [4;35;1mSQL (0.079399)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000352)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:34:16', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 1, `user_id` = 1, `description` = '14', `done` = 0, `updated_at` = '2007-09-04 23:00:05' WHERE `id` = 14[0m
+  [4;36;1mSQL (0.000671)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000108)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000282)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:34:22', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 2, `user_id` = 1, `description` = '15', `done` = 0, `updated_at` = '2007-09-04 23:00:05' WHERE `id` = 15[0m
+  [4;35;1mSQL (0.000586)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000340)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:35:47', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 4, `user_id` = 1, `description` = '16', `done` = 0, `updated_at` = '2007-09-04 23:00:05' WHERE `id` = 16[0m
+  [4;36;1mSQL (0.000623)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000246)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:36:04', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 5, `user_id` = 1, `description` = '17', `done` = 0, `updated_at` = '2007-09-04 23:00:05' WHERE `id` = 17[0m
+  [4;35;1mSQL (0.000571)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000305)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:48:27', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 6, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:00:05' WHERE `id` = 21[0m
+  [4;36;1mSQL (0.000633)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000114)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000256)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:36:05', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 7, `user_id` = 1, `description` = '18', `done` = 0, `updated_at` = '2007-09-04 23:00:05' WHERE `id` = 18[0m
+  [4;35;1mSQL (0.000577)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000087)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000307)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:36:07', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 8, `user_id` = 1, `description` = '19', `done` = 0, `updated_at` = '2007-09-04 23:00:05' WHERE `id` = 19[0m
+  [4;36;1mSQL (0.000642)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000289)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:58:50', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 9, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:00:05' WHERE `id` = 22[0m
+  [4;35;1mSQL (0.000542)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000246)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:58:58', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 10, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:00:05' WHERE `id` = 23[0m
+  [4;36;1mSQL (0.000613)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000113)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000258)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:58:59', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 11, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:00:05' WHERE `id` = 24[0m
+  [4;35;1mSQL (0.000511)[0m   [0mCOMMIT[0m
+Completed in 0.13141 (7 reqs/sec) | Rendering: 0.00007 (0%) | DB: 0.09424 (71%) | 200 OK [http://localhost/list/sort]
+  [4;36;1mListItem Columns (0.003155)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:00:08) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"3", "controller"=>"list"}
+  [4;35;1mListType Columns (0.001596)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000374)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 3) [0m
+  [4;35;1mListItem Load (0.000338)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000287)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00127)
+Completed in 0.01714 (58 reqs/sec) | Rendering: 0.00639 (37%) | DB: 0.00575 (33%) | 200 OK [http://localhost/list/activate_list/3]
+  [4;35;1mListItem Columns (0.002862)[0m   [0mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:00:10) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.001816)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000474)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000525)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000267)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00263)
+Completed in 0.01959 (51 reqs/sec) | Rendering: 0.00919 (46%) | DB: 0.00594 (30%) | 200 OK [http://localhost/list/activate_list/1]
+  [4;36;1mListItem Columns (0.002631)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:00:57) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListType Columns (0.001246)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000473)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;35;1mListItem Load (0.000395)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000266)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00244)
+Completed in 0.01877 (53 reqs/sec) | Rendering: 0.00838 (44%) | DB: 0.00501 (26%) | 200 OK [http://localhost/list/activate_list/2]
+  [4;35;1mListItem Columns (0.002857)[0m   [0mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:00:59) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.001709)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000837)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000438)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000247)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00198)
+Completed in 0.01876 (53 reqs/sec) | Rendering: 0.00753 (40%) | DB: 0.00609 (32%) | 200 OK [http://localhost/list/activate_list/1]
+  [4;36;1mListItem Columns (0.003283)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:01:19) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListType Columns (0.001680)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000500)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;35;1mListItem Load (0.000381)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000278)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00244)
+Completed in 0.01977 (50 reqs/sec) | Rendering: 0.00892 (45%) | DB: 0.00612 (30%) | 200 OK [http://localhost/list/activate_list/2]
+  [4;35;1mListItem Columns (0.002934)[0m   [0mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:01:20) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.001800)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000487)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000465)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000310)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00267)
+Completed in 0.02148 (46 reqs/sec) | Rendering: 0.00998 (46%) | DB: 0.00600 (27%) | 200 OK [http://localhost/list/activate_list/1]
+  [4;36;1mListItem Columns (0.003042)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-04 23:01:25) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;35;1mSQL (0.000348)[0m   [0mSELECT max(position) AS max_position FROM list_items WHERE (user_id = 1 and list_type_id = 1) [0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Load (0.000384)[0m   [0mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mSQL (0.000257)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-04 23:01:25', 0, NULL, 'Click To Change Description', 1, 1, 13, '2007-09-04 23:01:25')[0m
+  [4;35;1mSQL (0.000788)[0m   [0mCOMMIT[0m
+  [4;36;1mListItem Load (0.000433)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/add_new_item
+  [4;35;1mListType Columns (0.001709)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000425)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;35;1mListItem Load (0.000308)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+Rendered list/_list_items (0.00156)
+Completed in 0.02902 (34 reqs/sec) | Rendering: 0.01656 (57%) | DB: 0.00779 (26%) | 200 OK [http://localhost/list/add_new_item]
+  [4;36;1mListItem Columns (0.002929)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-04 23:01:31) [GET]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;35;1mListItem Load (0.000631)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00163)
+  [4;36;1mListType Load (0.000284)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListType Columns (0.001714)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListItem Load (0.000576)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000262)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000235)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000233)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000231)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000235)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.02424 (41 reqs/sec) | Rendering: 0.01777 (73%) | DB: 0.00733 (30%) | 200 OK [http://localhost/list/list]
+  [4;36;1mListItem Columns (0.002815)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#sort (for 127.0.0.1 at 2007-09-04 23:01:36) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"sort", "controller"=>"list", "all_list_items"=>["26", "14", "15", "25", "16", "17", "21", "18", "19", "22", "23", "24", "13"]}
+  [4;35;1mSQL (0.001173)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000358)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:34:16', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 2, `user_id` = 1, `description` = '14', `done` = 0, `updated_at` = '2007-09-04 23:01:36' WHERE `id` = 14[0m
+  [4;35;1mSQL (0.000756)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000272)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:34:22', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 3, `user_id` = 1, `description` = '15', `done` = 0, `updated_at` = '2007-09-04 23:01:36' WHERE `id` = 15[0m
+  [4;36;1mSQL (0.000589)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000104)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000271)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:59:00', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 4, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:36' WHERE `id` = 25[0m
+  [4;35;1mSQL (0.000594)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000281)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:35:47', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 5, `user_id` = 1, `description` = '16', `done` = 0, `updated_at` = '2007-09-04 23:01:36' WHERE `id` = 16[0m
+  [4;36;1mSQL (0.000587)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000087)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000397)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:36:04', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 6, `user_id` = 1, `description` = '17', `done` = 0, `updated_at` = '2007-09-04 23:01:36' WHERE `id` = 17[0m
+  [4;35;1mSQL (0.000783)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000335)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:48:27', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 7, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:36' WHERE `id` = 21[0m
+  [4;36;1mSQL (0.000960)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000107)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000298)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:36:05', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 8, `user_id` = 1, `description` = '18', `done` = 0, `updated_at` = '2007-09-04 23:01:36' WHERE `id` = 18[0m
+  [4;35;1mSQL (0.000717)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000268)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:36:07', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 9, `user_id` = 1, `description` = '19', `done` = 0, `updated_at` = '2007-09-04 23:01:36' WHERE `id` = 19[0m
+  [4;36;1mSQL (0.000644)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000247)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:58:50', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 10, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:36' WHERE `id` = 22[0m
+  [4;35;1mSQL (0.000603)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000308)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:58:58', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 11, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:36' WHERE `id` = 23[0m
+  [4;36;1mSQL (0.000744)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000109)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000273)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:58:59', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 12, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:36' WHERE `id` = 24[0m
+  [4;35;1mSQL (0.000548)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000602)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:33:27', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 13, `user_id` = 1, `description` = '13', `done` = 0, `updated_at` = '2007-09-04 23:01:36' WHERE `id` = 13[0m
+  [4;36;1mSQL (0.000706)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000300)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 23:01:25', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 1, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:36' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.000639)[0m   [0mCOMMIT[0m
+Completed in 0.12616 (7 reqs/sec) | Rendering: 0.00008 (0%) | DB: 0.01830 (14%) | 200 OK [http://localhost/list/sort]
+  [4;36;1mListItem Columns (0.002896)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:01:37) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListType Columns (0.001752)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000755)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;35;1mListItem Load (0.000410)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000266)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00243)
+Completed in 0.02033 (49 reqs/sec) | Rendering: 0.00871 (42%) | DB: 0.00608 (29%) | 200 OK [http://localhost/list/activate_list/2]
+  [4;35;1mListItem Columns (0.002368)[0m   [0mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:01:39) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.001661)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000937)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000602)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000280)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00253)
+Completed in 0.02105 (47 reqs/sec) | Rendering: 0.00930 (44%) | DB: 0.00585 (27%) | 200 OK [http://localhost/list/activate_list/1]
+  [4;36;1mListItem Columns (0.003038)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#sort (for 127.0.0.1 at 2007-09-04 23:01:42) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"sort", "controller"=>"list", "all_list_items"=>["14", "15", "25", "16", "17", "21", "18", "19", "22", "23", "26", "24", "13"]}
+  [4;35;1mSQL (0.000153)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000421)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:34:16', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 1, `user_id` = 1, `description` = '14', `done` = 0, `updated_at` = '2007-09-04 23:01:42' WHERE `id` = 14[0m
+  [4;35;1mSQL (0.000803)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000302)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:34:22', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 2, `user_id` = 1, `description` = '15', `done` = 0, `updated_at` = '2007-09-04 23:01:42' WHERE `id` = 15[0m
+  [4;36;1mSQL (0.000659)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000244)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:59:00', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 3, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:42' WHERE `id` = 25[0m
+  [4;35;1mSQL (0.000547)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000256)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:35:47', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 4, `user_id` = 1, `description` = '16', `done` = 0, `updated_at` = '2007-09-04 23:01:42' WHERE `id` = 16[0m
+  [4;36;1mSQL (0.000583)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000085)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000243)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:36:04', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 5, `user_id` = 1, `description` = '17', `done` = 0, `updated_at` = '2007-09-04 23:01:42' WHERE `id` = 17[0m
+  [4;35;1mSQL (0.000582)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000104)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000304)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:48:27', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 6, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:42' WHERE `id` = 21[0m
+  [4;36;1mSQL (0.000664)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000108)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000263)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:36:05', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 7, `user_id` = 1, `description` = '18', `done` = 0, `updated_at` = '2007-09-04 23:01:42' WHERE `id` = 18[0m
+  [4;35;1mSQL (0.000584)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000104)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000373)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:36:07', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 8, `user_id` = 1, `description` = '19', `done` = 0, `updated_at` = '2007-09-04 23:01:42' WHERE `id` = 19[0m
+  [4;36;1mSQL (0.000595)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000074)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000290)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:58:50', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 9, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:42' WHERE `id` = 22[0m
+  [4;35;1mSQL (0.001038)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000482)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:58:58', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 10, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:42' WHERE `id` = 23[0m
+  [4;36;1mSQL (0.000789)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000087)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000301)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:58:59', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 12, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:42' WHERE `id` = 24[0m
+  [4;35;1mSQL (0.000712)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000060)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000228)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:33:27', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 13, `user_id` = 1, `description` = '13', `done` = 0, `updated_at` = '2007-09-04 23:01:42' WHERE `id` = 13[0m
+  [4;36;1mSQL (0.000555)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000285)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 23:01:25', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 11, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:42' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.000805)[0m   [0mCOMMIT[0m
+Completed in 0.12735 (7 reqs/sec) | Rendering: 0.00008 (0%) | DB: 0.01728 (13%) | 200 OK [http://localhost/list/sort]
+  [4;36;1mListItem Columns (0.003084)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:01:45) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListType Columns (0.001940)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000339)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;35;1mListItem Load (0.000398)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000263)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00247)
+Completed in 0.02003 (49 reqs/sec) | Rendering: 0.00871 (43%) | DB: 0.00602 (30%) | 200 OK [http://localhost/list/activate_list/2]
+  [4;35;1mListItem Columns (0.002878)[0m   [0mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:01:46) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.001813)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000753)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000444)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000277)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00249)
+Completed in 0.02011 (49 reqs/sec) | Rendering: 0.00875 (43%) | DB: 0.00616 (30%) | 200 OK [http://localhost/list/activate_list/1]
+  [4;36;1mListItem Columns (0.003038)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-04 23:01:48) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;35;1mSQL (0.000355)[0m   [0mSELECT max(position) AS max_position FROM list_items WHERE (user_id = 1 and list_type_id = 1) [0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Load (0.000406)[0m   [0mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mSQL (0.000258)[0m   [0;1mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-04 23:01:48', 0, NULL, 'Click To Change Description', 1, 1, 14, '2007-09-04 23:01:48')[0m
+  [4;35;1mSQL (0.000700)[0m   [0mCOMMIT[0m
+  [4;36;1mListItem Load (0.000528)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/add_new_item
+  [4;35;1mListType Columns (0.001774)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000467)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;35;1mListItem Load (0.000366)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+Rendered list/_list_items (0.00164)
+Completed in 0.02987 (33 reqs/sec) | Rendering: 0.01702 (56%) | DB: 0.00799 (26%) | 200 OK [http://localhost/list/add_new_item]
+  [4;36;1mListItem Columns (0.002643)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#sort (for 127.0.0.1 at 2007-09-04 23:01:52) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"sort", "controller"=>"list", "all_list_items"=>["27", "14", "15", "25", "16", "17", "21", "18", "19", "22", "23", "26", "24", "13"]}
+  [4;35;1mSQL (0.000138)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000348)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:34:16', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 2, `user_id` = 1, `description` = '14', `done` = 0, `updated_at` = '2007-09-04 23:01:52' WHERE `id` = 14[0m
+  [4;35;1mSQL (0.000796)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000373)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:34:22', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 3, `user_id` = 1, `description` = '15', `done` = 0, `updated_at` = '2007-09-04 23:01:52' WHERE `id` = 15[0m
+  [4;36;1mSQL (0.000591)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000087)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000271)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:59:00', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 4, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:52' WHERE `id` = 25[0m
+  [4;35;1mSQL (0.000658)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000258)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:35:47', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 5, `user_id` = 1, `description` = '16', `done` = 0, `updated_at` = '2007-09-04 23:01:52' WHERE `id` = 16[0m
+  [4;36;1mSQL (0.000560)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000108)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000294)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:36:04', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 6, `user_id` = 1, `description` = '17', `done` = 0, `updated_at` = '2007-09-04 23:01:52' WHERE `id` = 17[0m
+  [4;35;1mSQL (0.000640)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000248)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:48:27', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 7, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:52' WHERE `id` = 21[0m
+  [4;36;1mSQL (0.000755)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000110)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000277)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:36:05', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 8, `user_id` = 1, `description` = '18', `done` = 0, `updated_at` = '2007-09-04 23:01:52' WHERE `id` = 18[0m
+  [4;35;1mSQL (0.000921)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000338)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:36:07', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 9, `user_id` = 1, `description` = '19', `done` = 0, `updated_at` = '2007-09-04 23:01:52' WHERE `id` = 19[0m
+  [4;36;1mSQL (0.000673)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000106)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000281)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:58:50', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 10, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:52' WHERE `id` = 22[0m
+  [4;35;1mSQL (0.000724)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000077)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000310)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:58:58', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 11, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:52' WHERE `id` = 23[0m
+  [4;36;1mSQL (0.000652)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000107)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000255)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:58:59', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 13, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:52' WHERE `id` = 24[0m
+  [4;35;1mSQL (0.000622)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000087)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000347)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:33:27', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 14, `user_id` = 1, `description` = '13', `done` = 0, `updated_at` = '2007-09-04 23:01:52' WHERE `id` = 13[0m
+  [4;36;1mSQL (0.001373)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000136)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000307)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 23:01:25', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 12, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:01:52' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.000735)[0m   [0mCOMMIT[0m
+Completed in 0.05882 (17 reqs/sec) | Rendering: 0.00008 (0%) | DB: 0.01763 (29%) | 200 OK [http://localhost/list/sort]
+  [4;36;1mListItem Columns (0.002920)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:01:54) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListType Columns (0.001763)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000261)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;35;1mListItem Load (0.000414)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000272)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00244)
+Completed in 0.01967 (50 reqs/sec) | Rendering: 0.00862 (43%) | DB: 0.00563 (28%) | 200 OK [http://localhost/list/activate_list/2]
+  [4;35;1mListItem Columns (0.002909)[0m   [0mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:01:55) [POST]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.001808)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000644)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000436)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000273)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00251)
+Completed in 0.02096 (47 reqs/sec) | Rendering: 0.00977 (46%) | DB: 0.00607 (28%) | 200 OK [http://localhost/list/activate_list/1]
+  [4;36;1mListItem Columns (0.002344)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing UserController#signin (for 127.0.0.1 at 2007-09-04 23:03:06) [GET]
+  Session ID: cc834cb6f294368d30a5e691c6c5ed6d
+  Parameters: {"action"=>"signin", "controller"=>"user"}
+Rendering  within layouts/user
+Rendering user/signin
+Completed in 0.06141 (16 reqs/sec) | Rendering: 0.06002 (97%) | DB: 0.00234 (3%) | 200 OK [http://localhost/user/signin]
+
+
+Processing UserController#signin (for 127.0.0.1 at 2007-09-04 23:03:34) [GET]
+  Session ID: f071464a669898cda2347a5a74905fd7
+  Parameters: {"action"=>"signin", "controller"=>"user"}
+Rendering  within layouts/user
+Rendering user/signin
+Completed in 0.00343 (291 reqs/sec) | Rendering: 0.00257 (74%) | DB: 0.00000 (0%) | 200 OK [http://localhost/user/signin]
+
+
+Processing UserController#signin (for 127.0.0.1 at 2007-09-04 23:04:08) [POST]
+  Session ID: f071464a669898cda2347a5a74905fd7
+  Parameters: {"name"=>"dmitry", "commit"=>"Sign in", "action"=>"signin", "controller"=>"user", "password"=>"dmitry123"}
+  [4;35;1mUser Columns (0.001742)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.001399)[0m   [0;1mSELECT * FROM users WHERE (users.`name` = 'dmitry') LIMIT 1[0m
+Redirected to http://localhost:3000/list/list
+Completed in 0.10890 (9 reqs/sec) | DB: 0.00314 (2%) | 302 Found [http://localhost/user/signin]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-04 23:04:08) [GET]
+  Session ID: f071464a669898cda2347a5a74905fd7
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.003075)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000307)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` IS NULL) ORDER BY position[0m
+  [4;35;1mListType Load (0.000267)[0m   [0mSELECT * FROM list_types LIMIT 1[0m
+  [4;36;1mListType Columns (0.001894)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00053)
+  [4;35;1mListType Load (0.000317)[0m   [0mSELECT * FROM list_types [0m
+  [4;36;1mListItem Load (0.000341)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000318)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.001604)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000232)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000216)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000215)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.03403 (29 reqs/sec) | Rendering: 0.00900 (26%) | DB: 0.00879 (25%) | 200 OK [http://localhost/list/list]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-04 23:04:16) [GET]
+  Session ID: f071464a669898cda2347a5a74905fd7
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.002904)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000551)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00155)
+  [4;36;1mListType Load (0.000241)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListType Columns (0.001605)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListItem Load (0.000387)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000287)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000240)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000235)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000231)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000232)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.03231 (30 reqs/sec) | Rendering: 0.01662 (51%) | DB: 0.00691 (21%) | 200 OK [http://localhost/list/list]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:06:51) [POST]
+  Session ID: f071464a669898cda2347a5a74905fd7
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002244)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.072510)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Columns (0.002355)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000497)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000266)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00271)
+Completed in 0.10316 (9 reqs/sec) | Rendering: 0.00928 (8%) | DB: 0.07787 (75%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-04 23:06:59) [GET]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"list", "controller"=>"list"}
+Redirected to http://localhost:3000/user/signin
+Completed in 0.00109 (920 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/list/list]
+
+
+Processing UserController#signin (for 127.0.0.1 at 2007-09-04 23:06:59) [GET]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"signin", "controller"=>"user"}
+Rendering  within layouts/user
+Rendering user/signin
+Completed in 0.00318 (314 reqs/sec) | Rendering: 0.00234 (73%) | DB: 0.00000 (0%) | 200 OK [http://localhost/user/signin]
+
+
+Processing UserController#signin (for 127.0.0.1 at 2007-09-04 23:07:04) [POST]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"name"=>"dmitry", "commit"=>"Sign in", "action"=>"signin", "controller"=>"user", "password"=>"dmitry123"}
+  [4;35;1mUser Columns (0.001944)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.001178)[0m   [0;1mSELECT * FROM users WHERE (users.`name` = 'dmitry') LIMIT 1[0m
+Redirected to http://localhost:3000/list/list
+Completed in 0.01453 (68 reqs/sec) | DB: 0.00312 (21%) | 302 Found [http://localhost/user/signin]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-04 23:07:04) [GET]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.006042)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.007280)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` IS NULL) ORDER BY position[0m
+  [4;35;1mListType Load (0.000275)[0m   [0mSELECT * FROM list_types LIMIT 1[0m
+  [4;36;1mListType Columns (0.014877)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00053)
+  [4;35;1mListType Load (0.002843)[0m   [0mSELECT * FROM list_types [0m
+  [4;36;1mListItem Load (0.000407)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000282)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000259)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000256)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000258)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000245)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.05728 (17 reqs/sec) | Rendering: 0.00900 (15%) | DB: 0.03302 (57%) | 200 OK [http://localhost/list/list]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:07:08) [POST]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002313)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000554)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;36;1mListItem Columns (0.002132)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000447)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000268)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00251)
+Completed in 0.03014 (33 reqs/sec) | Rendering: 0.00862 (28%) | DB: 0.00571 (18%) | 200 OK [http://localhost/list/activate_list/2]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:07:09) [POST]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002309)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000600)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;35;1mListItem Columns (0.002688)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000524)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000260)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00263)
+Completed in 0.03121 (32 reqs/sec) | Rendering: 0.00905 (28%) | DB: 0.00638 (20%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#sort (for 127.0.0.1 at 2007-09-04 23:07:18) [POST]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"sort", "controller"=>"list", "all_list_items"=>["13", "14", "15", "25", "16", "17", "21", "18", "19", "22", "23", "26", "24", "27"]}
+
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    .//app/controllers/list_controller.rb:43:in `sort'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:07:21) [POST]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;36;1mListType Columns (0.002417)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000482)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;36;1mListItem Columns (0.002119)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000410)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000274)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.06841)
+Completed in 0.09544 (10 reqs/sec) | Rendering: 0.07463 (78%) | DB: 0.00570 (5%) | 200 OK [http://localhost/list/activate_list/2]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:07:22) [POST]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;35;1mListType Columns (0.002241)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000479)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;35;1mListItem Columns (0.002610)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000500)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000278)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00269)
+Completed in 0.03151 (31 reqs/sec) | Rendering: 0.00959 (30%) | DB: 0.00611 (19%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-04 23:07:25) [GET]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.002988)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000576)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00172)
+  [4;36;1mListType Load (0.000303)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListType Columns (0.001778)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListItem Load (0.000450)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000260)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000240)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000229)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000277)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000244)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.03406 (29 reqs/sec) | Rendering: 0.01775 (52%) | DB: 0.00735 (21%) | 200 OK [http://localhost/list/list]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-04 23:07:26) [GET]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003004)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000498)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00155)
+  [4;36;1mListType Load (0.000302)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListType Columns (0.001786)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListItem Load (0.000542)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000273)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000284)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000243)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000233)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000224)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.03344 (29 reqs/sec) | Rendering: 0.01744 (52%) | DB: 0.00739 (22%) | 200 OK [http://localhost/list/list]
+
+
+Processing ListController#sort (for 127.0.0.1 at 2007-09-04 23:07:34) [POST]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"sort", "controller"=>"list", "all_list_items"=>["14", "15", "25", "16", "17", "21", "18", "19", "22", "23", "26", "24", "27", "13"]}
+
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    .//app/controllers/list_controller.rb:43:in `sort'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-04 23:07:37) [GET]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.002982)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000498)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00158)
+  [4;36;1mListType Load (0.000274)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListType Columns (0.001661)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListItem Load (0.000458)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000224)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000224)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000204)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000198)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000202)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.03144 (31 reqs/sec) | Rendering: 0.01575 (50%) | DB: 0.00693 (22%) | 200 OK [http://localhost/list/list]
+
+
+Processing ListController#sort (for 127.0.0.1 at 2007-09-04 23:08:28) [POST]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"sort", "controller"=>"list", "all_list_items"=>["14", "15", "25", "16", "17", "21", "18", "19", "22", "23", "26", "24", "27", "13"]}
+
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    .//app/controllers/list_controller.rb:43:in `sort'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-04 23:10:19) [GET]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003435)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.017270)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00164)
+  [4;36;1mListType Load (0.000321)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListType Columns (0.001732)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListItem Load (0.000398)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000308)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000226)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000238)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000236)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000232)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.12462 (8 reqs/sec) | Rendering: 0.01890 (15%) | DB: 0.02440 (19%) | 200 OK [http://localhost/list/list]
+  [4;36;1mListItem Columns (0.002943)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-04 23:10:21) [GET]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;35;1mListItem Load (0.000561)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00164)
+  [4;36;1mListType Load (0.000288)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListType Columns (0.001762)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListItem Load (0.000530)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000256)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000242)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000243)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000252)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000250)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.02365 (42 reqs/sec) | Rendering: 0.01739 (73%) | DB: 0.00733 (30%) | 200 OK [http://localhost/list/list]
+  [4;36;1mListItem Columns (0.002893)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#sort (for 127.0.0.1 at 2007-09-04 23:10:24) [POST]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"sort", "controller"=>"list", "all_list_items"=>["14", "15", "25", "16", "17", "21", "18", "19", "22", "23", "26", "24", "27", "13"]}
+  [4;35;1mSQL (0.000160)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000448)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:34:16', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 1, `user_id` = 1, `description` = '14', `done` = 0, `updated_at` = '2007-09-04 23:10:24' WHERE `id` = 14[0m
+  [4;35;1mSQL (0.000849)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000356)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:34:22', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 2, `user_id` = 1, `description` = '15', `done` = 0, `updated_at` = '2007-09-04 23:10:24' WHERE `id` = 15[0m
+  [4;36;1mSQL (0.025907)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000154)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000357)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:59:00', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 3, `user_id` = 1, `description` = '25', `done` = 0, `updated_at` = '2007-09-04 23:10:24' WHERE `id` = 25[0m
+  [4;35;1mSQL (0.000602)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000273)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:35:47', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 4, `user_id` = 1, `description` = '16', `done` = 0, `updated_at` = '2007-09-04 23:10:24' WHERE `id` = 16[0m
+  [4;36;1mSQL (0.000606)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000108)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000376)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:36:04', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 5, `user_id` = 1, `description` = '17', `done` = 0, `updated_at` = '2007-09-04 23:10:24' WHERE `id` = 17[0m
+  [4;35;1mSQL (0.000533)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000314)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:48:27', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 6, `user_id` = 1, `description` = '21', `done` = 0, `updated_at` = '2007-09-04 23:10:24' WHERE `id` = 21[0m
+  [4;36;1mSQL (0.000555)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000081)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000295)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:36:05', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 7, `user_id` = 1, `description` = '18', `done` = 0, `updated_at` = '2007-09-04 23:10:24' WHERE `id` = 18[0m
+  [4;35;1mSQL (0.000604)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000295)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:36:07', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 8, `user_id` = 1, `description` = '19', `done` = 0, `updated_at` = '2007-09-04 23:10:24' WHERE `id` = 19[0m
+  [4;36;1mSQL (0.000608)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000105)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000282)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:58:50', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 9, `user_id` = 1, `description` = '22', `done` = 0, `updated_at` = '2007-09-04 23:10:24' WHERE `id` = 22[0m
+  [4;35;1mSQL (0.000594)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000255)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:58:58', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 10, `user_id` = 1, `description` = '23', `done` = 0, `updated_at` = '2007-09-04 23:10:24' WHERE `id` = 23[0m
+  [4;36;1mSQL (0.000610)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000136)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000242)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 23:01:25', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 11, `user_id` = 1, `description` = '26', `done` = 0, `updated_at` = '2007-09-04 23:10:24' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.000612)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000234)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:58:59', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 12, `user_id` = 1, `description` = '24', `done` = 0, `updated_at` = '2007-09-04 23:10:24' WHERE `id` = 24[0m
+  [4;36;1mSQL (0.000579)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000088)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000227)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:33:27', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 14, `user_id` = 1, `description` = '13', `done` = 0, `updated_at` = '2007-09-04 23:10:24' WHERE `id` = 13[0m
+  [4;35;1mSQL (0.000555)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000240)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 23:01:48', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 13, `user_id` = 1, `description` = '27', `done` = 0, `updated_at` = '2007-09-04 23:10:24' WHERE `id` = 27[0m
+  [4;36;1mSQL (0.000573)[0m   [0;1mCOMMIT[0m
+Completed in 0.08687 (11 reqs/sec) | Rendering: 0.00008 (0%) | DB: 0.04241 (48%) | 200 OK [http://localhost/list/sort]
+  [4;35;1mListItem Columns (0.002946)[0m   [0mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-04 23:10:27) [GET]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;36;1mListItem Load (0.000566)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00161)
+  [4;35;1mListType Load (0.000317)[0m   [0mSELECT * FROM list_types [0m
+  [4;36;1mListType Columns (0.001700)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListItem Load (0.000477)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;36;1mListItem Load (0.000293)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;35;1mListItem Load (0.000263)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;36;1mListItem Load (0.000265)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;35;1mListItem Load (0.000257)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;36;1mListItem Load (0.000275)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.02482 (40 reqs/sec) | Rendering: 0.01834 (73%) | DB: 0.00736 (29%) | 200 OK [http://localhost/list/list]
+  [4;35;1mListItem Columns (0.002947)[0m   [0mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#add_new_item (for 127.0.0.1 at 2007-09-04 23:10:30) [POST]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"add_new_item", "controller"=>"list"}
+  [4;36;1mSQL (0.000359)[0m   [0;1mSELECT max(position) AS max_position FROM list_items WHERE (user_id = 1 and list_type_id = 1) [0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Load (0.000379)[0m   [0;1mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mSQL (0.000268)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-04 23:10:30', 0, NULL, 'Click To Change Description', 1, 1, 15, '2007-09-04 23:10:30')[0m
+  [4;36;1mSQL (0.000706)[0m   [0;1mCOMMIT[0m
+  [4;35;1mListItem Load (0.000442)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/add_new_item
+  [4;36;1mListType Columns (0.001461)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000495)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000270)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+Rendered list/_list_items (0.00139)
+Completed in 0.02760 (36 reqs/sec) | Rendering: 0.01548 (56%) | DB: 0.00742 (26%) | 200 OK [http://localhost/list/add_new_item]
+  [4;35;1mListItem Columns (0.003542)[0m   [0mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#sort (for 127.0.0.1 at 2007-09-04 23:10:32) [POST]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"sort", "controller"=>"list", "all_list_items"=>["14", "15", "25", "16", "28", "17", "21", "18", "19", "22", "23", "26", "24", "27", "13"]}
+  [4;36;1mSQL (0.002193)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000322)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:34:16', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 1, `user_id` = 1, `description` = '14', `done` = 0, `updated_at` = '2007-09-04 23:10:32' WHERE `id` = 14[0m
+  [4;36;1mSQL (0.000657)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000059)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000331)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:34:22', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 2, `user_id` = 1, `description` = '15', `done` = 0, `updated_at` = '2007-09-04 23:10:32' WHERE `id` = 15[0m
+  [4;35;1mSQL (0.000594)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000275)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:59:00', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 3, `user_id` = 1, `description` = '25', `done` = 0, `updated_at` = '2007-09-04 23:10:32' WHERE `id` = 25[0m
+  [4;36;1mSQL (0.000613)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000096)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000292)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:35:47', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 4, `user_id` = 1, `description` = '16', `done` = 0, `updated_at` = '2007-09-04 23:10:32' WHERE `id` = 16[0m
+  [4;35;1mSQL (0.001142)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000296)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:36:04', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 6, `user_id` = 1, `description` = '17', `done` = 0, `updated_at` = '2007-09-04 23:10:32' WHERE `id` = 17[0m
+  [4;36;1mSQL (0.000620)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000257)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:48:27', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 7, `user_id` = 1, `description` = '21', `done` = 0, `updated_at` = '2007-09-04 23:10:32' WHERE `id` = 21[0m
+  [4;35;1mSQL (0.000540)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000085)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000269)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:36:05', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 8, `user_id` = 1, `description` = '18', `done` = 0, `updated_at` = '2007-09-04 23:10:32' WHERE `id` = 18[0m
+  [4;36;1mSQL (0.000628)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000123)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000289)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:36:07', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 9, `user_id` = 1, `description` = '19', `done` = 0, `updated_at` = '2007-09-04 23:10:32' WHERE `id` = 19[0m
+  [4;35;1mSQL (0.000686)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000097)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000560)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 22:58:50', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 10, `user_id` = 1, `description` = '22', `done` = 0, `updated_at` = '2007-09-04 23:10:32' WHERE `id` = 22[0m
+  [4;36;1mSQL (0.000593)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000114)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000290)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:58:58', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 11, `user_id` = 1, `description` = '23', `done` = 0, `updated_at` = '2007-09-04 23:10:32' WHERE `id` = 23[0m
+  [4;35;1mSQL (0.000684)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000292)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 23:01:25', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 12, `user_id` = 1, `description` = '26', `done` = 0, `updated_at` = '2007-09-04 23:10:32' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.000660)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000108)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000262)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:58:59', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 13, `user_id` = 1, `description` = '24', `done` = 0, `updated_at` = '2007-09-04 23:10:32' WHERE `id` = 24[0m
+  [4;35;1mSQL (0.000546)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000237)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 23:01:48', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 14, `user_id` = 1, `description` = '27', `done` = 0, `updated_at` = '2007-09-04 23:10:32' WHERE `id` = 27[0m
+  [4;36;1mSQL (0.000727)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000089)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000261)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-04 22:33:27', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 15, `user_id` = 1, `description` = '13', `done` = 0, `updated_at` = '2007-09-04 23:10:32' WHERE `id` = 13[0m
+  [4;35;1mSQL (0.000568)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000082)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000261)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-04 23:10:30', `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 5, `user_id` = 1, `description` = 'Click To Change Description', `done` = 0, `updated_at` = '2007-09-04 23:10:32' WHERE `id` = 28[0m
+  [4;36;1mSQL (0.000626)[0m   [0;1mCOMMIT[0m
+Completed in 0.06592 (15 reqs/sec) | Rendering: 0.00008 (0%) | DB: 0.02144 (32%) | 200 OK [http://localhost/list/sort]
+  [4;35;1mListItem Columns (0.003082)[0m   [0mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:10:34) [POST]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"activate_list", "id"=>"2", "controller"=>"list"}
+  [4;36;1mListType Columns (0.001677)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000634)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 2) [0m
+  [4;36;1mListItem Load (0.000366)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) ORDER BY position[0m
+Rendering list/activate_list
+  [4;35;1mListType Load (0.000274)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00248)
+Completed in 0.01961 (50 reqs/sec) | Rendering: 0.00854 (43%) | DB: 0.00603 (30%) | 200 OK [http://localhost/list/activate_list/2]
+  [4;36;1mListItem Columns (0.002923)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-04 23:10:36) [POST]
+  Session ID: 5b220a70a6c3feb38533c8f0cc03d6b1
+  Parameters: {"action"=>"activate_list", "id"=>"1", "controller"=>"list"}
+  [4;35;1mListType Columns (0.001822)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000410)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;35;1mListItem Load (0.000493)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000292)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_list_items (0.00265)
+Completed in 0.02096 (47 reqs/sec) | Rendering: 0.00956 (45%) | DB: 0.00594 (28%) | 200 OK [http://localhost/list/activate_list/1]
