@@ -1,6 +1,4 @@
 <div id='addListItem'>
 	<%= link_to_remote "Add New Item", :url => {:action => :add_new_item} %>
 </div>
-<div id='listItems'>
-	<%=render :partial=>"list_items"%>
-</div>
+<%=	render :partial => "list_items", :object => @listItems %>

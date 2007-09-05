@@ -6,3 +6,4 @@ end
 #      :startcolor => "#ffffff", :endcolor => "#00af00",  :restorecolor => true
 page["listType_#{session[:list_type_id]}"]['style'].background = 'Wheat'
 #page["listType_#{session[:list_type_id]}"].visual_effect :blindDown
+page[:list_items].reload :object => @listItems

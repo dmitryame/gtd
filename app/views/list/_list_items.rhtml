@@ -1,7 +1,12 @@
-<ul id='all_list_items'>
-	<%@listItems.each do |item|%>
-		<% domid = "list_item_#{item.id}"%>
-		<li class="list_item" id='<%=domid%>'><%=item.description%></li>
-		<%= draggable_element(domid, :ghosting=>true, :revert=>true)%>
-	<%end%>
-</ul>
+<div id='list_items'>
+	<ul id='all_list_items'>
+		<%list_items.each do |item|%>
+			<li class="list_item" id='item_<%=item.id%>'><%=item.description%></li>
+		<%end%>
+	</ul>
+</div>
+
+<%= sortable_element 'all_list_items',
+	:url => { :action => "sort" },
+	:complete => visual_effect(:highlight, 'all_list_items')
+%>
