@@ -1,14 +1,13 @@
 class ListController < ApplicationController
 
   def list
+    session[:list_type_id] = ListType.find(:first).id if session[:list_type_id] == nil
     @listItems         = ListItem.find_all_by_user_id_and_list_type_id(
     session[:user_id], 
     session[:list_type_id],
     :order => "position") 
 
-    session[:list_type_id] = ListType.find(:first).id if session[:list_type_id] == nil
     session[:list_items] = @listItems        
-    
   end
 
   def activate_list
@@ -17,9 +16,7 @@ class ListController < ApplicationController
     session[:user_id], 
     session[:list_type_id],
     :order => "position") 
-
     session[:list_items] = @listItems        
-
   end
 
   def add_new_item

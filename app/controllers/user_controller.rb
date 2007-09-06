@@ -15,6 +15,12 @@ class UserController < ApplicationController
     end
   end
   
+  def logout
+    session[:user_id]      = nil
+    session[:list_type_id] = nil
+    redirect_to :action => "list", :controller => "list"
+  end  
+  
   def register
     @user = User.new(params[:user])
     if request.post? and @user.save
