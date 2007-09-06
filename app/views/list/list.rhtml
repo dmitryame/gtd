@@ -1,4 +1,17 @@
 <div id='addListItem'>
 	<%= link_to_remote "Add New Item", :url => {:action => :add_new_item} %>
 </div>
-<%=	render :partial => "list_items", :object => @listItems %>
+<fieldset>
+	<table>
+		<tr>
+			<td>
+				<fieldset>
+					<%=	render :partial => "list_items", :object => @listItems %>
+				</fieldset>
+			</td>
+			<td valign=top>
+				<%= render :partial => "list_item", :object => @listItems.first %>
+			</td>
+		</tr>
+	</table>
+</fieldset>
