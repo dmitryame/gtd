@@ -34,14 +34,14 @@ class ListController < ApplicationController
       maxSortOrder  = 0 if(maxSortOrder == nil) 
       maxSortOrder  = maxSortOrder + 1
 
-      newListItem   = ListItem.new(
-      :description  => 'Click To Change Description',
+      @listItem   = ListItem.new(
+      :description  => 'New Item -> change me',
       :user_id      => session[:user_id],
       :list_type_id => session[:list_type_id],
       :position   => maxSortOrder,
       :done         => false
       )
-      newListItem.save
+      @listItem.save
 
       @listItems             = ListItem.find_all_by_user_id_and_list_type_id(
       session[:user_id], 
@@ -49,7 +49,7 @@ class ListController < ApplicationController
       :order => "position")
       
       session[:list_items] = @listItems        
-      
+      session[:list_item_id] = @listItem.id
     end
 
     def sort
