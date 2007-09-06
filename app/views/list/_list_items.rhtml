@@ -1,7 +1,9 @@
 <div id='list_items'>
 	<ul id='all_list_items'>
 		<%list_items.each do |item|%>
-			<li class="list_item" id='item_<%=item.id%>'><%=item.description%></li>
+			<li class="list_item" id='item_<%=item.id%>'> 
+					<%= link_to_remote item.description, :url => {:action => :activate_list_item, :id => item.id } %> 
+			</li>
 		<%end%>
 	</ul>
 </div>

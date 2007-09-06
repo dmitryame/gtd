@@ -1,0 +1,9 @@
+listItems = ListItem.find_all_by_user_id_and_list_type_id(
+  session[:user_id], 
+  session[:list_type_id]
+)
+
+for listItem in listItems
+  page["item_#{listItem.id}"]['style'].background = 'White'
+end
+page["item_#{session[:list_item_id]}"]['style'].background = 'Wheat'

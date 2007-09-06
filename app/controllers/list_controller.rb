@@ -11,12 +11,20 @@ class ListController < ApplicationController
   end
 
   def activate_list
-    session[:list_type_id] = ListType.find(params[:id]).id
+    session[:list_type_id] = params[:id]
     @listItems             = ListItem.find_all_by_user_id_and_list_type_id(
     session[:user_id], 
     session[:list_type_id],
     :order => "position") 
     session[:list_items] = @listItems        
+  end
+  
+  def activate_list_item
+    session[:list_item_id] = params[:id]
+    @listItem = ListItem.find_all_by_id_and_user_id(
+    session[:list_item_id],
+    session[:user_id]
+    ).first
   end
 
   def add_new_item
