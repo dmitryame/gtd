@@ -1,3 +1,5 @@
 <div id="list_item">
-	list item <%= list_item.id%>
+	<%= session[:list_item_id]%>
+	<%# in_place_editor_field "list_item", "description", {} ,
+	{:load_text_url => url_for(:action=>"get_list_item_description"), :id=>	} %>
 </div>

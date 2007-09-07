@@ -1,4 +1,5 @@
 class ListController < ApplicationController
+  in_place_edit_for :list_item, :description
 
   def list
     session[:list_type_id] = ListType.find(:first).id if session[:list_type_id] == nil
@@ -6,8 +7,6 @@ class ListController < ApplicationController
     session[:user_id], 
     session[:list_type_id],
     :order => "position") 
-
-    session[:list_items] = @listItems        
   end
 
   def activate_list
@@ -16,7 +15,6 @@ class ListController < ApplicationController
     session[:user_id], 
     session[:list_type_id],
     :order => "position") 
-    session[:list_items] = @listItems        
   end
   
   def activate_list_item
@@ -35,7 +33,7 @@ class ListController < ApplicationController
       maxSortOrder  = maxSortOrder + 1
 
       @listItem   = ListItem.new(
-      :description  => 'New Item -> change me',
+      :description  => '[New Item -> change me]',
       :user_id      => session[:user_id],
       :list_type_id => session[:list_type_id],
       :position   => maxSortOrder,
@@ -48,14 +46,14 @@ class ListController < ApplicationController
       session[:list_type_id],
       :order => "position")
       
-      session[:list_items] = @listItems        
       session[:list_item_id] = @listItem.id
     end
 
     def sort
-      @listItems  = session[:list_items]        
-      @listItems.each do |list_item|
-        list_item.position = params['all_list_items'].index(list_item.id.to_s) + 1
+       @listItems = ListItem.find(params[:all_list_items])
+       puts @listItems.size
+       @listItems.each do |list_item|
+        list_item.position = params[:all_list_items].index(list_item.id.to_s) + 1
         list_item.save
       end
       render :nothing      => true
