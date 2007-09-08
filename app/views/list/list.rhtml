@@ -1,6 +1,17 @@
-<div id='addListItem'>
-	<%= link_to_remote "Add New Item", :url => {:action => :add_new_item} %>
-</div>
+<table>
+	<tr>
+		<td>
+			<div id='addListItem'>
+				<%= link_to_remote "Add New", :url => {:action => :add_new_item} %>
+			</div>
+		</td>
+		<td>
+			<div id='deleteListItem'>
+				<%= link_to_remote "Delete Current", :url => {:action => :delete_current_item} %>
+			</div>
+		</td>
+	</tr>
+</table>
 <fieldset>
 	<table>
 		<tr>

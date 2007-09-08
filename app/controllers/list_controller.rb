@@ -13,6 +13,7 @@ class ListController < ApplicationController
     session[:user_id], 
     session[:list_type_id],
     :order => "position") 
+    session[:list_item_id] = @listItems.first.id
   end
 
   def activate_list
@@ -51,7 +52,16 @@ class ListController < ApplicationController
       session[:user_id], 
       session[:list_type_id],
       :order => "position")
-      
+      session[:list_item_id] = @listItem.id
+    end
+
+    def delete_current_item
+      ListItem.delete(session[:list_item_id])
+       @listItems             = ListItem.find_all_by_user_id_and_list_type_id(
+       session[:user_id], 
+       session[:list_type_id],
+       :order => "position")
+       @listItem = @listItems.first
       session[:list_item_id] = @listItem.id
     end
 
@@ -63,6 +73,5 @@ class ListController < ApplicationController
         list_item.save
       end
       render :nothing      => true
-
     end
   end
