@@ -7,4 +7,4 @@ page["listType_#{session[:list_type_id]}"]['style'].background = 'Yellow'
 page[:list_items].reload :object => @listItems
 page[:list_item].reload :object => @listItem
 
-page["item_#{session[:list_item_id]}"]['style'].background = 'Wheat'
+page["item_#{session[:list_item_id]}"]['style'].background = 'Wheat' if session[:list_item_id]

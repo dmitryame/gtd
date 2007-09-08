@@ -13,7 +13,11 @@ class ListController < ApplicationController
     session[:user_id], 
     session[:list_type_id],
     :order => "position") 
-    session[:list_item_id] = @listItems.first.id
+    if @listItems.size > 0
+      session[:list_item_id] = @listItems.first.id
+    else
+      session[:list_item_id] = nil
+    end
   end
 
   def activate_list
@@ -61,8 +65,13 @@ class ListController < ApplicationController
        session[:user_id], 
        session[:list_type_id],
        :order => "position")
-       @listItem = @listItems.first
-      session[:list_item_id] = @listItem.id
+       if @listItems.size > 0
+         @listItem = @listItems.first
+         session[:list_item_id] = @listItem.id
+       else
+         @listItem = nil
+         session[:list_item_id] = nil
+       end
     end
 
     def sort
