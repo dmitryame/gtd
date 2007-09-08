@@ -40,7 +40,7 @@ class ListController < ApplicationController
       maxSortOrder  = maxSortOrder + 1
 
       @listItem   = ListItem.new(
-      :description  => '[New Item -> change me]',
+      :description  => '[New Item]',
       :user_id      => session[:user_id],
       :list_type_id => session[:list_type_id],
       :position   => maxSortOrder,
