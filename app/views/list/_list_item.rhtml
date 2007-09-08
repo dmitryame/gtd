@@ -1,5 +1,4 @@
 <div id="list_item">
-	<%= session[:list_item_id]%>
-	<%# in_place_editor_field "list_item", "description", {} ,
-	{:load_text_url => url_for(:action=>"get_list_item_description"), :id=>	} %>
+	<% @list_item = ListItem.find(session[:list_item_id])%>
+	<%= in_place_editor_field :list_item, :description, :click_to_edit_text => "Click to Edit" %>
 </div>

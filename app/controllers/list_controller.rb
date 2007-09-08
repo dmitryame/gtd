@@ -1,5 +1,11 @@
 class ListController < ApplicationController
   in_place_edit_for :list_item, :description
+  def set_list_item_description
+    @listItem = ListItem.find(params[:id])
+    @listItem.description = ERB::Util.h(params[:value])
+    @listItem.save
+  end
+
 
   def list
     session[:list_type_id] = ListType.find(:first).id if session[:list_type_id] == nil

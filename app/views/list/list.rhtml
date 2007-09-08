@@ -5,9 +5,7 @@
 	<table>
 		<tr>
 			<td>
-				<fieldset>
-					<%=	render :partial => "list_items", :object => @listItems %>
-				</fieldset>
+				<%=	render :partial => "list_items", :object => @listItems %>
 			</td>
 			<td valign=top>
 				<%= render :partial => "list_item", :object => @listItems.first %>
