@@ -26,6 +26,13 @@ class ListController < ApplicationController
     session[:user_id], 
     session[:list_type_id],
     :order => "position") 
+    if @listItems.size >0
+      @listItem = @listItems.first
+      session[:list_item_id] = @listItem.id 
+    else
+      @listItem = nil
+      session[:list_item_id] = nil
+    end
   end
   
   def activate_list_item
@@ -60,18 +67,18 @@ class ListController < ApplicationController
     end
 
     def delete_current_item
-      ListItem.delete(session[:list_item_id])
-       @listItems             = ListItem.find_all_by_user_id_and_list_type_id(
-       session[:user_id], 
-       session[:list_type_id],
-       :order => "position")
-       if @listItems.size > 0
-         @listItem = @listItems.first
-         session[:list_item_id] = @listItem.id
-       else
-         @listItem = nil
-         session[:list_item_id] = nil
-       end
+      ListItem.delete(session[:list_item_id]) if session[:list_item_id]
+      @listItems             = ListItem.find_all_by_user_id_and_list_type_id(
+      session[:user_id], 
+      session[:list_type_id],
+      :order => "position")
+      if @listItems.size > 0
+        @listItem = @listItems.first
+        session[:list_item_id] = @listItem.id
+      else
+        @listItem = nil
+        session[:list_item_id] = nil
+      end
     end
 
     def sort
