@@ -1,6 +1,35 @@
 <div id="list_item">
 	<%if session[:list_item_id]%>
-		<% @list_item = ListItem.find(session[:list_item_id])%>
-		<%= in_place_editor_field :list_item, :description, :click_to_edit_text => "Click to Edit" %>	
+	<% @list_item = ListItem.find(session[:list_item_id])%>
+
+
+
+	<table width="800">
+		<tr>
+			<td>
+				<fieldset>
+					<legend><%= ListType.find(session[:list_type_id]).name%></legend>
+					<%= in_place_editor_field :list_item, :description, :click_to_edit_text => "Click to Edit" %>
+				</fieldset>
+			</td>
+			<td width="200">
+				<fieldset>
+				</fieldset>				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<fieldset>						
+				</fieldset>
+			</td>
+			<td>
+				<fieldset>
+				</fieldset>
+			</td>			
+		</tr>
+	</table>
+
+
+
 	<%end%>
 </div>
