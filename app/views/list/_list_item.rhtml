@@ -8,18 +8,29 @@
 		<tr>
 			<td>
 				<fieldset>
-					<legend><%= ListType.find(session[:list_type_id]).name%></legend>
+					<legend><label><%= ListType.find(session[:list_type_id]).name%></label></legend>
 					<%= in_place_editor_field :list_item, :description, :click_to_edit_text => "Click to Edit" %>
+					<br>
+					<label for="remind_at">Remind:</label>
+					<label for="done">Done:</label>
+					<br>
+					<label for="resolution">Notes/Resolution:</label>
 				</fieldset>
 			</td>
 			<td width="200">
 				<fieldset>
-				</fieldset>				
+					<label>Created:</label>
+					<br><%= @list_item.created_at.to_s(:long)%>
+					<br>
+					<label>Updated:</label>
+					<br><%= @list_item.updated_at.to_s(:long)%>
+				</fieldset>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<fieldset>						
+				<fieldset>	
+					<legend><label>actions</label></legend>		
 				</fieldset>
 			</td>
 			<td>
