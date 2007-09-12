@@ -2,8 +2,6 @@
 	<%if session[:list_item_id]%>
 	<% @list_item = ListItem.find(session[:list_item_id])%>
 
-
-
 	<table width="800">
 		<tr>
 			<td>
@@ -12,9 +10,19 @@
 					<%= in_place_editor_field :list_item, :description, :click_to_edit_text => "Click to Edit" %>
 					<br>
 					<label for="remind_at">Remind:</label>
+					<%= check_box_tag 'remind_at', 1, @list_item.remind_at == nil ? false : true, :onclick => remote_function(:url =>{ :action => :toggle_remind, :id => @list_item.id }) %>
+					<%if @list_item.remind_at != nil%>
+						<%= @list_item.remind_at%>
+					<%end%>
+					
+
+
 					<label for="done">Done:</label>
+					<%= check_box_tag 'done', @list_item.done, @list_item.done ? true : false, :onclick => remote_function(:url =>{ :action => :toggle_done, :id => @list_item.id }) %>
+					
 					<br>
 					<label for="resolution">Notes/Resolution:</label>
+
 				</fieldset>
 			</td>
 			<td width="200">
@@ -27,20 +35,24 @@
 				</fieldset>
 			</td>
 		</tr>
-		<tr>
-			<td>
-				<fieldset>	
-					<legend><label>actions</label></legend>		
-				</fieldset>
+		<tr valign="top">
+			<td valign="top">
+				<table>
+					<tr>
+						<td>
+							<fieldset>	
+								<legend><label>actions</label></legend>		
+							</fieldset>
+						</td>
+						<td>
+							<fieldset>
+							</fieldset>
+						</td>			
+					</tr>
+				</table>			
 			</td>
-			<td>
-				<fieldset>
-				</fieldset>
-			</td>			
 		</tr>
+		
 	</table>
-
-
-
 	<%end%>
 </div>

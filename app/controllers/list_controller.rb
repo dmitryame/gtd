@@ -83,11 +83,30 @@ class ListController < ApplicationController
 
     def sort
        @listItems = ListItem.find(params[:all_list_items])
-       puts @listItems.size
        @listItems.each do |list_item|
         list_item.position = params[:all_list_items].index(list_item.id.to_s) + 1
         list_item.save
       end
       render :nothing      => true
+    end
+    
+    def toggle_done
+      @listItem = ListItem.find(params[:id])
+      if @listItem.done?
+        @listItem.done = false
+      else
+        @listItem.done = true
+      end
+      @listItem.save
+    end
+    
+    def toggle_remind
+      @listItem = ListItem.find(params[:id])
+      if @listItem.remind_at != nil
+        @listItem.remind_at = nil
+      else
+        @listItem.remind_at = Time.now
+      end
+      @listItem.save  
     end
   end
