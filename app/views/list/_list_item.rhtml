@@ -7,6 +7,7 @@
 			<td>
 				<fieldset>
 					<legend><label><%= ListType.find(session[:list_type_id]).name%></label></legend>
+
 					<%= in_place_editor_field :list_item, :description, :click_to_edit_text => "Click to Edit" %>
 					<br>
 					<label for="toggle_remind_at">Remind:</label>
@@ -22,7 +23,8 @@
 					<%= check_box_tag 'done', @list_item.done, @list_item.done ? true : false, :onclick => remote_function(:url =>{ :action => :toggle_done, :id => @list_item.id }) %>
 					
 					<br>
-					<label for="resolution">Notes/Resolution:</label>
+					<span id='resolution'><label for="resolution">Notes/Resolution:</label></span>
+					<%= in_place_editor_field :list_item, :resolution, {}, :rows => 10, :cols => 40, :click_to_edit_text => "Click to Edit", :external_control => 'resolution' %>
 
 				</fieldset>
 			</td>
