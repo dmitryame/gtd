@@ -109,4 +109,10 @@ class ListController < ApplicationController
       end
       @listItem.save  
     end
+    
+    def update_remind_at
+      @listItem = ListItem.find(params[:id])
+      @listItem.remind_at = params[:remind_at]
+      @listItem.save
+    end
   end
