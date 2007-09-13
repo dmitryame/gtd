@@ -4,6 +4,6 @@ page["listType_count_#{session[:list_type_id]}"].replace_html "(" + ListItem.fin
 
 page["listType_#{session[:list_type_id]}"]['style'].background = 'Yellow'
 
-page[:list_items].reload :object => @listItems
-page[:list_item].reload :object => @listItem
+page[:list_items].reload :object => @list_items
+page[:list_item].reload :object => @list_item
 page["item_#{session[:list_item_id]}"]['style'].background = 'Wheat'

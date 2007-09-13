@@ -6,11 +6,11 @@ end
 #      :startcolor => "#ffffff", :endcolor => "#00af00",  :restorecolor => true
 page["listType_#{session[:list_type_id]}"]['style'].background = 'Wheat'
 #page["listType_#{session[:list_type_id]}"].visual_effect :blindDown
-page[:list_items].reload :object => @listItems
+page[:list_items].reload :object => @list_items
 
-if @listItems.first
-  session[:list_item_id] = @listItems.first.id
-  page[:list_item].reload :object => @listItems.first
+if @list_items.first
+  session[:list_item_id] = @list_items.first.id
+  page[:list_item].reload :object => @list_items.first
   page["item_#{session[:list_item_id]}"]['style'].background = 'Wheat'
 else
   page[:list_item].hide

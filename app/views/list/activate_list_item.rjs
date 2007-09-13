@@ -8,4 +8,4 @@ for listItem in listItems
 end
 page["item_#{session[:list_item_id]}"]['style'].background = 'Wheat'
 
-page[:list_item].reload :object => @listItem
+page[:list_item].reload :object => @list_item
