@@ -13,7 +13,7 @@
 					<label for="toggle_remind_at">Remind:</label>
 					<%= check_box_tag :toggle_remind_at, 1, @list_item.remind_at == nil ? false : true, :onclick => remote_function(:url =>{ :action => :toggle_remind, :id => @list_item.id }) %>
 					<%if @list_item.remind_at != nil%>
-						<%= calendar_date_select_tag 'remind_at', @list_item.remind_at, :embedded => false, :time => true, :buttons => false %>
+						<%= calendar_date_select_tag 'remind_at', @list_item.remind_at, :embedded => false, :time => false, :buttons => false %>
 						<%= observe_field 'remind_at', :frequency => 0.5, :url =>{ :action => :update_remind_at, :id => @list_item.id }, :with => "'remind_at=' + escape(value)" %>
 					<%end%>
 					
@@ -23,8 +23,8 @@
 					<%= check_box_tag 'done', @list_item.done, @list_item.done ? true : false, :onclick => remote_function(:url =>{ :action => :toggle_done, :id => @list_item.id }) %>
 					
 					<br>
-					<span id='resolution'><label for="resolution">Notes/Resolution:</label></span>
-					<%= in_place_editor_field :list_item, :resolution, {}, :rows => 10, :cols => 40, :click_to_edit_text => "Click to Edit", :external_control => 'resolution' %>
+					<span id='resolution'><label for="resolution">Notes/Resolution:</label></span><br>
+					<%= in_place_editor_field :list_item, :resolution, { :style => 'white-space:pre'}, {:rows => 10, :cols => 70, :click_to_edit_text => "Click to Edit", :external_control => 'resolution'} %>
 
 				</fieldset>
 			</td>
