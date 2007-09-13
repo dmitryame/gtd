@@ -15,11 +15,26 @@
 <fieldset>
 	<table>
 		<tr>
-			<td>
+			<td valign="top">
 				<%=	render :partial => "list_items", :object => @list_items %>
 			</td>
 			<td valign="top">
-				<%= render :partial => "list_item", :object => @list_items.first %>
+				<table>
+					<tr>
+						<td>
+							<%= render :partial => "list_item", :object => @list_items.first %>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<fieldset>	
+								<legend><label>actions</label></legend>		
+								testasdllasd
+								as;dk;alksd;lk
+							</fieldset>
+						</td>
+					</tr>
+				</table>
 			</td>
 		</tr>
 	</table>
