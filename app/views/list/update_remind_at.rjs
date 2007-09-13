@@ -1,3 +1,4 @@
 page[:list_item].reload :object => @list_item
-page["item_#{@list_item.id}"].visual_effect :highlight,:startcolor => "#ffffff", :endcolor => "#00af00"
 page[:list_item].visual_effect :highlight,:startcolor => "#ffffff", :endcolor => "#00af00"
+
+page["item_#{@list_item.id}"].visual_effect :highlight,:startcolor => "#ffffff", :endcolor => "#00af00"

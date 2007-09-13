@@ -1,4 +1,5 @@
-page["item_#{@list_item.id}"].replace_html link_to_remote h(@list_item.description), :url => {:action => :activate_list_item, :id => @list_item.id }  
-page[:list_item].reload :object => @list_item
-page["item_#{@list_item.id}"].visual_effect :highlight,:startcolor => "#ffffff", :endcolor => "#00af00"
-page[:list_item].visual_effect :highlight,:startcolor => "#ffffff", :endcolor => "#00af00"
+page[:item_resolution].reload :object => @list_item
+page[:item_resolution].visual_effect :highlight,:startcolor => "#ffffff", :endcolor => "#00af00"
+
+page[:item_stats].reload :object => @list_item
+page[:item_stats].visual_effect :highlight,:startcolor => "#ffffff", :endcolor => "#00af00"
