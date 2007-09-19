@@ -4,8 +4,14 @@
 		<%if@list_item%>
 			<%= link_to_remote "Add New", :url => {:action => :add_new_action_item}%>
 			<table>
+				
+				
 				<%= render(:partial => "action_item", :collection => @list_item.action_items)%>
+
+
+
 			</table>
+
 			<%= link_to_remote "Add New", :url => {:action => :add_new_action_item}%>
 		<%end%>
 	</fieldset>

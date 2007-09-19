@@ -1,0 +1,3 @@
+page[:action_items].reload :object => @list_item
+#page[:action_item].visual_effect :highlight,:startcolor => "#ffffff", :endcolor => "#00af00"
+

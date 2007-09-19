@@ -2,6 +2,9 @@ class ListController < ApplicationController
   in_place_edit_for :list_item, :description
   in_place_edit_for :list_item, :resolution
 
+  in_place_edit_for :action_item, :description
+
+  # in_place_editor_filed helper methods
   def set_list_item_description
     @list_item = ListItem.find(params[:id])
     value = ERB::Util.h(params[:value])
@@ -16,6 +19,18 @@ class ListController < ApplicationController
     @list_item.resolution = value
     @list_item.save
   end
+
+  def set_action_item_description
+    @action_item = ActionItem.find(params[:id])
+    value = ERB::Util.h(params[:value])
+    value = '[enter description]' if value == nil || value.strip == ''
+    @action_item.description = value 
+    @action_item.save
+    @list_item = @action_item.list_item
+  end
+  # END in_place_editor_filed helper methods 
+
+
 
 
   def list
