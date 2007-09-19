@@ -1,17 +1,13 @@
-<div id="action_item_<%=action_item.id%>">
-	<tr class="<%= cycle("even", "odd")%>">
+	<tr id="action_item_<%=action_item.id%>" class="<%= cycle("even", "odd")%>">
 		<% @action_item = action_item %>
 		<td>
 			<%= in_place_editor_field :action_item, :description, :click_to_edit_text => "Click to Edit" %>
 		</td>
 		<td>
-			<%=action_item.description%>
 		</td>
 		<td>
-			<%=action_item.description%>
 		</td>
 		<td>
-			<%=action_item.description%>
+			<%=action_item.id%>
 		</td>
 	</tr>
-</div>

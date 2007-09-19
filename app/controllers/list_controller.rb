@@ -107,14 +107,24 @@ class ListController < ApplicationController
       end
     end
 
-    def sort
-       @list_items = ListItem.find(params[:all_list_items])
+    def sort_list_items
+       @list_items = ListItem.find(params[:sortable_list_items])
        @list_items.each do |list_item|
-        list_item.position = params[:all_list_items].index(list_item.id.to_s) + 1
+        list_item.position = params[:sortable_list_items].index(list_item.id.to_s) + 1
         list_item.save
       end
       render :nothing      => true
     end
+
+    def sort_action_items
+       @action_items = ActionItem.find(params[:sortable_action_items])
+       @action_items.each do |action_item|
+        action_item.position = params[:sortable_action_items].index(action_item.id.to_s) + 1
+        action_item.save
+      end
+      render :nothing      => true
+    end
+
     
     def toggle_done
       @list_item = ListItem.find(params[:id])

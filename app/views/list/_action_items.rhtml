@@ -4,15 +4,18 @@
 		<%if@list_item%>
 			<%= link_to_remote "Add New", :url => {:action => :add_new_action_item}%>
 			<table>
-				
-				
-				<%= render(:partial => "action_item", :collection => @list_item.action_items)%>
-
-
-
+				<tbody id="sortable_action_items">
+					<%= render(:partial => "action_item", :collection => @list_item.action_items)%>
+				</tbody>
 			</table>
 
 			<%= link_to_remote "Add New", :url => {:action => :add_new_action_item}%>
 		<%end%>
 	</fieldset>
 </div>
+
+<%= sortable_element 'sortable_action_items',
+	:tag => 'tr',
+	:url => { :action => "sort_action_items" },
+	:complete => visual_effect(:highlight, 'action_action_items')
+%>

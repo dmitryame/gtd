@@ -1,5 +1,5 @@
 <div id='list_items' style="border : solid 2px #ff0000; padding : 4px; width : 250px; height : 500px; overflow : auto; ">
-	<ul id='all_list_items'>
+	<ul id='sortable_list_items'>
 		<%list_items.each do |item|%>
 			<li class="list_item" id='item_<%=item.id%>'> 
 					<%= link_to_remote item.description, :url => {:action => :activate_list_item, :id => item.id } %> 
@@ -8,7 +8,7 @@
 	</ul>
 </div>
 
-<%= sortable_element 'all_list_items',
-	:url => { :action => "sort" },
-	:complete => visual_effect(:highlight, 'all_list_items')
+<%= sortable_element 'sortable_list_items',
+	:url => { :action => "sort_list_items" },
+	:complete => visual_effect(:highlight, 'sortable_list_items')
 %>
