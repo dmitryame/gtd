@@ -9,9 +9,15 @@ page["listType_#{session[:list_type_id]}"]['style'].background = 'Wheat'
 page[:list_items].reload :object => @list_items
 
 if @list_items.first
-  session[:list_item_id] = @list_items.first.id
-  page[:list_item].reload :object => @list_items.first
+  @list_item = @list_items.first
+  session[:list_item_id] = @list_item.id
+  page[:list_item].reload :object => @list_item
   page["item_#{session[:list_item_id]}"]['style'].background = 'Wheat'
+  page[:action_items].reload :object => @list_item
 else
   page[:list_item].hide
+  page[:action_items].hide
+  
+#  @list_item = nil
+#  page[:action_items].reload :object => @list_item
 end

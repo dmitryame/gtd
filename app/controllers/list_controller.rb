@@ -126,4 +126,31 @@ class ListController < ApplicationController
       @list_item.remind_at = params[:remind_at]
       @list_item.save
     end
+    
+    
+    def add_new_action_item
+      maxSortOrder  = ActionItem.maximum(:position,  :conditions   => ["list_item_id = :list_item_id", 
+        {:list_item_id => session[:list_item_id]}])
+
+        maxSortOrder  = 0 if(maxSortOrder == nil) 
+        maxSortOrder  = maxSortOrder + 1
+
+        @action_item   = ActionItem.new(
+        :description  => '[New Item]',
+        :list_item_id      => session[:list_item_id],
+        :position   => maxSortOrder,
+        :level    => 0,
+        :done         => false
+        )
+        @action_item.save
+
+        @action_items             = ActionItem.find_all_by_list_item_id(
+        session[:list_item_id],
+        :order => "position")
+
+        @list_item = @action_item.list_item
+
+      end
+
+    
   end
