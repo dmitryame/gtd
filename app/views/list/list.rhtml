@@ -2,12 +2,12 @@
 	<tr>
 		<td>
 			<div id='addListItem'>
-				<%= link_to_remote "Add New", :url => {:action => :add_new_item} %>
+				<%= link_to_remote image_tag ("add.gif", :border => 0), :url => {:action => :add_new_item} %>
 			</div>
 		</td>
 		<td>
 			<div id='deleteListItem'>
-				<%= link_to_remote "Delete Current", :url => {:action => :delete_current_item} %>
+				<%= link_to_remote image_tag ("trash.gif", :border => 0), :url => {:action => :delete_current_item}, :confirm => "Are you sure you want to delete Current List Item" %>
 			</div>
 		</td>
 	</tr>

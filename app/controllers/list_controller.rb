@@ -93,7 +93,7 @@ class ListController < ApplicationController
     end
 
     def delete_current_item
-      ListItem.delete(session[:list_item_id]) if session[:list_item_id]
+      ListItem.destroy(session[:list_item_id]) if session[:list_item_id]
       @list_items             = ListItem.find_all_by_user_id_and_list_type_id(
       session[:user_id], 
       session[:list_type_id],
@@ -101,8 +101,10 @@ class ListController < ApplicationController
       if @list_items.size > 0
         @list_item = @list_items.first
         session[:list_item_id] = @list_item.id
+        @action_items = @list_item.action_items
       else
         @list_item = nil
+        @action_items = nil
         session[:list_item_id] = nil
       end
     end
@@ -172,7 +174,12 @@ class ListController < ApplicationController
       @list_item = @action_item.list_item
     end
 
-    
+    def delete_action_item
+      @action_item = ActionItem.find(params[:id])      
+      @list_item = @action_item.list_item
+      ActionItem.delete(params[:id])
+    end
+
     def add_new_action_item
       maxSortOrder  = ActionItem.maximum(:position,  :conditions   => ["list_item_id = :list_item_id", 
         {:list_item_id => session[:list_item_id]}])
@@ -183,15 +190,18 @@ class ListController < ApplicationController
          @action_items = ActionItem.find_all_by_list_item_id(
           session[:list_item_id],
           :order => "position")
-          
-          
-        
 
+        if @action_items != nil && @action_items.size >0
+          nesting_level = @action_items.last.nesting_level  
+        else
+          nesting_level = 0
+        end
+        
         @action_item   = ActionItem.new(
         :description  => '[New Item]',
         :list_item_id      => session[:list_item_id],
         :position   => maxSortOrder,
-        :nesting_level    => @action_items.last.nesting_level,
+        :nesting_level    => nesting_level,
         :done         => false
         )
         @action_item.save
