@@ -1,0 +1,1 @@
+page[:action_items].reload :object => @list_item

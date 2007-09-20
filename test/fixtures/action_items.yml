@@ -4,11 +4,11 @@ pick_up_the_phone:
   description: pick up the phone
   list_item_id: 1
   position: 1
-  level: 1
+  nesting_level: 1
   remind_at: 20071212101010
 dial_the_phone:
   id: 2
   description: dial the phone
   list_item_id: 1
   position: 2
-  level: 1
+  nesting_level: 1

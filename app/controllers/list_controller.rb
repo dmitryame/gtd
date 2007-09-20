@@ -152,6 +152,26 @@ class ListController < ApplicationController
       @list_item.save
     end
     
+    def increase_action_nesting_level
+      @action_item = ActionItem.find(params[:id])
+      if @action_item.nesting_level < 5
+        nesting_level = @action_item.nesting_level
+        @action_item.nesting_level = nesting_level +1
+      end
+      @action_item.save
+      @list_item = @action_item.list_item
+    end
+
+    def decrease_action_nesting_level
+      @action_item = ActionItem.find(params[:id])
+      if @action_item.nesting_level > 0  
+        nesting_level = @action_item.nesting_level
+        @action_item.nesting_level = nesting_level -1
+      end
+      @action_item.save
+      @list_item = @action_item.list_item
+    end
+
     
     def add_new_action_item
       maxSortOrder  = ActionItem.maximum(:position,  :conditions   => ["list_item_id = :list_item_id", 
@@ -160,18 +180,23 @@ class ListController < ApplicationController
         maxSortOrder  = 0 if(maxSortOrder == nil) 
         maxSortOrder  = maxSortOrder + 1
 
+         @action_items = ActionItem.find_all_by_list_item_id(
+          session[:list_item_id],
+          :order => "position")
+          
+          
+        
+
         @action_item   = ActionItem.new(
         :description  => '[New Item]',
         :list_item_id      => session[:list_item_id],
         :position   => maxSortOrder,
-        :level    => 0,
+        :nesting_level    => @action_items.last.nesting_level,
         :done         => false
         )
         @action_item.save
 
-        @action_items             = ActionItem.find_all_by_list_item_id(
-        session[:list_item_id],
-        :order => "position")
+        @action_items.push @action_item
 
         @list_item = @action_item.list_item
 

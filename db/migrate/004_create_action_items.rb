@@ -4,7 +4,7 @@ class CreateActionItems < ActiveRecord::Migration
       t.column :description, :string
       t.column :list_item_id,    :integer,  :null => false
       t.column :position, :integer, :null       => false
-      t.column :level, :integer, :null            => false
+      t.column :nesting_level, :integer, :null  => false
       t.column :remind_at, :datetime
       t.column :done,       :boolean,  :null => false, :default => false
       t.column :resolution, :string
