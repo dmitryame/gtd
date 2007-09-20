@@ -93,7 +93,17 @@ class ListController < ApplicationController
     end
 
     def delete_current_item
-      ListItem.destroy(session[:list_item_id]) if session[:list_item_id]
+      @list_item = ListItem.find(session[:list_item_id])
+      if('5'== session[:list_type_id]) # if list_type is trash, then delete it
+        if @list_item != nil
+          ListItem.destroy(@list_item.id) 
+        end
+      else # if not trash, then move to trash
+        puts "move to trash"
+        @list_item.list_type_id = 5 # move to trash
+        @list_item.save
+      end
+      
       @list_items             = ListItem.find_all_by_user_id_and_list_type_id(
       session[:user_id], 
       session[:list_type_id],
@@ -107,6 +117,7 @@ class ListController < ApplicationController
         @action_items = nil
         session[:list_item_id] = nil
       end
+
     end
 
     def sort_list_items

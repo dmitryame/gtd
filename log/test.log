@@ -4111,3 +4111,95 @@ Processing UserController#signin (for 0.0.0.0 at 2007-09-19 22:02:23) [POST]
 Redirected to http://test.host/list/list
 Completed in 0.00132 (757 reqs/sec) | DB: 0.00080 (60%) | 302 Found [http://test.host/user/signin?password=dmitry1234&name=dmitry]
   [4;36;1mSQL (0.000135)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000229)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Columns (0.002706)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000359)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;35;1mActionItem Columns (0.002378)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.000306)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 1) [0m
+  [4;35;1mActionItem Update (0.000323)[0m   [0mUPDATE action_items SET `created_at` = NULL, `remind_at` = '2007-12-12 10:10:10', `resolution` = NULL, `list_item_id` = 1, `position` = 1, `description` = 'pick up the phone', `done` = 0, `updated_at` = '2007-09-20 14:25:37', `nesting_level` = 1 WHERE `id` = 1[0m
+  [4;36;1mActionItem Update (0.000277)[0m   [0;1mUPDATE action_items SET `created_at` = NULL, `remind_at` = '2007-12-12 10:10:10', `resolution` = NULL, `list_item_id` = 1, `position` = 1, `description` = 'push the intercom button', `done` = 0, `updated_at` = '2007-09-20 14:25:37', `nesting_level` = 1 WHERE `id` = 1[0m
+  [4;35;1mActionItem Load (0.000245)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 1) [0m
+  [4;36;1mActionItem Destroy (0.000183)[0m   [0;1m DELETE FROM action_items
+ WHERE `id` = 1
+[0m
+  [4;35;1mActionItem Update (0.000202)[0m   [0mUPDATE action_items SET position = (position - 1) WHERE (list_item_id = 1 AND position > 1) [0m
+  [4;36;1mSQL (0.000641)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000101)[0m   [0mBEGIN[0m
+  [4;36;1mUser Columns (0.002156)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.000318)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000234)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;35;1mListItem Update (0.000327)[0m   [0mUPDATE list_items SET `created_at` = NULL, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 1, `user_id` = 1, `description` = 'make a doctors appointement', `done` = 0, `updated_at` = '2007-09-20 14:25:37' WHERE `id` = 1[0m
+  [4;36;1mListItem Update (0.000267)[0m   [0;1mUPDATE list_items SET `created_at` = NULL, `list_type_id` = 1, `remind_at` = NULL, `resolution` = NULL, `position` = 1, `user_id` = 1, `description` = 'dentist appointement', `done` = 0, `updated_at` = '2007-09-20 14:25:37' WHERE `id` = 1[0m
+  [4;35;1mListItem Load (0.000224)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 1) [0m
+  [4;36;1mActionItem Load (0.000326)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.list_item_id = 1) ORDER BY position[0m
+  [4;35;1mActionItem Destroy (0.000181)[0m   [0m DELETE FROM action_items
+ WHERE `id` = 1
+[0m
+  [4;36;1mActionItem Update (0.000222)[0m   [0;1mUPDATE action_items SET position = (position - 1) WHERE (list_item_id = 1 AND position > 1) [0m
+  [4;35;1mActionItem Destroy (0.000185)[0m   [0m DELETE FROM action_items
+ WHERE `id` = 2
+[0m
+  [4;36;1mActionItem Update (0.000172)[0m   [0;1mUPDATE action_items SET position = (position - 1) WHERE (list_item_id = 1 AND position > 2) [0m
+  [4;35;1mListItem Destroy (0.000174)[0m   [0m DELETE FROM list_items
+ WHERE `id` = 1
+[0m
+  [4;36;1mListItem Update (0.000176)[0m   [0;1mUPDATE list_items SET position = (position - 1) WHERE (user_id = 1 AND position > 1) [0m
+  [4;35;1mSQL (0.025394)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000124)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000322)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mListType Columns (0.001924)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000532)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;36;1mListItem Load (0.000331)[0m   [0;1mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mSQL (0.000254)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-20 14:25:37', 0, NULL, 'new thing to do', 1, 1, 2, '2007-09-20 14:25:37')[0m
+  [4;36;1mListItem Load (0.000328)[0m   [0;1mSELECT * FROM list_items WHERE (user_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mSQL (0.000228)[0m   [0mINSERT INTO list_items (`resolution`, `updated_at`, `done`, `remind_at`, `description`, `user_id`, `list_type_id`, `position`, `created_at`) VALUES(NULL, '2007-09-20 14:25:37', 1, NULL, 'one more thing to do', 1, 1, 3, '2007-09-20 14:25:37')[0m
+  [4;36;1mListItem Load (0.000260)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListType Load (0.000182)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 5) [0m
+  [4;36;1mListItem Load (0.000214)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mSQL (0.000690)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000102)[0m   [0;1mBEGIN[0m
+  [4;35;1mListType Load (0.000310)[0m   [0mSELECT * FROM list_types [0m
+  [4;36;1mSQL (0.000154)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000089)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000251)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mUser Load (0.000448)[0m   [0mSELECT * FROM users WHERE (users.name = 'dmitry' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.000315)[0m   [0;1mUPDATE users SET `created_at` = NULL, `hashed_password` = '44f217f49ce4505ac40970fb64774cc94671ff74', `salt` = '261456000.173117579886387', `email` = 'dmitry@custommode.com', `updated_at` = '2007-09-20 14:25:37', `name` = 'dmitry' WHERE `id` = 1[0m
+  [4;35;1mUser Load (0.000242)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Destroy (0.000188)[0m   [0;1m DELETE FROM users
+ WHERE `id` = 1
+[0m
+  [4;35;1mSQL (0.000185)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mSQL (0.001277)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000124)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000289)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mSQL (0.000156)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000055)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000078)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000063)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.002231)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.000310)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#signin (for 0.0.0.0 at 2007-09-20 14:25:39) [POST]
+  Session ID: 
+  Parameters: {"name"=>"dmitry", "action"=>"signin", "controller"=>"user", "password"=>"wrong"}
+  [4;35;1mUser Load (0.000267)[0m   [0mSELECT * FROM users WHERE (users.`name` = 'dmitry') LIMIT 1[0m
+Rendering  within layouts/user
+Rendering user/signin
+Completed in 0.07556 (13 reqs/sec) | Rendering: 0.07395 (97%) | DB: 0.00323 (4%) | 200 OK [http://test.host/user/signin?password=wrong&name=dmitry]
+  [4;36;1mSQL (0.000178)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000082)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000291)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#signin (for 0.0.0.0 at 2007-09-20 14:25:39) [POST]
+  Session ID: 
+  Parameters: {"name"=>"dmitry", "action"=>"signin", "controller"=>"user", "password"=>"dmitry1234"}
+  [4;35;1mUser Load (0.000329)[0m   [0mSELECT * FROM users WHERE (users.`name` = 'dmitry') LIMIT 1[0m
+Redirected to http://test.host/list/list
+Completed in 0.00326 (306 reqs/sec) | DB: 0.00088 (26%) | 302 Found [http://test.host/user/signin?password=dmitry1234&name=dmitry]
+  [4;36;1mSQL (0.000143)[0m   [0;1mROLLBACK[0m
