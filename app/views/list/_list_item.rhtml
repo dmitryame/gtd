@@ -8,8 +8,12 @@
 					<%@selected_list_type = ListType.find(session[:list_type_id])%>
 					<legend><label><%= @selected_list_type.name%></label> 
 						move to -> 
-						<%= select(:list_type, :id, ListType.find(:all).map {|l| [l.name,l.id]},  {:selected=>@selected_list_type.id}) %>
-						<%= observe_field 'list_type_id', :frequency => 0.5, :url =>{ :action => :move_list_item_to, :id => @selected_list_type.id }, :with => "'move_to_list_type=' + escape(value)" %>
+						<%= select(:list_type, :id, ListType.find(:all).map {|l| [l.name,l.id]},  
+							{:selected=>@selected_list_type.id},
+							{"onchange" => remote_function(:url =>{ :action => :move_list_item_to}, 
+								:with => "'move_to_list_type='+value" )
+							}
+							) %>
 						
 					</legend>
 					<%= render :partial => "item_description", :object => @list_item %>

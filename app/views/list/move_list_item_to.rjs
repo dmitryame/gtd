@@ -4,8 +4,7 @@ page["listType_count_#{session[:list_type_id]}"].replace_html "(" + ListItem.fin
 page["listType_#{session[:list_type_id]}"]['style'].background = 'Yellow'
 
 page["listType_count_#{@move_to_list_type}"].replace_html "(" + ListItem.find_all_by_user_id_and_list_type_id(session[:user_id], @move_to_list_type).size.to_s + ")"
-#page["listType_#{@move_to_list_type}""]['style'].background = 'Red'
-
+page["listType_#{@move_to_list_type}"].visual_effect :highlight,:startcolor => "#ffffff", :endcolor => "#00af00"
 
 page[:list_items].reload :object => @list_items
 page[:list_item].reload :object => @list_item
