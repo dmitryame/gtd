@@ -99,7 +99,6 @@ class ListController < ApplicationController
           ListItem.destroy(@list_item.id) 
         end
       else # if not trash, then move to trash
-        puts "move to trash"
         @list_item.list_type_id = 5 # move to trash
         @list_item.save
       end
@@ -117,9 +116,29 @@ class ListController < ApplicationController
         @action_items = nil
         session[:list_item_id] = nil
       end
-
     end
 
+    def move_list_item_to
+      @move_to_list_type = params[:move_to_list_type]
+      @list_item = ListItem.find(session[:list_item_id])
+      @list_item.list_type_id = @move_to_list_type
+      @list_item.save
+      
+      @list_items             = ListItem.find_all_by_user_id_and_list_type_id(
+      session[:user_id], 
+      session[:list_type_id],
+      :order => "position")
+      if @list_items.size > 0
+        @list_item = @list_items.first
+        session[:list_item_id] = @list_item.id
+        @action_items = @list_item.action_items
+      else
+        @list_item = nil
+        @action_items = nil
+        session[:list_item_id] = nil
+      end
+    end
+    
     def sort_list_items
        @list_items = ListItem.find(params[:sortable_list_items])
        @list_items.each do |list_item|
