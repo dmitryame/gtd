@@ -5,5 +5,10 @@
 		<br>
 		<label>Updated:</label>
 		<br><%= @list_item.updated_at.to_s(:long)%>
+		<%if @list_item.done_at != nil%>
+			<br>
+			<label>Done:</label>
+			<%=@list_item.done_at.to_s(:long)%>
+		<%end%>
 	</fieldset>
 </dev>
