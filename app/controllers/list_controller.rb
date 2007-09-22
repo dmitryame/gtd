@@ -163,8 +163,10 @@ class ListController < ApplicationController
       @list_item = ListItem.find(params[:id])
       if @list_item.done?
         @list_item.done = false
+        @list_item.done_at = nil
       else
         @list_item.done = true
+        @list_item.done_at = Time.now
       end
       @list_item.save
     end

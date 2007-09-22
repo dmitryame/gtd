@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 4) do
     t.column "resolution",   :string
     t.column "created_at",   :datetime,                    :null => false
     t.column "updated_at",   :datetime,                    :null => false
+    t.column "done_at",      :datetime
   end
 
   create_table "list_types", :force => true do |t|
