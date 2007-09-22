@@ -40,6 +40,7 @@ class ListController < ApplicationController
     session[:list_type_id],
     :order => "position") 
     if @list_items.size > 0
+      @list_item = @list_items.first
       session[:list_item_id] = @list_items.first.id
     else
       session[:list_item_id] = nil

@@ -2,10 +2,8 @@
 for listType in ListType.find(:all) 
   page["listType_#{listType.id}"]['style'].background = 'White'
 end
-#page["listType_#{@listType.id}"].visual_effect :highlight, 
-#      :startcolor => "#ffffff", :endcolor => "#00af00",  :restorecolor => true
+
 page["listType_#{session[:list_type_id]}"]['style'].background = 'Wheat'
-#page["listType_#{session[:list_type_id]}"].visual_effect :blindDown
 page[:list_items].reload :object => @list_items
 
 if @list_items.first
@@ -17,7 +15,4 @@ if @list_items.first
 else
   page[:list_item].hide
   page[:action_items].hide
-  
-#  @list_item = nil
-#  page[:action_items].reload :object => @list_item
 end

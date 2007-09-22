@@ -6,9 +6,8 @@
 			</li>
 		<%end%>
 	</ul>
+	<%= sortable_element 'sortable_list_items',
+		:url => { :action => "sort_list_items" },
+		:complete => visual_effect(:highlight, 'sortable_list_items')
+	%>
 </div>
-
-<%= sortable_element 'sortable_list_items',
-	:url => { :action => "sort_list_items" },
-	:complete => visual_effect(:highlight, 'sortable_list_items')
-%>
