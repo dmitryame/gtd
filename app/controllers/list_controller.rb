@@ -189,12 +189,32 @@ class ListController < ApplicationController
       end
       @list_item.save  
     end
+
+    def toggle_action_remind
+      @action_item = ActionItem.find(params[:id])
+      if @action_item.remind_at != nil
+        @action_item.remind_at = nil
+      else
+        @action_item.remind_at = Time.now
+      end
+      @action_item.save  
+      @list_item = @action_item.list_item
+    end
+
     
     def update_remind_at
       @list_item = ListItem.find(params[:id])
       @list_item.remind_at = params[:remind_at]
       @list_item.save
     end
+
+    def update_action_remind_at
+      @action_item = ActionItem.find(params[:id])
+      @action_item.remind_at = params[:action_remind_at]
+      @action_item.save
+      @list_item = @action_item.list_item
+    end
+
     
     def increase_action_nesting_level
       @action_item = ActionItem.find(params[:id])
