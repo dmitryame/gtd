@@ -168,6 +168,17 @@ class ListController < ApplicationController
       end
       @list_item.save
     end
+
+    def toggle_action_done
+      @action_item = ActionItem.find(params[:id])
+      if @action_item.done?
+        @action_item.done = false
+      else
+        @action_item.done = true
+      end
+      @action_item.save
+    end
+
     
     def toggle_remind
       @list_item = ListItem.find(params[:id])

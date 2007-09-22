@@ -9,6 +9,8 @@
 			<%= in_place_editor_field :action_item, :description, :click_to_edit_text => "Click to Edit" %>
 		</td>
 		<td>
+			<label for="action_done">Done:</label>
+			<%= check_box_tag 'action_done', @action_item.done, @action_item.done ? true : false, :onclick => remote_function(:url =>{ :action => :toggle_action_done, :id => @action_item.id }) %>
 		</td>
 		<td>
 		</td>
