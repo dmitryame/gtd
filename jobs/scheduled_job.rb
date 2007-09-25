@@ -7,7 +7,7 @@ ActiveRecord::Base.establish_connection(
   :host => "localhost",
   :username => "getitdon",
   :password => "getitdon",
-  :database => "gtd_production"
+  :database => "gtd_production",
 #  :username => "root",
 #  :password => "",
 #  :database => "gtd_development"
