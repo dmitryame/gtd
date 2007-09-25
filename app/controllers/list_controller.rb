@@ -31,8 +31,6 @@ class ListController < ApplicationController
   # END in_place_editor_filed helper methods 
 
 
-
-
   def list
     session[:list_type_id] = ListType.find(:first).id if session[:list_type_id] == nil
     @list_items         = ListItem.find_all_by_user_id_and_list_type_id(
