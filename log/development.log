@@ -150,3 +150,35 @@ Rendered list/_action_item (0.00223)
 Rendered list/_action_item (0.00224)
 Rendered list/_action_items (0.02148)
 Completed in 0.06449 (15 reqs/sec) | Rendering: 0.04540 (70%) | DB: 0.00995 (15%) | 200 OK [http://localhost/list/activate_list/1]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-23 10:34:36) [GET]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003185)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000481)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = '1') ORDER BY position[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00246)
+  [4;36;1mListItem Load (0.000446)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+  [4;35;1mListType Columns (0.002150)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000474)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 1) [0m
+  [4;35;1mListType Load (0.000178)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00058)
+Rendered list/_item_resolution (0.00052)
+Rendered list/_item_stats (0.00061)
+Rendered list/_list_item (0.01729)
+  [4;36;1mActionItem Load (0.000481)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.list_item_id = 2) ORDER BY position[0m
+  [4;35;1mActionItem Columns (0.002424)[0m   [0mSHOW FIELDS FROM action_items[0m
+Rendered list/_action_item (0.00827)
+Rendered list/_action_item (0.00248)
+Rendered list/_action_item (0.00177)
+Rendered list/_action_items (0.02078)
+  [4;36;1mListType Load (0.003147)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListItem Load (0.000251)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;36;1mListItem Load (0.000190)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;35;1mListItem Load (0.000159)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;36;1mListItem Load (0.000156)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;35;1mListItem Load (0.000891)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;36;1mListItem Load (0.000180)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.07135 (14 reqs/sec) | Rendering: 0.04725 (66%) | DB: 0.01479 (20%) | 200 OK [http://localhost/list/list]
