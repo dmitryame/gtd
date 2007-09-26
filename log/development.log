@@ -20346,3 +20346,906 @@ Rendered list/_item_resolution (0.00057)
 Rendered list/_item_stats (0.00089)
 Rendered list/_list_item (0.02071)
 Completed in 0.06965 (14 reqs/sec) | Rendering: 0.02577 (37%) | DB: 0.03008 (43%) | 200 OK [http://localhost/list/toggle_done/3]
+
+
+Processing ListController#increase_action_nesting_level (for 127.0.0.1 at 2007-09-26 07:29:52) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"increase_action_nesting_level", "id"=>"5", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.003303)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.000323)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 5) [0m
+  [4;36;1mSQL (0.000103)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000325)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 5, `description` = 'dddd', `done` = 0, `updated_at` = '2007-09-26 07:29:52', `nesting_level` = 1 WHERE `id` = 5[0m
+  [4;36;1mSQL (0.000737)[0m   [0;1mCOMMIT[0m
+  [4;35;1mListItem Columns (0.002574)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.002121)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+Rendering list/increase_action_nesting_level
+Rendered list/_action_item (0.00385)
+Completed in 0.04098 (24 reqs/sec) | Rendering: 0.01027 (25%) | DB: 0.00949 (23%) | 200 OK [http://localhost/list/increase_action_nesting_level/5]
+
+
+Processing ListController#increase_action_nesting_level (for 127.0.0.1 at 2007-09-26 07:29:53) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"increase_action_nesting_level", "id"=>"5", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.003657)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.000730)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 5) [0m
+  [4;35;1mSQL (0.000098)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000312)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 5, `description` = 'dddd', `done` = 0, `updated_at` = '2007-09-26 07:29:54', `nesting_level` = 2 WHERE `id` = 5[0m
+  [4;35;1mSQL (0.000827)[0m   [0mCOMMIT[0m
+  [4;36;1mListItem Columns (0.002691)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000336)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+Rendering list/increase_action_nesting_level
+Rendered list/_action_item (0.00406)
+Completed in 0.10803 (9 reqs/sec) | Rendering: 0.01121 (10%) | DB: 0.00865 (8%) | 200 OK [http://localhost/list/increase_action_nesting_level/5]
+
+
+Processing ListController#increase_action_nesting_level (for 127.0.0.1 at 2007-09-26 07:29:54) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"increase_action_nesting_level", "id"=>"5", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.002215)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.002251)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 5) [0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000472)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 5, `description` = 'dddd', `done` = 0, `updated_at` = '2007-09-26 07:29:54', `nesting_level` = 3 WHERE `id` = 5[0m
+  [4;36;1mSQL (0.000705)[0m   [0;1mCOMMIT[0m
+  [4;35;1mListItem Columns (0.002072)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.001461)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+Rendering list/increase_action_nesting_level
+Rendered list/_action_item (0.00300)
+Completed in 0.03978 (25 reqs/sec) | Rendering: 0.01014 (25%) | DB: 0.00935 (23%) | 200 OK [http://localhost/list/increase_action_nesting_level/5]
+
+
+Processing ListController#decrease_action_nesting_level (for 127.0.0.1 at 2007-09-26 07:30:11) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"decrease_action_nesting_level", "id"=>"4", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.002594)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.000264)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 4) [0m
+  [4;35;1mSQL (0.000085)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000305)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 3, `description` = 'c', `done` = 0, `updated_at` = '2007-09-26 07:30:11', `nesting_level` = 0 WHERE `id` = 4[0m
+  [4;35;1mSQL (0.000735)[0m   [0mCOMMIT[0m
+  [4;36;1mListItem Columns (0.001861)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000290)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+Rendering list/decrease_action_nesting_level
+Rendered list/_action_item (0.00364)
+Completed in 0.03682 (27 reqs/sec) | Rendering: 0.00991 (26%) | DB: 0.00613 (16%) | 200 OK [http://localhost/list/decrease_action_nesting_level/4]
+
+
+Processing ListController#decrease_action_nesting_level (for 127.0.0.1 at 2007-09-26 07:30:37) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"decrease_action_nesting_level", "id"=>"4", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.003417)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.000318)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 4) [0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000337)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 3, `description` = 'c', `done` = 0, `updated_at` = '2007-09-26 07:30:37', `nesting_level` = 0 WHERE `id` = 4[0m
+  [4;36;1mSQL (0.000692)[0m   [0;1mCOMMIT[0m
+  [4;35;1mListItem Columns (0.002556)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000326)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+Rendering list/decrease_action_nesting_level
+Rendered list/_action_item (0.00398)
+Completed in 0.03937 (25 reqs/sec) | Rendering: 0.01064 (27%) | DB: 0.00774 (19%) | 200 OK [http://localhost/list/decrease_action_nesting_level/4]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:30:39) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"6", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.002959)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.000331)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 6) [0m
+  [4;35;1mSQL (0.000145)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000346)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 1, `description` = 'a', `done` = 0, `updated_at` = '2007-09-26 07:30:39', `nesting_level` = 2 WHERE `id` = 6[0m
+  [4;35;1mSQL (0.000875)[0m   [0mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00406)
+Completed in 0.02805 (35 reqs/sec) | Rendering: 0.01084 (38%) | DB: 0.00466 (16%) | 200 OK [http://localhost/list/toggle_action_done/6]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:30:42) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"6", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.003004)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.000717)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 6) [0m
+  [4;36;1mSQL (0.000102)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000330)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 1, `description` = 'a', `done` = 1, `updated_at` = '2007-09-26 07:30:42', `nesting_level` = 2 WHERE `id` = 6[0m
+  [4;36;1mSQL (0.000866)[0m   [0;1mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00399)
+Completed in 0.02834 (35 reqs/sec) | Rendering: 0.01039 (36%) | DB: 0.00502 (17%) | 200 OK [http://localhost/list/toggle_action_done/6]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:30:43) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"6", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.003005)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.000328)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 6) [0m
+  [4;35;1mSQL (0.000111)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000342)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 1, `description` = 'a', `done` = 0, `updated_at` = '2007-09-26 07:30:43', `nesting_level` = 2 WHERE `id` = 6[0m
+  [4;35;1mSQL (0.000893)[0m   [0mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00389)
+Completed in 0.02798 (35 reqs/sec) | Rendering: 0.01097 (39%) | DB: 0.00468 (16%) | 200 OK [http://localhost/list/toggle_action_done/6]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:30:44) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"6", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.002759)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.001943)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 6) [0m
+  [4;36;1mSQL (0.000589)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000335)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 1, `description` = 'a', `done` = 1, `updated_at` = '2007-09-26 07:30:44', `nesting_level` = 2 WHERE `id` = 6[0m
+  [4;36;1mSQL (0.000755)[0m   [0;1mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00400)
+Completed in 0.02814 (35 reqs/sec) | Rendering: 0.01016 (36%) | DB: 0.00638 (22%) | 200 OK [http://localhost/list/toggle_action_done/6]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:30:46) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"6", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.003134)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.001820)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 6) [0m
+  [4;35;1mSQL (0.000116)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000372)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 1, `description` = 'a', `done` = 0, `updated_at` = '2007-09-26 07:30:46', `nesting_level` = 2 WHERE `id` = 6[0m
+  [4;35;1mSQL (0.000737)[0m   [0mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00403)
+Completed in 0.09950 (10 reqs/sec) | Rendering: 0.01124 (11%) | DB: 0.00618 (6%) | 200 OK [http://localhost/list/toggle_action_done/6]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:30:47) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"6", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.003406)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.000320)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 6) [0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000338)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 1, `description` = 'a', `done` = 1, `updated_at` = '2007-09-26 07:30:47', `nesting_level` = 2 WHERE `id` = 6[0m
+  [4;36;1mSQL (0.000864)[0m   [0;1mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00403)
+Completed in 0.02720 (36 reqs/sec) | Rendering: 0.01064 (39%) | DB: 0.00502 (18%) | 200 OK [http://localhost/list/toggle_action_done/6]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:30:48) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"6", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.002888)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.001087)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 6) [0m
+  [4;35;1mSQL (0.000104)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000303)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 1, `description` = 'a', `done` = 0, `updated_at` = '2007-09-26 07:30:48', `nesting_level` = 2 WHERE `id` = 6[0m
+  [4;35;1mSQL (0.000831)[0m   [0mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00376)
+Completed in 0.02811 (35 reqs/sec) | Rendering: 0.01080 (38%) | DB: 0.00521 (18%) | 200 OK [http://localhost/list/toggle_action_done/6]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:30:50) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"6", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.003079)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.000323)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 6) [0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000322)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 1, `description` = 'a', `done` = 1, `updated_at` = '2007-09-26 07:30:50', `nesting_level` = 2 WHERE `id` = 6[0m
+  [4;36;1mSQL (0.000880)[0m   [0;1mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00386)
+Completed in 0.02844 (35 reqs/sec) | Rendering: 0.01111 (39%) | DB: 0.00470 (16%) | 200 OK [http://localhost/list/toggle_action_done/6]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:30:50) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"6", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.002963)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.001994)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 6) [0m
+  [4;35;1mSQL (0.000100)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000318)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 1, `description` = 'a', `done` = 0, `updated_at` = '2007-09-26 07:30:50', `nesting_level` = 2 WHERE `id` = 6[0m
+  [4;35;1mSQL (0.000853)[0m   [0mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00786)
+Completed in 0.10472 (9 reqs/sec) | Rendering: 0.08450 (80%) | DB: 0.00623 (5%) | 200 OK [http://localhost/list/toggle_action_done/6]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:30:51) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"4", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.003094)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.000923)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 4) [0m
+  [4;36;1mSQL (0.000106)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000311)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 3, `description` = 'c', `done` = 1, `updated_at` = '2007-09-26 07:30:51', `nesting_level` = 0 WHERE `id` = 4[0m
+  [4;36;1mSQL (0.041115)[0m   [0;1mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00401)
+Completed in 0.07019 (14 reqs/sec) | Rendering: 0.01107 (15%) | DB: 0.04555 (64%) | 200 OK [http://localhost/list/toggle_action_done/4]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:30:52) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"4", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.003496)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.000326)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 4) [0m
+  [4;35;1mSQL (0.000100)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000330)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 3, `description` = 'c', `done` = 0, `updated_at` = '2007-09-26 07:30:52', `nesting_level` = 0 WHERE `id` = 4[0m
+  [4;35;1mSQL (0.000777)[0m   [0mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00537)
+Completed in 0.03004 (33 reqs/sec) | Rendering: 0.01231 (40%) | DB: 0.00503 (16%) | 200 OK [http://localhost/list/toggle_action_done/4]
+
+
+Processing ListController#toggle_action_remind (for 127.0.0.1 at 2007-09-26 07:30:57) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_remind", "id"=>"6", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.003167)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.000417)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 6) [0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000362)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = '2007-09-26 07:30:57', `resolution` = NULL, `list_item_id` = 2, `position` = 1, `description` = 'a', `done` = 0, `updated_at` = '2007-09-26 07:30:57', `nesting_level` = 2 WHERE `id` = 6[0m
+  [4;36;1mSQL (0.000700)[0m   [0;1mCOMMIT[0m
+  [4;35;1mListItem Columns (0.002575)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000342)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+Rendering list/toggle_action_remind
+Rendered list/_action_item (0.00439)
+Completed in 0.03976 (25 reqs/sec) | Rendering: 0.01176 (29%) | DB: 0.00767 (19%) | 200 OK [http://localhost/list/toggle_action_remind/6]
+
+
+Processing ListController#toggle_action_remind (for 127.0.0.1 at 2007-09-26 07:30:58) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_remind", "id"=>"6", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.002538)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.000280)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 6) [0m
+  [4;35;1mSQL (0.000113)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000330)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 1, `description` = 'a', `done` = 0, `updated_at` = '2007-09-26 07:30:58', `nesting_level` = 2 WHERE `id` = 6[0m
+  [4;35;1mSQL (0.000725)[0m   [0mCOMMIT[0m
+  [4;36;1mListItem Columns (0.002254)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000334)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+Rendering list/toggle_action_remind
+Rendered list/_action_item (0.07602)
+Completed in 0.10961 (9 reqs/sec) | Rendering: 0.08227 (75%) | DB: 0.00657 (5%) | 200 OK [http://localhost/list/toggle_action_remind/6]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-26 07:32:58) [GET]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.002686)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000496)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = '5') ORDER BY position[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00281)
+  [4;36;1mListItem Load (0.000324)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 3) [0m
+  [4;35;1mListType Columns (0.001853)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000552)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 5) [0m
+  [4;35;1mListType Load (0.000200)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00056)
+Rendered list/_item_resolution (0.00054)
+Rendered list/_item_stats (0.00103)
+Rendered list/_list_item (0.01960)
+  [4;36;1mActionItem Load (0.000485)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.list_item_id = 3) ORDER BY position[0m
+Rendered list/_action_items (0.00856)
+  [4;35;1mListType Load (0.000468)[0m   [0mSELECT * FROM list_types [0m
+  [4;36;1mListItem Load (0.000263)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000276)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000243)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000237)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000248)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000259)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.05870 (17 reqs/sec) | Rendering: 0.03771 (64%) | DB: 0.00859 (14%) | 200 OK [http://localhost/list/list]
+
+
+Processing ListController#activate_list_item (for 127.0.0.1 at 2007-09-26 07:33:01) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"activate_list_item", "id"=>"6", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003236)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000351)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = '6' AND list_items.`user_id` = 1) [0m
+Rendering list/activate_list_item
+  [4;36;1mListItem Load (0.000398)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = '5') [0m
+  [4;35;1mListItem Load (0.000287)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 6) [0m
+  [4;36;1mListType Columns (0.001946)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001098)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 5) [0m
+  [4;36;1mListType Load (0.000223)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00168)
+Rendered list/_item_resolution (0.00059)
+Rendered list/_item_stats (0.00094)
+Rendered list/_list_item (0.02197)
+  [4;35;1mActionItem Load (0.000486)[0m   [0mSELECT * FROM action_items WHERE (action_items.list_item_id = 6) ORDER BY position[0m
+Rendered list/_action_items (0.00802)
+Completed in 0.05207 (19 reqs/sec) | Rendering: 0.03472 (66%) | DB: 0.00802 (15%) | 200 OK [http://localhost/list/activate_list_item/6]
+
+
+Processing ListController#activate_list_item (for 127.0.0.1 at 2007-09-26 07:33:03) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"activate_list_item", "id"=>"3", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003140)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000345)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = '3' AND list_items.`user_id` = 1) [0m
+Rendering list/activate_list_item
+  [4;36;1mListItem Load (0.000410)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = '5') [0m
+  [4;35;1mListItem Load (0.000619)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 3) [0m
+  [4;36;1mListType Columns (0.001876)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000912)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 5) [0m
+  [4;36;1mListType Load (0.000208)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00167)
+Rendered list/_item_resolution (0.00060)
+Rendered list/_item_stats (0.00097)
+Rendered list/_list_item (0.09626)
+  [4;35;1mActionItem Load (0.000465)[0m   [0mSELECT * FROM action_items WHERE (action_items.list_item_id = 3) ORDER BY position[0m
+Rendered list/_action_items (0.00804)
+Completed in 0.12676 (7 reqs/sec) | Rendering: 0.10923 (86%) | DB: 0.00797 (6%) | 200 OK [http://localhost/list/activate_list_item/3]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-26 07:33:05) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"activate_list", "id"=>"5", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003475)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000513)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = '5') ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000326)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListType Columns (0.001863)[0m   [0mSHOW FIELDS FROM list_types[0m
+Rendered list/_list_items (0.00423)
+  [4;36;1mListItem Load (0.000380)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 3) [0m
+  [4;35;1mListType Load (0.000200)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 5) [0m
+  [4;36;1mListType Load (0.000197)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00057)
+Rendered list/_item_resolution (0.00055)
+Rendered list/_item_stats (0.00091)
+Rendered list/_list_item (0.00759)
+  [4;35;1mActionItem Load (0.000471)[0m   [0mSELECT * FROM action_items WHERE (action_items.list_item_id = 3) ORDER BY position[0m
+Rendered list/_action_items (0.00752)
+Completed in 0.05497 (18 reqs/sec) | Rendering: 0.03804 (69%) | DB: 0.00742 (13%) | 200 OK [http://localhost/list/activate_list/5]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-26 07:33:06) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"activate_list", "id"=>"6", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003086)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000534)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = '6') ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000270)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListType Columns (0.001732)[0m   [0mSHOW FIELDS FROM list_types[0m
+Rendered list/_list_items (0.00369)
+  [4;36;1mListItem Load (0.000337)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 7) [0m
+  [4;35;1mListType Load (0.000187)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 6) [0m
+  [4;36;1mListType Load (0.000189)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00117)
+Rendered list/_item_resolution (0.00061)
+Rendered list/_item_stats (0.00057)
+Rendered list/_list_item (0.00654)
+  [4;35;1mActionItem Load (0.000522)[0m   [0mSELECT * FROM action_items WHERE (action_items.list_item_id = 7) ORDER BY position[0m
+Rendered list/_action_items (0.00845)
+Completed in 0.05188 (19 reqs/sec) | Rendering: 0.03550 (68%) | DB: 0.00686 (13%) | 200 OK [http://localhost/list/activate_list/6]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-26 07:33:09) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"activate_list", "id"=>"5", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003117)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000490)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = '5') ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000302)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListType Columns (0.001975)[0m   [0mSHOW FIELDS FROM list_types[0m
+Rendered list/_list_items (0.00419)
+  [4;36;1mListItem Load (0.000911)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 3) [0m
+  [4;35;1mListType Load (0.000225)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 5) [0m
+  [4;36;1mListType Load (0.000214)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00059)
+Rendered list/_item_resolution (0.00056)
+Rendered list/_item_stats (0.00101)
+Rendered list/_list_item (0.00861)
+  [4;35;1mActionItem Load (0.000491)[0m   [0mSELECT * FROM action_items WHERE (action_items.list_item_id = 3) ORDER BY position[0m
+Rendered list/_action_items (0.00828)
+Completed in 0.05630 (17 reqs/sec) | Rendering: 0.03861 (68%) | DB: 0.00773 (13%) | 200 OK [http://localhost/list/activate_list/5]
+
+
+Processing ListController#activate_list_item (for 127.0.0.1 at 2007-09-26 07:33:11) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"activate_list_item", "id"=>"5", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.001677)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000507)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = '5' AND list_items.`user_id` = 1) [0m
+Rendering list/activate_list_item
+  [4;36;1mListItem Load (0.000328)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = '5') [0m
+  [4;35;1mListItem Load (0.000226)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 5) [0m
+  [4;36;1mListType Columns (0.001996)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000816)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 5) [0m
+  [4;36;1mListType Load (0.000225)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00174)
+Rendered list/_item_resolution (0.00055)
+Rendered list/_item_stats (0.00094)
+Rendered list/_list_item (0.01888)
+  [4;35;1mActionItem Load (0.000450)[0m   [0mSELECT * FROM action_items WHERE (action_items.list_item_id = 5) ORDER BY position[0m
+Rendered list/_action_items (0.00758)
+Completed in 0.04608 (21 reqs/sec) | Rendering: 0.02996 (65%) | DB: 0.00623 (13%) | 200 OK [http://localhost/list/activate_list_item/5]
+
+
+Processing ListController#activate_list_item (for 127.0.0.1 at 2007-09-26 07:33:12) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"activate_list_item", "id"=>"6", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003263)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000343)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = '6' AND list_items.`user_id` = 1) [0m
+Rendering list/activate_list_item
+  [4;36;1mListItem Load (0.000390)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = '5') [0m
+  [4;35;1mListItem Load (0.000248)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 6) [0m
+  [4;36;1mListType Columns (0.002042)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000585)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 5) [0m
+  [4;36;1mListType Load (0.000252)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00179)
+Rendered list/_item_resolution (0.00054)
+Rendered list/_item_stats (0.00096)
+Rendered list/_list_item (0.02086)
+  [4;35;1mActionItem Load (0.000460)[0m   [0mSELECT * FROM action_items WHERE (action_items.list_item_id = 6) ORDER BY position[0m
+Rendered list/_action_items (0.00801)
+Completed in 0.05162 (19 reqs/sec) | Rendering: 0.03460 (67%) | DB: 0.00758 (14%) | 200 OK [http://localhost/list/activate_list_item/6]
+
+
+Processing ListController#activate_list_item (for 127.0.0.1 at 2007-09-26 07:33:14) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"activate_list_item", "id"=>"4", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003435)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000366)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = '4' AND list_items.`user_id` = 1) [0m
+Rendering list/activate_list_item
+  [4;36;1mListItem Load (0.000443)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = '5') [0m
+  [4;35;1mListItem Load (0.000311)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 4) [0m
+  [4;36;1mListType Columns (0.001965)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000880)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 5) [0m
+  [4;36;1mListType Load (0.000201)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00177)
+Rendered list/_item_resolution (0.00061)
+Rendered list/_item_stats (0.00094)
+Rendered list/_list_item (0.02294)
+  [4;35;1mActionItem Load (0.000547)[0m   [0mSELECT * FROM action_items WHERE (action_items.list_item_id = 4) ORDER BY position[0m
+Rendered list/_action_items (0.00881)
+Completed in 0.05554 (18 reqs/sec) | Rendering: 0.03759 (67%) | DB: 0.00815 (14%) | 200 OK [http://localhost/list/activate_list_item/4]
+
+
+Processing ListController#activate_list (for 127.0.0.1 at 2007-09-26 07:33:16) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"activate_list", "id"=>"6", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003015)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000479)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = '6') ORDER BY position[0m
+Rendering list/activate_list
+  [4;36;1mListType Load (0.000313)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListType Columns (0.001925)[0m   [0mSHOW FIELDS FROM list_types[0m
+Rendered list/_list_items (0.00376)
+  [4;36;1mListItem Load (0.000321)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 7) [0m
+  [4;35;1mListType Load (0.000186)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 6) [0m
+  [4;36;1mListType Load (0.000340)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00068)
+Rendered list/_item_resolution (0.00057)
+Rendered list/_item_stats (0.00058)
+Rendered list/_list_item (0.00664)
+  [4;35;1mActionItem Load (0.000624)[0m   [0mSELECT * FROM action_items WHERE (action_items.list_item_id = 7) ORDER BY position[0m
+Rendered list/_action_items (0.00785)
+Completed in 0.05238 (19 reqs/sec) | Rendering: 0.03528 (67%) | DB: 0.00720 (13%) | 200 OK [http://localhost/list/activate_list/6]
+
+
+Processing ListController#activate_list_item (for 127.0.0.1 at 2007-09-26 07:33:17) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"activate_list_item", "id"=>"8", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.002520)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000314)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = '8' AND list_items.`user_id` = 1) [0m
+Rendering list/activate_list_item
+  [4;36;1mListItem Load (0.000319)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = '6') [0m
+  [4;35;1mListItem Load (0.000212)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 8) [0m
+  [4;36;1mListType Columns (0.001605)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000815)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 6) [0m
+  [4;36;1mListType Load (0.000176)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00129)
+Rendered list/_item_resolution (0.00042)
+Rendered list/_item_stats (0.00078)
+Rendered list/_list_item (0.01698)
+  [4;35;1mActionItem Load (0.000411)[0m   [0mSELECT * FROM action_items WHERE (action_items.list_item_id = 8) ORDER BY position[0m
+Rendered list/_action_items (0.00639)
+Completed in 0.04179 (23 reqs/sec) | Rendering: 0.02675 (64%) | DB: 0.00637 (15%) | 200 OK [http://localhost/list/activate_list_item/8]
+
+
+Processing ListController#activate_list_item (for 127.0.0.1 at 2007-09-26 07:33:18) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"activate_list_item", "id"=>"9", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003095)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000372)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = '9' AND list_items.`user_id` = 1) [0m
+Rendering list/activate_list_item
+  [4;36;1mListItem Load (0.000417)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = '6') [0m
+  [4;35;1mListItem Load (0.000255)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 9) [0m
+  [4;36;1mListType Columns (0.001954)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000860)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 6) [0m
+  [4;36;1mListType Load (0.000250)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00174)
+Rendered list/_item_resolution (0.00059)
+Rendered list/_item_stats (0.00057)
+Rendered list/_list_item (0.02230)
+  [4;35;1mActionItem Load (0.000586)[0m   [0mSELECT * FROM action_items WHERE (action_items.list_item_id = 9) ORDER BY position[0m
+Rendered list/_action_items (0.00744)
+Completed in 0.05196 (19 reqs/sec) | Rendering: 0.03422 (65%) | DB: 0.00779 (14%) | 200 OK [http://localhost/list/activate_list_item/9]
+
+
+Processing ListController#activate_list_item (for 127.0.0.1 at 2007-09-26 07:33:20) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"activate_list_item", "id"=>"2", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.002933)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000755)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = '2' AND list_items.`user_id` = 1) [0m
+Rendering list/activate_list_item
+  [4;36;1mListItem Load (0.000395)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = '6') [0m
+  [4;35;1mListItem Load (0.000237)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+  [4;36;1mListType Columns (0.001930)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001210)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 6) [0m
+  [4;36;1mListType Load (0.000199)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00157)
+Rendered list/_item_resolution (0.00112)
+Rendered list/_item_stats (0.00099)
+Rendered list/_list_item (0.02348)
+  [4;35;1mActionItem Load (0.000729)[0m   [0mSELECT * FROM action_items WHERE (action_items.list_item_id = 2) ORDER BY position[0m
+  [4;36;1mActionItem Columns (0.002514)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+Rendered list/_action_item (0.01173)
+Rendered list/_action_item (0.00223)
+Rendered list/_action_item (0.00218)
+Rendered list/_action_item (0.00210)
+Rendered list/_action_item (0.00215)
+Rendered list/_action_item (0.00227)
+Rendered list/_action_item (0.00230)
+Rendered list/_action_item (0.00234)
+Rendered list/_action_item (0.00452)
+Rendered list/_action_item (0.00258)
+Rendered list/_action_item (0.00175)
+Rendered list/_action_item (0.00163)
+Rendered list/_action_item (0.00178)
+Rendered list/_action_item (0.00168)
+Rendered list/_action_item (0.00164)
+Rendered list/_action_item (0.00183)
+Rendered list/_action_item (0.00162)
+Rendered list/_action_item (0.00166)
+Rendered list/_action_item (0.00190)
+Rendered list/_action_items (0.06236)
+Completed in 0.19870 (5 reqs/sec) | Rendering: 0.17782 (89%) | DB: 0.01090 (5%) | 200 OK [http://localhost/list/activate_list_item/2]
+
+
+Processing ListController#sort_list_items (for 127.0.0.1 at 2007-09-26 07:33:24) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"sort_list_items", "sortable_list_items"=>["2", "7", "8", "9"], "controller"=>"list"}
+  [4;35;1mListItem Columns (0.002596)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.001356)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` IN (2,7,8,9)) [0m
+  [4;35;1mSQL (0.000117)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000623)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-22 08:43:19', `list_type_id` = 6, `remind_at` = '2007-09-24 21:30:00', `resolution` = NULL, `position` = 1, `user_id` = 1, `description` = '[New Item]', `done` = 1, `done_at` = '2007-09-25 18:11:37', `updated_at` = '2007-09-26 07:33:24' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.083780)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000824)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-25 21:05:14', `list_type_id` = 6, `remind_at` = NULL, `resolution` = NULL, `position` = 2, `user_id` = 1, `description` = '[New Item]', `done` = 0, `done_at` = NULL, `updated_at` = '2007-09-26 07:33:24' WHERE `id` = 7[0m
+  [4;36;1mSQL (0.000723)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000085)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000382)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-25 21:05:16', `list_type_id` = 6, `remind_at` = NULL, `resolution` = NULL, `position` = 3, `user_id` = 1, `description` = '[New Item]', `done` = 1, `done_at` = '2007-09-25 21:06:02', `updated_at` = '2007-09-26 07:33:24' WHERE `id` = 8[0m
+  [4;35;1mSQL (0.000673)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000312)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-25 21:05:17', `list_type_id` = 6, `remind_at` = NULL, `resolution` = NULL, `position` = 4, `user_id` = 1, `description` = '[New Item]', `done` = 0, `done_at` = NULL, `updated_at` = '2007-09-26 07:33:24' WHERE `id` = 9[0m
+  [4;36;1mSQL (0.000967)[0m   [0;1mCOMMIT[0m
+Completed in 0.11856 (8 reqs/sec) | Rendering: 0.00009 (0%) | DB: 0.09266 (78%) | 200 OK [http://localhost/list/sort_list_items]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:33:28) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"9", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.003052)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.000337)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 9) [0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000313)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:50', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 6, `description` = '[New Item]', `done` = 1, `updated_at` = '2007-09-26 07:33:28', `nesting_level` = 2 WHERE `id` = 9[0m
+  [4;35;1mSQL (0.000798)[0m   [0mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00416)
+Completed in 0.02793 (35 reqs/sec) | Rendering: 0.01126 (40%) | DB: 0.00460 (16%) | 200 OK [http://localhost/list/toggle_action_done/9]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:33:29) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"9", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.003540)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.000384)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 9) [0m
+  [4;36;1mSQL (0.000099)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000297)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:50', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 6, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:33:29', `nesting_level` = 2 WHERE `id` = 9[0m
+  [4;36;1mSQL (0.000872)[0m   [0;1mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00366)
+Completed in 0.02730 (36 reqs/sec) | Rendering: 0.01101 (40%) | DB: 0.00519 (19%) | 200 OK [http://localhost/list/toggle_action_done/9]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-26 07:33:37) [GET]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.003441)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000517)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = '6') ORDER BY position[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00290)
+  [4;35;1mListItem Load (0.000334)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+  [4;36;1mListType Columns (0.001963)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001349)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 6) [0m
+  [4;36;1mListType Load (0.000303)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00061)
+Rendered list/_item_resolution (0.00054)
+Rendered list/_item_stats (0.00084)
+Rendered list/_list_item (0.02082)
+  [4;35;1mActionItem Load (0.000543)[0m   [0mSELECT * FROM action_items WHERE (action_items.list_item_id = 2) ORDER BY position[0m
+  [4;36;1mActionItem Columns (0.002362)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+Rendered list/_action_item (0.00985)
+Rendered list/_action_item (0.00220)
+Rendered list/_action_item (0.00229)
+Rendered list/_action_item (0.00279)
+Rendered list/_action_item (0.00228)
+Rendered list/_action_item (0.00217)
+Rendered list/_action_item (0.00201)
+Rendered list/_action_item (0.00206)
+Rendered list/_action_item (0.00196)
+Rendered list/_action_item (0.00175)
+Rendered list/_action_item (0.00166)
+Rendered list/_action_item (0.00176)
+Rendered list/_action_item (0.00173)
+Rendered list/_action_item (0.00164)
+Rendered list/_action_item (0.00189)
+Rendered list/_action_item (0.00163)
+Rendered list/_action_item (0.00163)
+Rendered list/_action_item (0.00175)
+Rendered list/_action_item (0.00171)
+Rendered list/_action_items (0.05615)
+  [4;35;1mListType Load (0.000503)[0m   [0mSELECT * FROM list_types [0m
+  [4;36;1mListItem Load (0.000252)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000193)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000187)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000192)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000202)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000200)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.17656 (5 reqs/sec) | Rendering: 0.08133 (46%) | DB: 0.01254 (7%) | 200 OK [http://localhost/list/list]
+
+
+Processing ListController#sort_action_items (for 127.0.0.1 at 2007-09-26 07:33:43) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"sortable_action_items"=>["6", "22", "4", "5", "8", "9", "10", "7", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"], "action"=>"sort_action_items", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.002606)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.000875)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` IN (6,22,4,5,8,9,10,7,11,12,13,14,15,16,17,18,19,20,21)) [0m
+  [4;36;1mSQL (0.000084)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000458)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 3, `description` = 'c', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 0 WHERE `id` = 4[0m
+  [4;36;1mSQL (0.000736)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000115)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000406)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 4, `description` = 'dddd', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 3 WHERE `id` = 5[0m
+  [4;35;1mSQL (0.000585)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000299)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 1, `description` = 'a', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 2 WHERE `id` = 6[0m
+  [4;36;1mSQL (0.000559)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000307)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:49', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 8, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 2 WHERE `id` = 7[0m
+  [4;35;1mSQL (0.000511)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000074)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000294)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:49', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 5, `description` = 'ads', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 4 WHERE `id` = 8[0m
+  [4;36;1mSQL (0.000565)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000087)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000481)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:50', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 6, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 2 WHERE `id` = 9[0m
+  [4;35;1mSQL (0.000747)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000070)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000289)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:50', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 7, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 2 WHERE `id` = 10[0m
+  [4;36;1mSQL (0.026888)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000130)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000403)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:50', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 9, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 2 WHERE `id` = 11[0m
+  [4;35;1mSQL (0.000582)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000078)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000391)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:51', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 10, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 2 WHERE `id` = 12[0m
+  [4;36;1mSQL (0.000620)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000106)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000346)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:51', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 11, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 2 WHERE `id` = 13[0m
+  [4;35;1mSQL (0.000618)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000130)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000472)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:52', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 12, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 2 WHERE `id` = 14[0m
+  [4;36;1mSQL (0.000541)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000096)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000510)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:52', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 13, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 2 WHERE `id` = 15[0m
+  [4;35;1mSQL (0.000575)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000441)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:52', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 14, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 2 WHERE `id` = 16[0m
+  [4;36;1mSQL (0.000680)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000078)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000281)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:53', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 15, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 2 WHERE `id` = 17[0m
+  [4;35;1mSQL (0.000489)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000067)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000309)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:53', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 16, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 2 WHERE `id` = 18[0m
+  [4;36;1mSQL (0.000564)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000083)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000336)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:54', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 17, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 2 WHERE `id` = 19[0m
+  [4;35;1mSQL (0.000500)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000097)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000274)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:54', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 18, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 2 WHERE `id` = 20[0m
+  [4;36;1mSQL (0.000617)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000077)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000258)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 20:51:24', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 19, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 2 WHERE `id` = 21[0m
+  [4;35;1mSQL (0.000477)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000065)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000239)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 20:51:30', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 2, `description` = '[New Item]a', `done` = 0, `updated_at` = '2007-09-26 07:33:43', `nesting_level` = 2 WHERE `id` = 22[0m
+  [4;36;1mSQL (0.000571)[0m   [0;1mCOMMIT[0m
+Completed in 0.11545 (8 reqs/sec) | Rendering: 0.00014 (0%) | DB: 0.04941 (42%) | 200 OK [http://localhost/list/sort_action_items]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-26 07:34:26) [GET]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.004057)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.003418)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = '6') ORDER BY position[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00287)
+  [4;35;1mListItem Load (0.000323)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+  [4;36;1mListType Columns (0.001844)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.000284)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 6) [0m
+  [4;36;1mListType Load (0.000210)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00057)
+Rendered list/_item_resolution (0.00060)
+Rendered list/_item_stats (0.00093)
+Rendered list/_list_item (0.02460)
+  [4;35;1mActionItem Load (0.000600)[0m   [0mSELECT * FROM action_items WHERE (action_items.list_item_id = 2) ORDER BY position[0m
+  [4;36;1mActionItem Columns (0.001784)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+Rendered list/_action_item (0.01392)
+Rendered list/_action_item (0.00226)
+Rendered list/_action_item (0.00213)
+Rendered list/_action_item (0.00209)
+Rendered list/_action_item (0.00202)
+Rendered list/_action_item (0.00213)
+Rendered list/_action_item (0.00199)
+Rendered list/_action_item (0.00195)
+Rendered list/_action_item (0.00173)
+Rendered list/_action_item (0.00168)
+Rendered list/_action_item (0.00180)
+Rendered list/_action_item (0.00341)
+Rendered list/_action_item (0.00175)
+Rendered list/_action_item (0.00175)
+Rendered list/_action_item (0.00290)
+Rendered list/_action_item (0.00180)
+Rendered list/_action_item (0.00169)
+Rendered list/_action_item (0.00163)
+Rendered list/_action_item (0.00163)
+Rendered list/_action_items (0.06267)
+  [4;35;1mListType Load (0.000297)[0m   [0mSELECT * FROM list_types [0m
+  [4;36;1mListItem Load (0.000224)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;35;1mListItem Load (0.000241)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;36;1mListItem Load (0.000293)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;35;1mListItem Load (0.000207)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;36;1mListItem Load (0.000212)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;35;1mListItem Load (0.000202)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.12120 (8 reqs/sec) | Rendering: 0.09343 (77%) | DB: 0.01420 (11%) | 200 OK [http://localhost/list/list]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:34:29) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"8", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.002982)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.000342)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 8) [0m
+  [4;36;1mSQL (0.000099)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000328)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:49', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 5, `description` = 'ads', `done` = 1, `updated_at` = '2007-09-26 07:34:29', `nesting_level` = 4 WHERE `id` = 8[0m
+  [4;36;1mSQL (0.000835)[0m   [0;1mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00394)
+Completed in 0.02817 (35 reqs/sec) | Rendering: 0.01132 (40%) | DB: 0.00459 (16%) | 200 OK [http://localhost/list/toggle_action_done/8]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:34:30) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"8", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.129731)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.001470)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 8) [0m
+  [4;35;1mSQL (0.000116)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000275)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:49', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 5, `description` = 'ads', `done` = 0, `updated_at` = '2007-09-26 07:34:30', `nesting_level` = 4 WHERE `id` = 8[0m
+  [4;35;1mSQL (0.001977)[0m   [0mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00307)
+Completed in 0.15521 (6 reqs/sec) | Rendering: 0.00789 (5%) | DB: 0.13357 (86%) | 200 OK [http://localhost/list/toggle_action_done/8]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:34:31) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"8", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.003304)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.000309)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 8) [0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000301)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:49', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 5, `description` = 'ads', `done` = 1, `updated_at` = '2007-09-26 07:34:31', `nesting_level` = 4 WHERE `id` = 8[0m
+  [4;36;1mSQL (0.000757)[0m   [0;1mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00423)
+Completed in 0.02835 (35 reqs/sec) | Rendering: 0.01027 (36%) | DB: 0.00476 (16%) | 200 OK [http://localhost/list/toggle_action_done/8]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:34:32) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"8", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.003278)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.000993)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 8) [0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000300)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:49', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 5, `description` = 'ads', `done` = 0, `updated_at` = '2007-09-26 07:34:32', `nesting_level` = 4 WHERE `id` = 8[0m
+  [4;35;1mSQL (0.000911)[0m   [0mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00378)
+Completed in 0.02803 (35 reqs/sec) | Rendering: 0.01099 (39%) | DB: 0.00557 (19%) | 200 OK [http://localhost/list/toggle_action_done/8]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:34:33) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"8", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.003366)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.001147)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 8) [0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000331)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:49', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 5, `description` = 'ads', `done` = 1, `updated_at` = '2007-09-26 07:34:33', `nesting_level` = 4 WHERE `id` = 8[0m
+  [4;36;1mSQL (0.001159)[0m   [0;1mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00411)
+Completed in 0.03032 (32 reqs/sec) | Rendering: 0.01063 (35%) | DB: 0.00611 (20%) | 200 OK [http://localhost/list/toggle_action_done/8]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:34:34) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"8", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.003406)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.000310)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 8) [0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000360)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:49', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 5, `description` = 'ads', `done` = 0, `updated_at` = '2007-09-26 07:34:34', `nesting_level` = 4 WHERE `id` = 8[0m
+  [4;35;1mSQL (0.000973)[0m   [0mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00409)
+Completed in 0.02901 (34 reqs/sec) | Rendering: 0.01045 (36%) | DB: 0.00514 (17%) | 200 OK [http://localhost/list/toggle_action_done/8]
+
+
+Processing ListController#list (for 127.0.0.1 at 2007-09-26 07:35:41) [GET]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"list", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003100)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.085061)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = '6') ORDER BY position[0m
+Rendering  within layouts/list
+Rendering list/list
+Rendered list/_list_items (0.00322)
+  [4;36;1mListItem Load (0.000354)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+  [4;35;1mListType Columns (0.002156)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000941)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 6) [0m
+  [4;35;1mListType Load (0.000201)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00056)
+Rendered list/_item_resolution (0.00062)
+Rendered list/_item_stats (0.00093)
+Rendered list/_list_item (0.02177)
+  [4;36;1mActionItem Load (0.000607)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.list_item_id = 2) ORDER BY position[0m
+  [4;35;1mActionItem Columns (0.002484)[0m   [0mSHOW FIELDS FROM action_items[0m
+Rendered list/_action_item (0.01163)
+Rendered list/_action_item (0.00247)
+Rendered list/_action_item (0.00226)
+Rendered list/_action_item (0.00209)
+Rendered list/_action_item (0.00229)
+Rendered list/_action_item (0.00245)
+Rendered list/_action_item (0.00216)
+Rendered list/_action_item (0.00207)
+Rendered list/_action_item (0.00228)
+Rendered list/_action_item (0.00204)
+Rendered list/_action_item (0.00193)
+Rendered list/_action_item (0.00163)
+Rendered list/_action_item (0.00162)
+Rendered list/_action_item (0.00160)
+Rendered list/_action_item (0.00175)
+Rendered list/_action_item (0.00197)
+Rendered list/_action_item (0.00192)
+Rendered list/_action_item (0.00162)
+Rendered list/_action_item (0.00160)
+Rendered list/_action_items (0.05962)
+  [4;36;1mListType Load (0.000504)[0m   [0;1mSELECT * FROM list_types [0m
+  [4;35;1mListItem Load (0.000839)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 1) [0m
+  [4;36;1mListItem Load (0.000221)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 2) [0m
+  [4;35;1mListItem Load (0.000192)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 3) [0m
+  [4;36;1mListItem Load (0.000185)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 4) [0m
+  [4;35;1mListItem Load (0.000203)[0m   [0mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 5) [0m
+  [4;36;1mListItem Load (0.000198)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`user_id` = 1 AND list_items.`list_type_id` = 6) [0m
+Completed in 0.19380 (5 reqs/sec) | Rendering: 0.08617 (44%) | DB: 0.09725 (50%) | 200 OK [http://localhost/list/list]
+
+
+Processing ListController#toggle_action_remind (for 127.0.0.1 at 2007-09-26 07:35:44) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_remind", "id"=>"10", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.003103)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.000309)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 10) [0m
+  [4;35;1mSQL (0.000124)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000364)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:50', `remind_at` = '2007-09-26 07:35:44', `resolution` = NULL, `list_item_id` = 2, `position` = 7, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:35:44', `nesting_level` = 2 WHERE `id` = 10[0m
+  [4;35;1mSQL (0.000791)[0m   [0mCOMMIT[0m
+  [4;36;1mListItem Columns (0.002937)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000307)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+Rendering list/toggle_action_remind
+Rendered list/_action_item (0.00545)
+Completed in 0.04183 (23 reqs/sec) | Rendering: 0.01265 (30%) | DB: 0.00794 (18%) | 200 OK [http://localhost/list/toggle_action_remind/10]
+
+
+Processing ListController#toggle_action_remind (for 127.0.0.1 at 2007-09-26 07:35:46) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_remind", "id"=>"10", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.002584)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.000279)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 10) [0m
+  [4;36;1mSQL (0.000103)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000317)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:50', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 7, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:35:46', `nesting_level` = 2 WHERE `id` = 10[0m
+  [4;36;1mSQL (0.000732)[0m   [0;1mCOMMIT[0m
+  [4;35;1mListItem Columns (0.002682)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000733)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+Rendering list/toggle_action_remind
+Rendered list/_action_item (0.00432)
+Completed in 0.11321 (8 reqs/sec) | Rendering: 0.01060 (9%) | DB: 0.00743 (6%) | 200 OK [http://localhost/list/toggle_action_remind/10]
