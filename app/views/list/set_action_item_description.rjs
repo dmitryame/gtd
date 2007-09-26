@@ -1,3 +1,2 @@
-page[:action_items].reload :object => @list_item
-#page[:action_item].visual_effect :highlight,:startcolor => "#ffffff", :endcolor => "#00af00"
+page.replace "action_item_#{@action_item.id}", :partial => 'action_item', :object => @action_item
 

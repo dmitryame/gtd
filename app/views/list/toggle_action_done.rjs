@@ -1,2 +1,1 @@
-page["action_item_#{@action_item.id}"]['style'].color = 'grey' if @action_item.done
-page["action_item_#{@action_item.id}"]['style'].color = 'black' if !@action_item.done
+page.replace "action_item_#{@action_item.id}", :partial => 'action_item', :object => @action_item
