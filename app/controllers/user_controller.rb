@@ -7,7 +7,7 @@ class UserController < ApplicationController
       user = User.authenticate(params[:name], params[:password])
       if user.blank?
           session[:user_id] = nil
-        flash[:notice] = "Name or Password invalid";
+        flash[:notice] = "Login or Password invalid";
       else
         session[:user_id] = user.id
         redirect_to :action => "list", :controller => "list"

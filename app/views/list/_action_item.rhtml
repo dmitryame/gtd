@@ -1,4 +1,5 @@
-	<tr id="action_item_<%=action_item.id%>" class="<%= cycle("even", "odd")%>">
+	<tr id="action_item_<%=action_item.id%>" class="<%= cycle("even", "odd")%>" 
+		<%= action_item.done ? 'style="color:grey"':'' %> >
 		<% @action_item = action_item %>
 		<td valign='top' style="white-space: nowrap">
 			<%= link_to_remote image_tag ("trash.gif", :border => 0), :url => {:action => :delete_action_item, :id => @action_item.id }, :confirm => "Are you sure you want to delete"  %> 				

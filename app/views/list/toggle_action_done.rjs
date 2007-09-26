@@ -1,2 +1,2 @@
-page["action_item_#{@action_item.id}"].visual_effect :highlight,:startcolor => "#ffffff", :endcolor => "#00af00"
-page[:action_items].visual_effect :highlight,:startcolor => "#ffffff", :endcolor => "#00af00"
+page["action_item_#{@action_item.id}"]['style'].color = 'grey' if @action_item.done
+page["action_item_#{@action_item.id}"]['style'].color = 'black' if !@action_item.done

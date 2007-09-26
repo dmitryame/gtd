@@ -1,5 +1,6 @@
 <div id="item_stats">
 	<fieldset>
+		<font size="-3">
 		<label>Created:</label>
 		<br><%= @list_item.created_at.to_s(:long)%>
 		<br>
@@ -10,5 +11,6 @@
 			<label>Done:</label>
 			<%=@list_item.done_at.to_s(:long)%>
 		<%end%>
+		</font>
 	</fieldset>
 </dev>
