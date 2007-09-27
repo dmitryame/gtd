@@ -5,13 +5,9 @@ require 'active_record'
 ActiveRecord::Base.establish_connection(
   :adapter => "mysql",
   :host => "localhost",
-  :username => "getitdon",
-  :password => "getitdon",
-  :database => "gtd_production",
-#  :username => "root",
-#  :password => "",
-#  :database => "gtd_development"
-  :socket => "/var/run/mysqld/mysqld.sock"
+  :username => "root",
+  :password => "",
+  :database => "gtd_development"
   
 )
 
@@ -42,13 +38,13 @@ ActionMailer::Base.smtp_settings = {
 # setting up the root of the template so that ActionMailer will know where to find the ERB template
 class StandAloneEmailSender < ActionMailer::Base
   def notify_list_item(list_item)
-    subject  "List Item Notification"
+    subject  "[List Item] Notification"
     recipients  [list_item.user.email]
     from  "notify@custommode.com" 
     body  '[List Item] --> ' + list_item.description + ' <is due>' + list_item.remind_at.to_s 
   end
   def notify_action_item(action_item)
-    subject  "Action Item Notification"
+    subject  "[Action Item] Notification"
     recipients  [action_item.list_item.user.email]
     from  "notify@custommode.com" 
     body  '[List Item] --> ' + action_item.list_item.description + ' [Action Item] --> ' + action_item.description + ' <is due>' + action_item.remind_at.to_s 
