@@ -17,6 +17,7 @@ ActiveRecord::Base.establish_connection(
 
 class ListItem < ActiveRecord::Base
   belongs_to :user
+  has_many :action_items
 end
 
 class User < ActiveRecord::Base
@@ -24,6 +25,7 @@ class User < ActiveRecord::Base
 end
 
 class ActionItem < ActiveRecord::Base
+  belongs_to :list_item
 end
 
 ActiveRecord::Base.logger =  Logger.new(STDOUT)
@@ -43,13 +45,13 @@ class StandAloneEmailSender < ActionMailer::Base
     subject  "List Item Notification"
     recipients  [list_item.user.email]
     from  "notify@custommode.com" 
-    body  'List Item ' + list_item.description + ' is due ' + list_item.remind_at.to_s 
+    body  '[List Item] --> ' + list_item.description + ' <is due>' + list_item.remind_at.to_s 
   end
   def notify_action_item(action_item)
     subject  "Action Item Notification"
     recipients  [action_item.list_item.user.email]
     from  "notify@custommode.com" 
-    body  'Action Item ' + action_item.description + ' is due ' + action_item.remind_at.to_s 
+    body  '[List Item] --> ' + action_item.list_item.description + ' [Action Item] --> ' + action_item.description + ' <is due>' + action_item.remind_at.to_s 
   end
 end
 

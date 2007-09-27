@@ -21249,3 +21249,363 @@ Processing ListController#toggle_action_remind (for 127.0.0.1 at 2007-09-26 07:3
 Rendering list/toggle_action_remind
 Rendered list/_action_item (0.00432)
 Completed in 0.11321 (8 reqs/sec) | Rendering: 0.01060 (9%) | DB: 0.00743 (6%) | 200 OK [http://localhost/list/toggle_action_remind/10]
+
+
+Processing ListController#toggle_remind (for 127.0.0.1 at 2007-09-26 07:37:06) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_remind", "id"=>"2", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.003548)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.001465)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000420)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-22 08:43:19', `list_type_id` = 6, `remind_at` = NULL, `resolution` = NULL, `position` = 1, `user_id` = 1, `description` = '[New Item]', `done` = 1, `done_at` = '2007-09-25 18:11:37', `updated_at` = '2007-09-26 07:37:06' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.000741)[0m   [0mCOMMIT[0m
+Rendering list/toggle_remind
+  [4;36;1mListItem Load (0.000360)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+  [4;35;1mListType Columns (0.001792)[0m   [0mSHOW FIELDS FROM list_types[0m
+  [4;36;1mListType Load (0.000436)[0m   [0;1mSELECT * FROM list_types WHERE (list_types.`id` = 6) [0m
+  [4;35;1mListType Load (0.000188)[0m   [0mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00066)
+Rendered list/_item_resolution (0.00056)
+Rendered list/_item_stats (0.00095)
+Rendered list/_list_item (0.02093)
+Completed in 0.05047 (19 reqs/sec) | Rendering: 0.02672 (52%) | DB: 0.00905 (17%) | 200 OK [http://localhost/list/toggle_remind/2]
+
+
+Processing ListController#toggle_remind (for 127.0.0.1 at 2007-09-26 07:37:07) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_remind", "id"=>"2", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.003232)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.001088)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+  [4;36;1mSQL (0.000100)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000377)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-22 08:43:19', `list_type_id` = 6, `remind_at` = '2007-09-26 07:37:07', `resolution` = NULL, `position` = 1, `user_id` = 1, `description` = '[New Item]', `done` = 1, `done_at` = '2007-09-25 18:11:37', `updated_at` = '2007-09-26 07:37:07' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.000919)[0m   [0;1mCOMMIT[0m
+Rendering list/toggle_remind
+  [4;35;1mListItem Load (0.000366)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+  [4;36;1mListType Columns (0.001912)[0m   [0;1mSHOW FIELDS FROM list_types[0m
+  [4;35;1mListType Load (0.001176)[0m   [0mSELECT * FROM list_types WHERE (list_types.`id` = 6) [0m
+  [4;36;1mListType Load (0.000233)[0m   [0;1mSELECT * FROM list_types [0m
+Rendered list/_item_description (0.00048)
+Rendered list/_item_resolution (0.00043)
+Rendered list/_item_stats (0.00068)
+Rendered list/_list_item (0.02194)
+Completed in 0.04957 (20 reqs/sec) | Rendering: 0.02592 (52%) | DB: 0.00940 (18%) | 200 OK [http://localhost/list/toggle_remind/2]
+
+
+Processing ListController#set_list_item_resolution (for 127.0.0.1 at 2007-09-26 07:37:15) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"set_list_item_resolution", "id"=>"2", "value"=>"kjlkjwer", "controller"=>"list"}
+  [4;35;1mListItem Columns (0.002933)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.001773)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+  [4;35;1mSQL (0.000085)[0m   [0mBEGIN[0m
+  [4;36;1mListItem Update (0.000324)[0m   [0;1mUPDATE list_items SET `created_at` = '2007-09-22 08:43:19', `list_type_id` = 6, `remind_at` = '2007-09-26 07:37:07', `resolution` = 'kjlkjwer', `position` = 1, `user_id` = 1, `description` = '[New Item]', `done` = 1, `done_at` = '2007-09-25 18:11:37', `updated_at` = '2007-09-26 07:37:15' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.000707)[0m   [0mCOMMIT[0m
+Rendering list/set_list_item_resolution
+Rendered list/_item_resolution (0.00179)
+Rendered list/_item_stats (0.00078)
+Completed in 0.04500 (22 reqs/sec) | Rendering: 0.02603 (57%) | DB: 0.00582 (12%) | 200 OK [http://localhost/list/set_list_item_resolution/2]
+
+
+Processing ListController#set_list_item_resolution (for 127.0.0.1 at 2007-09-26 07:37:22) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"set_list_item_resolution", "id"=>"2", "value"=>"kjlkjwer", "controller"=>"list"}
+  [4;36;1mListItem Columns (0.002771)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000402)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+  [4;36;1mSQL (0.000077)[0m   [0;1mBEGIN[0m
+  [4;35;1mListItem Update (0.000293)[0m   [0mUPDATE list_items SET `created_at` = '2007-09-22 08:43:19', `list_type_id` = 6, `remind_at` = '2007-09-26 07:37:07', `resolution` = 'kjlkjwer', `position` = 1, `user_id` = 1, `description` = '[New Item]', `done` = 1, `done_at` = '2007-09-25 18:11:37', `updated_at` = '2007-09-26 07:37:22' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.000671)[0m   [0;1mCOMMIT[0m
+Rendering list/set_list_item_resolution
+Rendered list/_item_resolution (0.00132)
+Rendered list/_item_stats (0.00068)
+Completed in 0.02610 (38 reqs/sec) | Rendering: 0.00821 (31%) | DB: 0.00421 (16%) | 200 OK [http://localhost/list/set_list_item_resolution/2]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:37:28) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"18", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.002907)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.000292)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 18) [0m
+  [4;35;1mSQL (0.000107)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000376)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:53', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 16, `description` = '[New Item]', `done` = 1, `updated_at` = '2007-09-26 07:37:28', `nesting_level` = 2 WHERE `id` = 18[0m
+  [4;35;1mSQL (0.000791)[0m   [0mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00391)
+Completed in 0.02632 (37 reqs/sec) | Rendering: 0.01028 (39%) | DB: 0.00447 (16%) | 200 OK [http://localhost/list/toggle_action_done/18]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:37:32) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"17", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.003067)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.001040)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 17) [0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000320)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:53', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 15, `description` = '[New Item]', `done` = 1, `updated_at` = '2007-09-26 07:37:32', `nesting_level` = 2 WHERE `id` = 17[0m
+  [4;36;1mSQL (0.000880)[0m   [0;1mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00383)
+Completed in 0.02730 (36 reqs/sec) | Rendering: 0.01054 (38%) | DB: 0.00542 (19%) | 200 OK [http://localhost/list/toggle_action_done/17]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:37:35) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"17", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.002502)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.000459)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 17) [0m
+  [4;35;1mSQL (0.000081)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000285)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:53', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 15, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:37:35', `nesting_level` = 2 WHERE `id` = 17[0m
+  [4;35;1mSQL (0.000706)[0m   [0mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00321)
+Completed in 0.02228 (44 reqs/sec) | Rendering: 0.00802 (35%) | DB: 0.00403 (18%) | 200 OK [http://localhost/list/toggle_action_done/17]
+
+
+Processing ListController#toggle_action_done (for 127.0.0.1 at 2007-09-26 07:37:38) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"toggle_action_done", "id"=>"18", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.002454)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.000270)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 18) [0m
+  [4;36;1mSQL (0.000082)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000285)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:53', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 16, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:37:38', `nesting_level` = 2 WHERE `id` = 18[0m
+  [4;36;1mSQL (0.000754)[0m   [0;1mCOMMIT[0m
+Rendering list/toggle_action_done
+Rendered list/_action_item (0.00316)
+Completed in 0.02262 (44 reqs/sec) | Rendering: 0.00820 (36%) | DB: 0.00385 (17%) | 200 OK [http://localhost/list/toggle_action_done/18]
+
+
+Processing ListController#sort_action_items (for 127.0.0.1 at 2007-09-26 07:37:55) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"sortable_action_items"=>["6", "22", "4", "8", "9", "10", "7", "11", "12", "13", "14", "15", "16", "17", "18", "5", "19", "20", "21"], "action"=>"sort_action_items", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.003059)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.001704)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` IN (6,22,4,8,9,10,7,11,12,13,14,15,16,17,18,5,19,20,21)) [0m
+  [4;35;1mSQL (0.000167)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000411)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 3, `description` = 'c', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 0 WHERE `id` = 4[0m
+  [4;35;1mSQL (0.080733)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000179)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000435)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 16, `description` = 'dddd', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 3 WHERE `id` = 5[0m
+  [4;36;1mSQL (0.000564)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000226)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000428)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 1, `description` = 'a', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 2 WHERE `id` = 6[0m
+  [4;35;1mSQL (0.000561)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000083)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000885)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:49', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 7, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 2 WHERE `id` = 7[0m
+  [4;36;1mSQL (0.001984)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000209)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000407)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:49', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 4, `description` = 'ads', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 4 WHERE `id` = 8[0m
+  [4;35;1mSQL (0.000525)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000360)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:50', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 5, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 2 WHERE `id` = 9[0m
+  [4;36;1mSQL (0.000562)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000076)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000273)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:50', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 6, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 2 WHERE `id` = 10[0m
+  [4;35;1mSQL (0.000599)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000086)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000231)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:50', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 8, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 2 WHERE `id` = 11[0m
+  [4;36;1mSQL (0.000492)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000067)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000257)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:51', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 9, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 2 WHERE `id` = 12[0m
+  [4;35;1mSQL (0.000483)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000067)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000400)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:51', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 10, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 2 WHERE `id` = 13[0m
+  [4;36;1mSQL (0.000494)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000072)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000313)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:52', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 11, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 2 WHERE `id` = 14[0m
+  [4;35;1mSQL (0.000521)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000512)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:52', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 12, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 2 WHERE `id` = 15[0m
+  [4;36;1mSQL (0.000578)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000085)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000493)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:52', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 13, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 2 WHERE `id` = 16[0m
+  [4;35;1mSQL (0.000516)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000068)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000279)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:53', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 14, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 2 WHERE `id` = 17[0m
+  [4;36;1mSQL (0.000600)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000112)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000338)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:53', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 15, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 2 WHERE `id` = 18[0m
+  [4;35;1mSQL (0.000536)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000398)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:54', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 17, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 2 WHERE `id` = 19[0m
+  [4;36;1mSQL (0.000616)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000293)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:54', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 18, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 2 WHERE `id` = 20[0m
+  [4;35;1mSQL (0.000564)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000410)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 20:51:24', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 19, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 2 WHERE `id` = 21[0m
+  [4;36;1mSQL (0.001327)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000302)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 20:51:30', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 2, `description` = '[New Item]a', `done` = 0, `updated_at` = '2007-09-26 07:37:55', `nesting_level` = 2 WHERE `id` = 22[0m
+  [4;35;1mSQL (0.000563)[0m   [0mCOMMIT[0m
+Completed in 0.17460 (5 reqs/sec) | Rendering: 0.00007 (0%) | DB: 0.10704 (61%) | 200 OK [http://localhost/list/sort_action_items]
+
+
+Processing ListController#sort_action_items (for 127.0.0.1 at 2007-09-26 07:38:01) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"sortable_action_items"=>["6", "22", "4", "8", "9", "10", "7", "11", "12", "13", "14", "5", "15", "16", "17", "18", "19", "20", "21"], "action"=>"sort_action_items", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.002908)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.005695)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` IN (6,22,4,8,9,10,7,11,12,13,14,5,15,16,17,18,19,20,21)) [0m
+  [4;36;1mSQL (0.000126)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000533)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 3, `description` = 'c', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 0 WHERE `id` = 4[0m
+  [4;36;1mSQL (0.000734)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000199)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000325)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 12, `description` = 'dddd', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 3 WHERE `id` = 5[0m
+  [4;35;1mSQL (0.000564)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000534)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 1, `description` = 'a', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 2 WHERE `id` = 6[0m
+  [4;36;1mSQL (0.000697)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000098)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000289)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:49', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 7, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 2 WHERE `id` = 7[0m
+  [4;35;1mSQL (0.000634)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000102)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000300)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:49', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 4, `description` = 'ads', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 4 WHERE `id` = 8[0m
+  [4;36;1mSQL (0.000835)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000075)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000248)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:50', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 5, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 2 WHERE `id` = 9[0m
+  [4;35;1mSQL (0.000618)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000379)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:50', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 6, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 2 WHERE `id` = 10[0m
+  [4;36;1mSQL (0.000563)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000103)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000439)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:50', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 8, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 2 WHERE `id` = 11[0m
+  [4;35;1mSQL (0.000598)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000433)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:51', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 9, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 2 WHERE `id` = 12[0m
+  [4;36;1mSQL (0.000582)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000069)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000268)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:51', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 10, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 2 WHERE `id` = 13[0m
+  [4;35;1mSQL (0.000543)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000069)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000286)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:52', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 11, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 2 WHERE `id` = 14[0m
+  [4;36;1mSQL (0.000564)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000084)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000369)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:52', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 13, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 2 WHERE `id` = 15[0m
+  [4;35;1mSQL (0.000573)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000303)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:52', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 14, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 2 WHERE `id` = 16[0m
+  [4;36;1mSQL (0.000658)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000109)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000308)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:53', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 15, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 2 WHERE `id` = 17[0m
+  [4;35;1mSQL (0.000602)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000101)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000297)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:53', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 16, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 2 WHERE `id` = 18[0m
+  [4;36;1mSQL (0.000552)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000406)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:54', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 17, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 2 WHERE `id` = 19[0m
+  [4;35;1mSQL (0.000915)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000085)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000417)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:54', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 18, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 2 WHERE `id` = 20[0m
+  [4;36;1mSQL (0.000632)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000107)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000563)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 20:51:24', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 19, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 2 WHERE `id` = 21[0m
+  [4;35;1mSQL (0.000795)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000076)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000252)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 20:51:30', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 2, `description` = '[New Item]a', `done` = 0, `updated_at` = '2007-09-26 07:38:01', `nesting_level` = 2 WHERE `id` = 22[0m
+  [4;36;1mSQL (0.000650)[0m   [0;1mCOMMIT[0m
+Completed in 0.19016 (5 reqs/sec) | Rendering: 0.00009 (0%) | DB: 0.02987 (15%) | 200 OK [http://localhost/list/sort_action_items]
+
+
+Processing ListController#sort_action_items (for 127.0.0.1 at 2007-09-26 07:38:09) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"sortable_action_items"=>["6", "22", "4", "8", "9", "10", "7", "11", "12", "13", "14", "5", "16", "17", "18", "19", "20", "21", "15"], "action"=>"sort_action_items", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.001673)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.002779)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` IN (6,22,4,8,9,10,7,11,12,13,14,5,16,17,18,19,20,21,15)) [0m
+  [4;35;1mSQL (0.000250)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000380)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 3, `description` = 'c', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 0 WHERE `id` = 4[0m
+  [4;35;1mSQL (0.000700)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000300)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 12, `description` = 'dddd', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 3 WHERE `id` = 5[0m
+  [4;36;1mSQL (0.000548)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000069)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000299)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 1, `description` = 'a', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 2 WHERE `id` = 6[0m
+  [4;35;1mSQL (0.000781)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000461)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:49', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 7, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 2 WHERE `id` = 7[0m
+  [4;36;1mSQL (0.000848)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000080)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000293)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:49', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 4, `description` = 'ads', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 4 WHERE `id` = 8[0m
+  [4;35;1mSQL (0.000627)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000069)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000239)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:50', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 5, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 2 WHERE `id` = 9[0m
+  [4;36;1mSQL (0.000537)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000072)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000738)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:50', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 6, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 2 WHERE `id` = 10[0m
+  [4;35;1mSQL (0.000994)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000304)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:50', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 8, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 2 WHERE `id` = 11[0m
+  [4;36;1mSQL (0.003658)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000324)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:51', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 9, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 2 WHERE `id` = 12[0m
+  [4;35;1mSQL (0.001054)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000086)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000521)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:51', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 10, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 2 WHERE `id` = 13[0m
+  [4;36;1mSQL (0.000521)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000068)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000334)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:52', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 11, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 2 WHERE `id` = 14[0m
+  [4;35;1mSQL (0.000746)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000083)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000555)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:52', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 19, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 2 WHERE `id` = 15[0m
+  [4;36;1mSQL (0.000565)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000074)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000320)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:52', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 13, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 2 WHERE `id` = 16[0m
+  [4;35;1mSQL (0.019930)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000127)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000342)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:53', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 14, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 2 WHERE `id` = 17[0m
+  [4;36;1mSQL (0.000543)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000074)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000318)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:53', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 15, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 2 WHERE `id` = 18[0m
+  [4;35;1mSQL (0.000527)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000187)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000332)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 17:54:54', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 16, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 2 WHERE `id` = 19[0m
+  [4;36;1mSQL (0.001025)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000085)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000384)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 17:54:54', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 17, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 2 WHERE `id` = 20[0m
+  [4;35;1mSQL (0.000578)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000192)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000315)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-25 20:51:24', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 18, `description` = '[New Item]', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 2 WHERE `id` = 21[0m
+  [4;36;1mSQL (0.000616)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000096)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000285)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-25 20:51:30', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 2, `description` = '[New Item]a', `done` = 0, `updated_at` = '2007-09-26 07:38:10', `nesting_level` = 2 WHERE `id` = 22[0m
+  [4;35;1mSQL (0.000854)[0m   [0mCOMMIT[0m
+Completed in 0.11470 (8 reqs/sec) | Rendering: 0.00009 (0%) | DB: 0.04913 (42%) | 200 OK [http://localhost/list/sort_action_items]
+
+
+Processing ListController#decrease_action_nesting_level (for 127.0.0.1 at 2007-09-26 07:38:16) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"decrease_action_nesting_level", "id"=>"5", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.002542)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.001222)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 5) [0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000311)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 12, `description` = 'dddd', `done` = 0, `updated_at` = '2007-09-26 07:38:16', `nesting_level` = 2 WHERE `id` = 5[0m
+  [4;36;1mSQL (0.000683)[0m   [0;1mCOMMIT[0m
+  [4;35;1mListItem Columns (0.003233)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000789)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+Rendering list/decrease_action_nesting_level
+Rendered list/_action_item (0.00426)
+Completed in 0.03947 (25 reqs/sec) | Rendering: 0.01017 (25%) | DB: 0.00891 (22%) | 200 OK [http://localhost/list/decrease_action_nesting_level/5]
+
+
+Processing ListController#decrease_action_nesting_level (for 127.0.0.1 at 2007-09-26 07:38:17) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"decrease_action_nesting_level", "id"=>"5", "controller"=>"list"}
+  [4;35;1mActionItem Columns (0.003198)[0m   [0mSHOW FIELDS FROM action_items[0m
+  [4;36;1mActionItem Load (0.000966)[0m   [0;1mSELECT * FROM action_items WHERE (action_items.`id` = 5) [0m
+  [4;35;1mSQL (0.000142)[0m   [0mBEGIN[0m
+  [4;36;1mActionItem Update (0.000365)[0m   [0;1mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 12, `description` = 'dddd', `done` = 0, `updated_at` = '2007-09-26 07:38:17', `nesting_level` = 1 WHERE `id` = 5[0m
+  [4;35;1mSQL (0.000857)[0m   [0mCOMMIT[0m
+  [4;36;1mListItem Columns (0.002710)[0m   [0;1mSHOW FIELDS FROM list_items[0m
+  [4;35;1mListItem Load (0.000403)[0m   [0mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+Rendering list/decrease_action_nesting_level
+Rendered list/_action_item (0.00333)
+Completed in 0.10528 (9 reqs/sec) | Rendering: 0.00858 (8%) | DB: 0.00864 (8%) | 200 OK [http://localhost/list/decrease_action_nesting_level/5]
+
+
+Processing ListController#decrease_action_nesting_level (for 127.0.0.1 at 2007-09-26 07:38:18) [POST]
+  Session ID: b31d8a1428e8d419bd9a36153d4cc055
+  Parameters: {"action"=>"decrease_action_nesting_level", "id"=>"5", "controller"=>"list"}
+  [4;36;1mActionItem Columns (0.003054)[0m   [0;1mSHOW FIELDS FROM action_items[0m
+  [4;35;1mActionItem Load (0.000343)[0m   [0mSELECT * FROM action_items WHERE (action_items.`id` = 5) [0m
+  [4;36;1mSQL (0.000101)[0m   [0;1mBEGIN[0m
+  [4;35;1mActionItem Update (0.000307)[0m   [0mUPDATE action_items SET `created_at` = '2007-09-22 08:43:23', `remind_at` = NULL, `resolution` = NULL, `list_item_id` = 2, `position` = 12, `description` = 'dddd', `done` = 0, `updated_at` = '2007-09-26 07:38:18', `nesting_level` = 0 WHERE `id` = 5[0m
+  [4;36;1mSQL (0.000911)[0m   [0;1mCOMMIT[0m
+  [4;35;1mListItem Columns (0.002369)[0m   [0mSHOW FIELDS FROM list_items[0m
+  [4;36;1mListItem Load (0.000515)[0m   [0;1mSELECT * FROM list_items WHERE (list_items.`id` = 2) [0m
+Rendering list/decrease_action_nesting_level
+Rendered list/_action_item (0.00414)
+Completed in 0.03845 (26 reqs/sec) | Rendering: 0.01027 (26%) | DB: 0.00760 (19%) | 200 OK [http://localhost/list/decrease_action_nesting_level/5]
