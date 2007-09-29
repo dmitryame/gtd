@@ -1,8 +1,8 @@
 <div id='list_items' style="border : solid 2px #ff0000; padding : 4px; width : 250px; height : 500px; overflow : auto; ">
 	<ul id='sortable_list_items'>
 		<%list_items.each do |item|%>
-			<li class="list_item" id='item_<%=item.id%>' <%= item.done ? 'style="color:grey"':'' %>> 
-					<%= link_to_remote item.description, :url => {:action => :activate_list_item, :id => item.id } %> 
+			<li class="list_item" id='item_<%=item.id%>' style="<%= item.done ? 'color:yellow':'' %>"> 
+					<%= link_to_remote item.description, :url => {:action => :activate_list_item, :id => item.id }  %> 
 			</li>
 		<%end%>
 	</ul>

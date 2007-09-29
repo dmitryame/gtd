@@ -8,7 +8,7 @@ class ListController < ApplicationController
   def set_list_item_description
     @list_item = ListItem.find(params[:id])
     value = ERB::Util.h(params[:value])
-    value = '[enter description]' if value == nil || value.strip == ''
+    value = '[enter description]:' + @list_item.id.to_s if value == nil || value.strip == ''
     @list_item.description = value 
     @list_item.save
   end
@@ -83,6 +83,9 @@ class ListController < ApplicationController
       :done         => false
       )
       @list_item.save
+      @list_item.description = @list_item.description + ":" + @list_item.id.to_s
+      @list_item.save
+
 
       @list_items             = ListItem.find_all_by_user_id_and_list_type_id(
       session[:user_id], 

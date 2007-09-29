@@ -85,6 +85,10 @@ div.footer {
      text-align: right;
 }
 
+li.list_item {
+    border: 1px dotted grey;
+}
+
 tr.even td{
 	background-color:#CCC;
 }
