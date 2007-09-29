@@ -38,7 +38,7 @@
 						</div>
 								</td>
 								<td>
-						<div class="listTypeItem" id="listType_<%=listType.id%>" <%= (session[:list_type_id] == listType.id)? 'style="background:LightSeaGreen"':''%>>
+						<div class="listTypeItem" id="listType_<%=listType.id%>" <%= (session[:list_type_id] == listType.id.to_s)? "style='background:Wheat'":""%> >
 							<%= link_to_remote listType.name, :url => {:action => :activate_list, :id => listType } %>
 						</div>
 								</td>
