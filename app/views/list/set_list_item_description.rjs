@@ -1,4 +1,4 @@
-page[:item_description].reload :object => @list_item
+page[:item_description].reload  :object => @list_item
 page[:item_description].visual_effect :highlight,:startcolor => "#ffffff", :endcolor => "#00af00"
 
 page[:item_stats].reload :object => @list_item
