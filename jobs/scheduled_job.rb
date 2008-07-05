@@ -5,10 +5,10 @@ require 'active_record'
 ActiveRecord::Base.establish_connection(
   :adapter => "mysql",
   :host => "localhost",
-  :username => "root",
-  :password => "",
-  :database => "gtd_development"
-  
+  :username => "getitdon",
+  :password => "getitdon",
+  :database => "gtd_production",
+  :socket   => "/var/run/mysqld/mysqld.sock"
 )
 
 class ListItem < ActiveRecord::Base

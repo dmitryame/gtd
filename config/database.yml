@@ -37,8 +37,8 @@ test:
 production:
   adapter: mysql
   database: gtd_production
-  username: root
-  password: 
+  username: getitdon
+  password: getitdon
 # this line had to be added manually on ubuntu to work 
   socket: /var/run/mysqld/mysqld.sock
 # added explicit encoding
