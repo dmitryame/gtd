@@ -1,5 +1,5 @@
 # This file is auto-generated from the current state of the database. Instead of editing this file, 
-# please use the migrations feature of ActiveRecord to incrementally modify your database, and
+# please use the migrations feature of Active Record to incrementally modify your database, and
 # then regenerate this schema definition.
 #
 # Note that this schema.rb definition is the authoritative source for your database schema. If you need
@@ -13,26 +13,26 @@ ActiveRecord::Schema.define(:version => 5) do
 
   create_table "action_items", :force => true do |t|
     t.string   "description"
-    t.integer  "list_item_id",                     :null => false
-    t.integer  "position",                         :null => false
-    t.integer  "nesting_level",                    :null => false
+    t.integer  "list_item_id",  :limit => 11,                    :null => false
+    t.integer  "position",      :limit => 11,                    :null => false
+    t.integer  "nesting_level", :limit => 11,                    :null => false
     t.datetime "remind_at"
-    t.boolean  "done",          :default => false, :null => false
+    t.boolean  "done",                        :default => false, :null => false
     t.string   "resolution"
-    t.datetime "created_at",                       :null => false
-    t.datetime "updated_at",                       :null => false
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
   end
 
   create_table "list_items", :force => true do |t|
     t.string   "description"
-    t.integer  "user_id",                         :null => false
-    t.integer  "list_type_id",                    :null => false
-    t.integer  "position",                        :null => false
+    t.integer  "user_id",      :limit => 11,                          :null => false
+    t.integer  "list_type_id", :limit => 11,                          :null => false
+    t.integer  "position",     :limit => 11,                          :null => false
     t.datetime "remind_at"
-    t.boolean  "done",         :default => false, :null => false
-    t.text     "resolution"
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
+    t.boolean  "done",                             :default => false, :null => false
+    t.text     "resolution",   :limit => 16777215
+    t.datetime "created_at",                                          :null => false
+    t.datetime "updated_at",                                          :null => false
     t.datetime "done_at"
   end
 
@@ -44,9 +44,9 @@ ActiveRecord::Schema.define(:version => 5) do
     t.string   "name"
     t.string   "hashed_password"
     t.string   "salt"
-    t.string   "email",           :default => "", :null => false
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
+    t.string   "email",           :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end
